@@ -5,227 +5,160 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🔥 HF 热榜日报 - Hugging Face 热门 AI 技术分析</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 20px;
         }
-        
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-        }
-        
-        header {
+        .container { max-width: 1200px; margin: 0 auto; }
+        .header {
             text-align: center;
             color: white;
             padding: 40px 20px;
         }
-        
-        header h1 {
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-        }
-        
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
-        }
-        
-        .meta-info {
-            background: rgba(255,255,255,0.15);
-            border-radius: 10px;
-            padding: 15px 30px;
+        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
+        .header p { font-size: 1.1rem; opacity: 0.9; }
+        .date-badge {
             display: inline-block;
-            margin-top: 20px;
-        }
-        
-        .meta-info span {
-            margin: 0 15px;
-        }
-        
-        .section {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            margin-bottom: 30px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        
-        .section h2 {
-            color: #333;
-            font-size: 1.5em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #667eea;
-        }
-        
-        .grid-2 {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
-            gap: 30px;
-        }
-        
-        .chart-container {
-            text-align: center;
-        }
-        
-        .chart-container img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
-        }
-        
-        .chart-title {
-            font-size: 1.1em;
-            color: #666;
-            margin-bottom: 15px;
-        }
-        
-        table {
-            width: 100%;
-            border-collapse: collapse;
-            margin-top: 15px;
-        }
-        
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        
-        th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #333;
-        }
-        
-        tr:hover {
-            background: #f8f9fa;
-        }
-        
-        .rank {
-            font-weight: bold;
-            color: #667eea;
-        }
-        
-        .rank-1 { color: #FFD700; }
-        .rank-2 { color: #C0C0C0; }
-        .rank-3 { color: #CD7F32; }
-        
-        .tech-tag {
-            display: inline-block;
-            padding: 4px 10px;
+            background: rgba(255,255,255,0.2);
+            padding: 8px 20px;
             border-radius: 20px;
-            font-size: 0.85em;
-            background: #e8f4f8;
-            color: #0077b6;
+            margin-top: 15px;
+            font-size: 0.9rem;
         }
-        
         .stats-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 20px;
-            margin-bottom: 30px;
+            margin: 30px 0;
         }
-        
         .stat-card {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
+            background: white;
+            border-radius: 16px;
             padding: 25px;
-            border-radius: 12px;
             text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        
         .stat-card .number {
-            font-size: 2.5em;
+            font-size: 2.5rem;
             font-weight: bold;
+            color: #667eea;
         }
-        
         .stat-card .label {
-            font-size: 0.95em;
-            opacity: 0.9;
+            color: #666;
             margin-top: 5px;
         }
-        
-        .trend-list {
-            list-style: none;
+        .card {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
         }
-        
-        .trend-list li {
-            padding: 10px 0;
+        .card h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 15px 10px;
+            text-align: left;
             border-bottom: 1px solid #eee;
-            display: flex;
-            align-items: center;
         }
-        
-        .trend-list li:last-child {
-            border-bottom: none;
+        th {
+            background: #f8f9fa;
+            font-weight: 600;
+            color: #555;
         }
-        
-        .trend-icon {
-            margin-right: 10px;
-            font-size: 1.2em;
+        .rank { font-size: 1.2rem; width: 60px; }
+        .model-name { color: #333; }
+        .category-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 12px;
+            color: white;
+            font-size: 0.8rem;
         }
-        
-        footer {
+        .downloads, .likes { color: #666; }
+        .author { color: #888; font-size: 0.9rem; }
+        .image-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 20px;
+        }
+        .image-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+        .image-card h3 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .image-card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+        .trends {
+            background: white;
+            border-radius: 16px;
+            padding: 30px;
+            margin: 20px 0;
+        }
+        .trends h2 { color: #333; margin-bottom: 20px; }
+        .trends ul { list-style: none; }
+        .trends li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            color: #555;
+        }
+        .trends li:last-child { border-bottom: none; }
+        .footer {
             text-align: center;
             color: white;
             padding: 30px;
             opacity: 0.8;
         }
-        
-        @media (max-width: 768px) {
-            .grid-2 {
-                grid-template-columns: 1fr;
-            }
-            
-            header h1 {
-                font-size: 1.8em;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
+        <div class="header">
             <h1>🔥 HF 热榜日报</h1>
             <p>Hugging Face 热门 AI 技术分析报告</p>
-            <div class="meta-info">
-                <span>📅 2026-01-29</span>
-                <span>📊 数据来源: Hugging Face Hub</span>
+            <div class="date-badge">
+                📅 2026-01-30 &nbsp;&nbsp;|&nbsp;&nbsp; 🏠 数据来源: Hugging Face Hub
             </div>
-        </header>
+        </div>
         
         <div class="stats-grid">
             <div class="stat-card">
-                <div class="number">10</div>
+                <div class="number">0</div>
                 <div class="label">热门模型</div>
             </div>
             <div class="stat-card">
-                <div class="number">9</div>
+                <div class="number">0</div>
                 <div class="label">技术领域</div>
             </div>
             <div class="stat-card">
-                <div class="number">210+</div>
+                <div class="number">0+</div>
                 <div class="label">分析模型数</div>
             </div>
             <div class="stat-card">
-                <div class="number">29%</div>
+                <div class="number">0%</div>
                 <div class="label">语言模型占比</div>
             </div>
         </div>
         
-        <div class="section">
+        <div class="card">
             <h2>📈 今日热榜 Top 10</h2>
             <table>
                 <thead>
@@ -239,139 +172,52 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td><span class="rank rank-1">🥇 1</span></td>
-                        <td><strong>personaplex-7b-v1</strong></td>
-                        <td><span class="tech-tag">语音识别</span></td>
-                        <td>50.8K</td>
-                        <td>1450</td>
-                        <td>nvidia</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank rank-2">🥈 2</span></td>
-                        <td><strong>Kimi-K2.5</strong></td>
-                        <td><span class="tech-tag">多模态模型</span></td>
-                        <td>21.4K</td>
-                        <td>1088</td>
-                        <td>moonshotai</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank rank-3">🥉 3</span></td>
-                        <td><strong>Qwen3-TTS-12Hz-1.7B</strong></td>
-                        <td><span class="tech-tag">语音合成</span></td>
-                        <td>169.0K</td>
-                        <td>752</td>
-                        <td>Qwen</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">4</span></td>
-                        <td><strong>VibeVoice-ASR</strong></td>
-                        <td><span class="tech-tag">语音识别</span></td>
-                        <td>102.5K</td>
-                        <td>724</td>
-                        <td>microsoft</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">5</span></td>
-                        <td><strong>Z-Image</strong></td>
-                        <td><span class="tech-tag">图像生成</span></td>
-                        <td>1.2K</td>
-                        <td>651</td>
-                        <td>Tongyi-MAI</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">6</span></td>
-                        <td><strong>DeepSeek-OCR-2</strong></td>
-                        <td><span class="tech-tag">多模态模型</span></td>
-                        <td>30.9K</td>
-                        <td>520</td>
-                        <td>deepseek-ai</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">7</span></td>
-                        <td><strong>GLM-4.7-Flash</strong></td>
-                        <td><span class="tech-tag">语言模型</span></td>
-                        <td>609.0K</td>
-                        <td>1327</td>
-                        <td>zai-org</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">8</span></td>
-                        <td><strong>LightOnOCR-2-1B</strong></td>
-                        <td><span class="tech-tag">多模态模型</span></td>
-                        <td>26.2K</td>
-                        <td>435</td>
-                        <td>lightonai</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">9</span></td>
-                        <td><strong>Chroma-4B</strong></td>
-                        <td><span class="tech-tag">多模态模型</span></td>
-                        <td>7.2K</td>
-                        <td>298</td>
-                        <td>FlashLabs</td>
-                    </tr>
-                    <tr>
-                        <td><span class="rank">10</span></td>
-                        <td><strong>sweep-next-edit-1.5B</strong></td>
-                        <td><span class="tech-tag">其他</span></td>
-                        <td>3.7K</td>
-                        <td>273</td>
-                        <td>sweepai</td>
-                    </tr>
+                    
                 </tbody>
             </table>
         </div>
         
-        <div class="section">
+        <div class="card">
             <h2>🎨 技术词云</h2>
-            <div class="chart-container">
-                <img src="wordcloud_2026-01-29.png" alt="技术词云">
+            <img src="wordcloud_2026-01-30.png" alt="技术词云" style="width: 100%; border-radius: 8px;">
+        </div>
+        
+        <div class="image-grid">
+            <div class="image-card">
+                <h3>热门模型排行榜</h3>
+                <img src="leaderboard_2026-01-30.png" alt="排行榜">
+            </div>
+            <div class="image-card">
+                <h3>技术领域分布</h3>
+                <img src="tech_distribution_2026-01-30.png" alt="技术分布">
             </div>
         </div>
         
-        <div class="section">
-            <h2>📊 可视化分析</h2>
-            <div class="grid-2">
-                <div class="chart-container">
-                    <div class="chart-title">热门模型排行榜</div>
-                    <img src="leaderboard_2026-01-29.png" alt="排行榜">
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">技术领域分布</div>
-                    <img src="tech_distribution_2026-01-29.png" alt="技术分布">
-                </div>
+        <div class="image-grid">
+            <div class="image-card">
+                <h3>模型热度分布（气泡图）</h3>
+                <img src="bubble_chart_2026-01-30.png" alt="气泡图">
+            </div>
+            <div class="image-card">
+                <h3>活跃组织排行</h3>
+                <img src="org_ranking_2026-01-30.png" alt="组织排行">
             </div>
         </div>
         
-        <div class="section">
-            <h2>🔬 深度分析</h2>
-            <div class="grid-2">
-                <div class="chart-container">
-                    <div class="chart-title">模型热度分布（气泡图）</div>
-                    <img src="bubble_chart_2026-01-29.png" alt="气泡图">
-                </div>
-                <div class="chart-container">
-                    <div class="chart-title">活跃组织排行</div>
-                    <img src="org_ranking_2026-01-29.png" alt="组织排行">
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
+        <div class="trends">
             <h2>📝 技术趋势观察</h2>
-            <ul class="trend-list">
-                <li><span class="trend-icon">🚀</span> <strong>语言模型 (LLM)</strong> 仍是最热门的技术方向，但多模态模型增长迅速</li>
-                <li><span class="trend-icon">🎙️</span> <strong>语音技术</strong> (TTS/ASR) 近期热度上升，多个新模型上榜</li>
-                <li><span class="trend-icon">🎨</span> <strong>图像生成</strong> 领域持续活跃，Diffusion 模型占据主导地位</li>
-                <li><span class="trend-icon">📄</span> <strong>OCR/文档理解</strong> 成为新的增长点，DeepSeek-OCR 等模型表现亮眼</li>
+            <ul>
+                <li>🚀 <strong>语言模型 (LLM)</strong>仍是最热门的技术方向，但多模态模型增长迅速</li>
+                <li>🎙️ <strong>语音技术</strong>(TTS/ASR) 近期热度上升，多个新模型上榜</li>
+                <li>🎨 <strong>图像生成</strong>领域持续活跃，Diffusion 模型占据主导地位</li>
+                <li>📄 <strong>OCR/文档理解</strong>成为新的增长点，DeepSeek-OCR 等模型表现亮眼</li>
             </ul>
         </div>
         
-        <footer>
+        <div class="footer">
             <p>本报告由 Hugging Face 热门技术分析系统自动生成</p>
             <p>每日早上 9:00 自动更新</p>
-        </footer>
+        </div>
     </div>
 </body>
 </html>
