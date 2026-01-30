@@ -1,7 +1,19 @@
 {
   "date": "2026-01-30",
-  "timestamp": "2026-01-30T07:56:39.375866",
+  "timestamp": "2026-01-30T08:17:03.367573",
   "trending_models": [
+    {
+      "id": "moonshotai/Kimi-K2.5",
+      "author": "moonshotai",
+      "pipeline_tag": "image-text-to-text",
+      "downloads": 25438,
+      "likes": 1112,
+      "num_parameters": null,
+      "last_modified": "2026-01-30T04:48:50.000Z",
+      "source": "trending",
+      "tech_category": "多模态模型",
+      "size_category": "未知"
+    },
     {
       "id": "nvidia/personaplex-7b-v1",
       "author": "nvidia",
@@ -15,15 +27,15 @@
       "size_category": "未知"
     },
     {
-      "id": "moonshotai/Kimi-K2.5",
-      "author": "moonshotai",
-      "pipeline_tag": "image-text-to-text",
-      "downloads": 25438,
-      "likes": 1111,
+      "id": "Tongyi-MAI/Z-Image",
+      "author": "Tongyi-MAI",
+      "pipeline_tag": "text-to-image",
+      "downloads": 1918,
+      "likes": 663,
       "num_parameters": null,
-      "last_modified": "2026-01-30T04:48:50.000Z",
+      "last_modified": "2026-01-28T14:26:13.000Z",
       "source": "trending",
-      "tech_category": "多模态模型",
+      "tech_category": "图像生成",
       "size_category": "未知"
     },
     {
@@ -31,11 +43,23 @@
       "author": "Qwen",
       "pipeline_tag": "text-to-speech",
       "downloads": 180679,
-      "likes": 761,
+      "likes": 764,
       "num_parameters": 1916676352,
       "last_modified": "2026-01-29T08:00:54.000Z",
       "source": "trending",
       "tech_category": "语音合成",
+      "size_category": "小型 (1B-7B)"
+    },
+    {
+      "id": "deepseek-ai/DeepSeek-OCR-2",
+      "author": "deepseek-ai",
+      "pipeline_tag": "image-text-to-text",
+      "downloads": 45346,
+      "likes": 530,
+      "num_parameters": 3389119360,
+      "last_modified": "2026-01-30T00:17:54.000Z",
+      "source": "trending",
+      "tech_category": "多模态模型",
       "size_category": "小型 (1B-7B)"
     },
     {
@@ -51,28 +75,16 @@
       "size_category": "中型 (7B-32B)"
     },
     {
-      "id": "Tongyi-MAI/Z-Image",
-      "author": "Tongyi-MAI",
-      "pipeline_tag": "text-to-image",
-      "downloads": 1918,
-      "likes": 663,
-      "num_parameters": null,
-      "last_modified": "2026-01-28T14:26:13.000Z",
+      "id": "zai-org/GLM-4.7-Flash",
+      "author": "zai-org",
+      "pipeline_tag": "text-generation",
+      "downloads": 645542,
+      "likes": 1331,
+      "num_parameters": 31221488576,
+      "last_modified": "2026-01-29T08:06:19.000Z",
       "source": "trending",
-      "tech_category": "图像生成",
-      "size_category": "未知"
-    },
-    {
-      "id": "deepseek-ai/DeepSeek-OCR-2",
-      "author": "deepseek-ai",
-      "pipeline_tag": "image-text-to-text",
-      "downloads": 45346,
-      "likes": 530,
-      "num_parameters": 3389119360,
-      "last_modified": "2026-01-30T00:17:54.000Z",
-      "source": "trending",
-      "tech_category": "多模态模型",
-      "size_category": "小型 (1B-7B)"
+      "tech_category": "语言模型",
+      "size_category": "中型 (7B-32B)"
     },
     {
       "id": "lightonai/LightOnOCR-2-1B",
@@ -87,40 +99,28 @@
       "size_category": "小型 (1B-7B)"
     },
     {
-      "id": "zai-org/GLM-4.7-Flash",
-      "author": "zai-org",
-      "pipeline_tag": "text-generation",
-      "downloads": 645542,
-      "likes": 1330,
-      "num_parameters": 31221488576,
-      "last_modified": "2026-01-29T08:06:19.000Z",
-      "source": "trending",
-      "tech_category": "语言模型",
-      "size_category": "中型 (7B-32B)"
-    },
-    {
-      "id": "FlashLabs/Chroma-4B",
-      "author": "FlashLabs",
-      "pipeline_tag": "any-to-any",
-      "downloads": 7309,
-      "likes": 300,
-      "num_parameters": 5921680193,
-      "last_modified": "2026-01-28T03:21:07.000Z",
-      "source": "trending",
-      "tech_category": "多模态模型",
-      "size_category": "小型 (1B-7B)"
-    },
-    {
-      "id": "sweepai/sweep-next-edit-1.5B",
-      "author": "sweepai",
+      "id": "Qwen/Qwen3-TTS-12Hz-1.7B-Base",
+      "author": "Qwen",
       "pipeline_tag": null,
-      "downloads": 3843,
-      "likes": 275,
-      "num_parameters": 1445014016,
-      "last_modified": "2026-01-22T20:40:28.000Z",
+      "downloads": 179618,
+      "likes": 254,
+      "num_parameters": null,
+      "last_modified": "2026-01-23T05:25:33.000Z",
       "source": "trending",
       "tech_category": "其他",
-      "size_category": "小型 (1B-7B)"
+      "size_category": "未知"
+    },
+    {
+      "id": "numind/NuMarkdown-8B-Thinking",
+      "author": "numind",
+      "pipeline_tag": "image-to-text",
+      "downloads": 1074937,
+      "likes": 387,
+      "num_parameters": 8292166656,
+      "last_modified": "2025-11-13T14:18:07.000Z",
+      "source": "trending",
+      "tech_category": "文档理解",
+      "size_category": "中型 (7B-32B)"
     }
   ],
   "most_downloaded": [
@@ -763,7 +763,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 10152306,
-      "likes": 2692,
+      "likes": 2693,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -2887,7 +2887,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 3066292,
-      "likes": 678,
+      "likes": 679,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3931,7 +3931,7 @@
       "author": null,
       "pipeline_tag": null,
       "downloads": 2495537,
-      "likes": 568,
+      "likes": 569,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4162,7 +4162,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 1641746,
-      "likes": 6438,
+      "likes": 6439,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5403,7 +5403,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 10152306,
-      "likes": 2692,
+      "likes": 2693,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -7530,7 +7530,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 3066292,
-        "likes": 678,
+        "likes": 679,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8453,7 +8453,7 @@
         "author": null,
         "pipeline_tag": "text-to-image",
         "downloads": 1468544,
-        "likes": 991,
+        "likes": 992,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -9633,7 +9633,7 @@
         "author": null,
         "pipeline_tag": "text-to-speech",
         "downloads": 180679,
-        "likes": 761,
+        "likes": 764,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -11953,7 +11953,7 @@
         "author": null,
         "pipeline_tag": "feature-extraction",
         "downloads": 2107732,
-        "likes": 853,
+        "likes": 854,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -13031,32 +13031,32 @@
   },
   "statistics": {
     "tech_distribution": {
+      "多模态模型": 18,
       "语音识别": 14,
-      "多模态模型": 19,
-      "语音合成": 8,
       "图像生成": 22,
+      "语音合成": 8,
       "语言模型": 60,
       "其他": 58,
+      "文档理解": 1,
       "嵌入模型": 16,
       "图像理解": 9,
       "视频生成": 4
     },
     "top_organizations": {
-      "nvidia": 1,
+      "Qwen": 2,
       "moonshotai": 1,
-      "Qwen": 1,
-      "microsoft": 1,
+      "nvidia": 1,
       "Tongyi-MAI": 1,
       "deepseek-ai": 1,
-      "lightonai": 1,
+      "microsoft": 1,
       "zai-org": 1,
-      "FlashLabs": 1,
-      "sweepai": 1
+      "lightonai": 1,
+      "numind": 1
     },
     "size_distribution": {
-      "未知": 203,
-      "小型 (1B-7B)": 5,
-      "中型 (7B-32B)": 2
+      "未知": 204,
+      "小型 (1B-7B)": 3,
+      "中型 (7B-32B)": 3
     }
   }
 }
