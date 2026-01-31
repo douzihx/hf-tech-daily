@@ -1,6 +1,6 @@
 {
   "date": "2026-01-31",
-  "timestamp": "2026-01-31T04:20:51.935813",
+  "timestamp": "2026-01-31T04:33:51.872474",
   "trending_models": [
     {
       "id": "moonshotai/Kimi-K2.5",
@@ -19,7 +19,7 @@
       "author": "nvidia",
       "pipeline_tag": "audio-to-audio",
       "downloads": 54463,
-      "likes": 1514,
+      "likes": 1515,
       "num_parameters": null,
       "last_modified": "2026-01-28T23:12:52.000Z",
       "source": "trending",
@@ -43,7 +43,7 @@
       "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 45346,
-      "likes": 569,
+      "likes": 570,
       "num_parameters": 3389119360,
       "last_modified": "2026-01-30T00:17:54.000Z",
       "source": "trending",
@@ -79,7 +79,7 @@
       "author": "tencent",
       "pipeline_tag": "image-to-image",
       "downloads": 37,
-      "likes": 397,
+      "likes": 398,
       "num_parameters": 83009199459,
       "last_modified": "2026-01-28T08:15:07.000Z",
       "source": "trending",
@@ -115,7 +115,7 @@
       "author": "PaddlePaddle",
       "pipeline_tag": "image-text-to-text",
       "downloads": 216,
-      "likes": 230,
+      "likes": 231,
       "num_parameters": 958588736,
       "last_modified": "2026-01-30T05:29:50.000Z",
       "source": "trending",
@@ -793,7 +793,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 10000042,
-      "likes": 5348,
+      "likes": 5349,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4338,7 +4338,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 10000042,
-      "likes": 5348,
+      "likes": 5349,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4772,7 +4772,7 @@
       "author": null,
       "pipeline_tag": "text-to-image",
       "downloads": 526555,
-      "likes": 4005,
+      "likes": 4006,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5608,7 +5608,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 459979,
-      "likes": 2394,
+      "likes": 2395,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -7173,7 +7173,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 10000042,
-        "likes": 5348,
+        "likes": 5349,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8642,7 +8642,7 @@
         "author": null,
         "pipeline_tag": "text-to-image",
         "downloads": 526555,
-        "likes": 4005,
+        "likes": 4006,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
