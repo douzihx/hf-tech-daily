@@ -1,431 +1,281 @@
-<!DOCTYPE html>
-<html lang="zh-CN">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HF 热榜日报 - Hugging Face 热门 AI 技术分析</title>
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'PingFang SC', 'Microsoft YaHei', sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 20px;
-        }
-        .container { max-width: 1200px; margin: 0 auto; }
-        .header {
-            text-align: center;
-            color: white;
-            padding: 40px 20px;
-        }
-        .header h1 { font-size: 2.5rem; margin-bottom: 10px; }
-        .header p { font-size: 1.1rem; opacity: 0.9; }
-        .date-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.2);
-            padding: 8px 20px;
-            border-radius: 20px;
-            margin-top: 15px;
-            font-size: 0.9rem;
-        }
-        .stats-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        .stat-card {
-            background: white;
-            border-radius: 16px;
-            padding: 25px;
-            text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .stat-card .number {
-            font-size: 2.5rem;
-            font-weight: bold;
-            color: #667eea;
-        }
-        .stat-card .label {
-            color: #666;
-            margin-top: 5px;
-        }
-        .card {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .card h2 {
-            color: #333;
-            margin-bottom: 20px;
-            font-size: 1.5rem;
-        }
-        table {
-            width: 100%;
-            border-collapse: collapse;
-        }
-        th, td {
-            padding: 15px 10px;
-            text-align: left;
-            border-bottom: 1px solid #eee;
-        }
-        th {
-            background: #f8f9fa;
-            font-weight: 600;
-            color: #555;
-        }
-        .rank { font-size: 1.2rem; width: 60px; }
-        .model-name { color: #333; }
-        .category-tag {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 12px;
-            color: white;
-            font-size: 0.85rem;
-        }
-        .downloads { color: #667eea; font-weight: 600; }
-        .likes { color: #e91e63; }
-        .author { color: #888; font-size: 0.9rem; }
-        .image-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 20px;
-            margin: 20px 0;
-        }
-        .image-card {
-            background: white;
-            border-radius: 16px;
-            padding: 20px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .image-card h3 {
-            color: #333;
-            margin-bottom: 15px;
-            font-size: 1.2rem;
-        }
-        .image-card img {
-            width: 100%;
-            border-radius: 8px;
-            cursor: pointer;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .image-card img:hover {
-            transform: scale(1.02);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.2);
-        }
-        .trends {
-            background: white;
-            border-radius: 16px;
-            padding: 30px;
-            margin: 20px 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
-        }
-        .trends h2 {
-            color: #333;
-            margin-bottom: 20px;
-        }
-        .trends ul {
-            list-style: none;
-        }
-        .trends li {
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-            color: #555;
-            line-height: 1.6;
-        }
-        .trends li:last-child {
-            border-bottom: none;
-        }
-        .footer {
-            text-align: center;
-            color: white;
-            padding: 30px;
-            opacity: 0.9;
-        }
-        
-        /* 图片放大模态框样式 */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0,0,0,0.9);
-            cursor: pointer;
-        }
-        .modal-content {
-            margin: auto;
-            display: block;
-            max-width: 90%;
-            max-height: 90%;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            border-radius: 8px;
-            box-shadow: 0 0 30px rgba(255,255,255,0.2);
-        }
-        .modal-close {
-            position: absolute;
-            top: 20px;
-            right: 35px;
-            color: #fff;
-            font-size: 40px;
-            font-weight: bold;
-            cursor: pointer;
-            z-index: 1001;
-        }
-        .modal-close:hover {
-            color: #ccc;
-        }
-        .modal-title {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            color: white;
-            font-size: 1.2rem;
-            text-align: center;
-            background: rgba(0,0,0,0.5);
-            padding: 10px 20px;
-            border-radius: 8px;
-        }
-        
-        /* 点击提示 */
-        .click-hint {
-            text-align: center;
-            color: #888;
-            font-size: 0.85rem;
-            margin-top: 8px;
-        }
-        
-        @media (max-width: 768px) {
-            .header h1 { font-size: 1.8rem; }
-            .image-grid { grid-template-columns: 1fr; }
-            th, td { padding: 10px 5px; font-size: 0.9rem; }
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <div class="header">
-            <h1>🔥 HF 热榜日报</h1>
-            <p>Hugging Face 热门 AI 技术分析报告</p>
-            <div class="date-badge">
-                📅 2026-01-31   |   🏠 数据来源: Hugging Face Hub
-            </div>
-        </div>
-        
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="number">10</div>
-                <div class="label">热门模型</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">9</div>
-                <div class="label">技术领域</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">210+</div>
-                <div class="label">分析模型数</div>
-            </div>
-            <div class="stat-card">
-                <div class="number">29%</div>
-                <div class="label">语言模型占比</div>
-            </div>
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <title>HF 热榜日报 - 2026-01-31</title>
+        <style>
+            body { font-family: sans-serif; background: #f4f7f6; padding: 20px; }
+            .card { background: white; border-radius: 15px; padding: 25px; max-width: 1000px; margin: 20px auto; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+            table { width: 100%; border-collapse: collapse; }
+            th { text-align: left; padding: 15px; background: #f8f9fa; color: #666; }
+        </style>
+    </head>
+    <body>
+        <div style="text-align:center; margin-bottom:40px;">
+            <h1 style="color:#333;">🔥 Hugging Face 技术日报</h1>
+            <p style="color:#666;">日期：2026-01-31 | 自动更新</p>
         </div>
         
         <div class="card">
-            <h2>📈 今日热榜 Top 10</h2>
+            <h2>📈 今日热门模型 Top 15</h2>
             <table>
                 <thead>
-                    <tr>
-                        <th>排名</th>
-                        <th>模型名称</th>
-                        <th>技术领域</th>
-                        <th>下载量</th>
-                        <th>点赞数</th>
-                        <th>作者</th>
-                    </tr>
+                    <tr><th>排名</th><th>模型名称</th><th>技术领域</th><th>下载量</th><th>作者</th></tr>
                 </thead>
                 <tbody>
-                    
             <tr>
-                <td class="rank">🥇</td>
-                <td class="model-name"><strong>Kimi-K2.5</strong></td>
-                <td><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></td>
-                <td class="downloads">25.4K</td>
-                <td class="likes">1217</td>
-                <td class="author">moonshotai</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">🥇</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">all-MiniLM-L6-v2</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=feature-extraction" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">嵌入模型</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">141.5M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers" target="_blank" style="text-decoration:none; color:#888;">sentence-transformers</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">🥈</td>
-                <td class="model-name"><strong>personaplex-7b-v1</strong></td>
-                <td><span class="category-tag" style="background-color: #a855f7">语音识别</span></td>
-                <td class="downloads">54.5K</td>
-                <td class="likes">1521</td>
-                <td class="author">nvidia</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">🥈</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Falconsai/nsfw_image_detection" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">nsfw_image_detection</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=image-classification" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">图像理解</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">66.0M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Falconsai" target="_blank" style="text-decoration:none; color:#888;">Falconsai</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">🥉</td>
-                <td class="model-name"><strong>Z-Image</strong></td>
-                <td><span class="category-tag" style="background-color: #3b82f6">图像生成</span></td>
-                <td class="downloads">1.9K</td>
-                <td class="likes">712</td>
-                <td class="author">Tongyi-MAI</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">🥉</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/google/electra-base-discriminator" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">electra-base-discriminator</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">47.9M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/google" target="_blank" style="text-decoration:none; color:#888;">google</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">4</td>
-                <td class="model-name"><strong>DeepSeek-OCR-2</strong></td>
-                <td><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></td>
-                <td class="downloads">45.3K</td>
-                <td class="likes">573</td>
-                <td class="author">deepseek-ai</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">4</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/dima806/fairface_age_image_detection" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">fairface_age_image_detection</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=image-classification" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">图像理解</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">42.9M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/dima806" target="_blank" style="text-decoration:none; color:#888;">dima806</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">5</td>
-                <td class="model-name"><strong>Qwen3-TTS-12Hz-1.7B-CustomVoice</strong></td>
-                <td><span class="category-tag" style="background-color: #f59e0b">语音合成</span></td>
-                <td class="downloads">180.7K</td>
-                <td class="likes">806</td>
-                <td class="author">Qwen</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">5</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/google-bert/bert-base-uncased" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">bert-base-uncased</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">39.2M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/google-bert" target="_blank" style="text-decoration:none; color:#888;">google-bert</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">6</td>
-                <td class="model-name"><strong>VibeVoice-ASR</strong></td>
-                <td><span class="category-tag" style="background-color: #a855f7">语音识别</span></td>
-                <td class="downloads">111.6K</td>
-                <td class="likes">748</td>
-                <td class="author">microsoft</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">6</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/FacebookAI/roberta-large" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">roberta-large</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">21.9M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/FacebookAI" target="_blank" style="text-decoration:none; color:#888;">FacebookAI</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">7</td>
-                <td class="model-name"><strong>HunyuanImage-3.0-Instruct</strong></td>
-                <td><span class="category-tag" style="background-color: #3b82f6">图像生成</span></td>
-                <td class="downloads">0.0K</td>
-                <td class="likes">405</td>
-                <td class="author">tencent</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">7</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/timm/mobilenetv3_small_100.lamb_in1k" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">mobilenetv3_small_100.lamb_in1k</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=image-classification" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">图像理解</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">21.9M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/timm" target="_blank" style="text-decoration:none; color:#888;">timm</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">8</td>
-                <td class="model-name"><strong>GLM-4.7-Flash</strong></td>
-                <td><span class="category-tag" style="background-color: #6366f1">语言模型</span></td>
-                <td class="downloads">645.5K</td>
-                <td class="likes">1341</td>
-                <td class="author">zai-org</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">8</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Qwen/Qwen2.5-VL-3B-Instruct" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">Qwen2.5-VL-3B-Instruct</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">多模态模型</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">21.6M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Qwen" target="_blank" style="text-decoration:none; color:#888;">Qwen</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">9</td>
-                <td class="model-name"><strong>LightOnOCR-2-1B</strong></td>
-                <td><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></td>
-                <td class="downloads">27.4K</td>
-                <td class="likes">448</td>
-                <td class="author">lightonai</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">9</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers/all-mpnet-base-v2" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">all-mpnet-base-v2</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=feature-extraction" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">嵌入模型</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">21.5M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers" target="_blank" style="text-decoration:none; color:#888;">sentence-transformers</a>
+                </td>
             </tr>
         
             <tr>
-                <td class="rank">10</td>
-                <td class="model-name"><strong>PaddleOCR-VL-1.5</strong></td>
-                <td><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></td>
-                <td class="downloads">0.2K</td>
-                <td class="likes">236</td>
-                <td class="author">PaddlePaddle</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">10</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">paraphrase-multilingual-MiniLM-L12-v2</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=feature-extraction" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">嵌入模型</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">17.1M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/sentence-transformers" target="_blank" style="text-decoration:none; color:#888;">sentence-transformers</a>
+                </td>
             </tr>
         
-                </tbody>
+            <tr>
+                <td style="padding:15px; border-bottom:1px solid #eee;">11</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/laion/clap-htsat-fused" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">clap-htsat-fused</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">15.8M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/laion" target="_blank" style="text-decoration:none; color:#888;">laion</a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="padding:15px; border-bottom:1px solid #eee;">12</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Qwen/Qwen2.5-3B-Instruct" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">Qwen2.5-3B-Instruct</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/models?pipeline_tag=text-generation" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">语言模型</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">15.6M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/Qwen" target="_blank" style="text-decoration:none; color:#888;">Qwen</a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="padding:15px; border-bottom:1px solid #eee;">13</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/colbert-ir/colbertv2.0" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">colbertv2.0</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">15.5M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/colbert-ir" target="_blank" style="text-decoration:none; color:#888;">colbert-ir</a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="padding:15px; border-bottom:1px solid #eee;">14</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/pyannote/wespeaker-voxceleb-resnet34-LM" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">wespeaker-voxceleb-resnet34-LM</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">14.6M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/pyannote" target="_blank" style="text-decoration:none; color:#888;">pyannote</a>
+                </td>
+            </tr>
+        
+            <tr>
+                <td style="padding:15px; border-bottom:1px solid #eee;">15</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/openai/clip-vit-base-patch32" target="_blank" style="text-decoration:none; color:#333; font-weight:bold;">clip-vit-base-patch32</a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="#" target="_blank" style="text-decoration:none;">
+                        <span style="background:#6366f1; color:white; padding:4px 10px; border-radius:10px; font-size:0.8rem;">其他</span>
+                    </a>
+                </td>
+                <td style="padding:15px; border-bottom:1px solid #eee; color:#6366f1; font-weight:600;">14.5M</td>
+                <td style="padding:15px; border-bottom:1px solid #eee;">
+                    <a href="https://huggingface.co/openai" target="_blank" style="text-decoration:none; color:#888;">openai</a>
+                </td>
+            </tr>
+        </tbody>
             </table>
         </div>
         
-        <div class="card">
-            <h2>🎨 技术词云</h2>
-            <img src="wordcloud_2026-01-31.png" alt="技术词云" class="zoomable" data-title="Hugging Face 技术词云 - 2026-01-31" style="width: 100%; border-radius: 8px; cursor: pointer;" onerror="this.parentElement.style.display='none'">
-            <p class="click-hint">👆 点击图片可放大查看</p>
+        <div class="card" style="text-align:center;">
+            <h2>📊 活跃组织排行</h2>
+            <img src="org_ranking_2026-01-31.png" style="max-width:100%; border-radius:10px;">
         </div>
-        
-        <div class="image-grid">
-            <div class="image-card">
-                <h3>📊 Top Models Leaderboard</h3>
-                <img src="leaderboard_2026-01-31.png" alt="排行榜" class="zoomable" data-title="Top Models Leaderboard - 2026-01-31" onerror="this.parentElement.style.display='none'">
-                <p class="click-hint">👆 点击图片可放大查看</p>
-            </div>
-            <div class="image-card">
-                <h3>📈 Tech Distribution</h3>
-                <img src="tech_distribution_2026-01-31.png" alt="技术分布" class="zoomable" data-title="Tech Distribution - 2026-01-31" onerror="this.parentElement.style.display='none'">
-                <p class="click-hint">👆 点击图片可放大查看</p>
-            </div>
+
+        <div class="card" style="text-align:center;">
+            <h2>📉 技术领域趋势 (30天)</h2>
+            <img src="trend_chart_2026-01-31.png" style="max-width:100%; border-radius:10px;">
         </div>
-        
-        <div class="image-grid">
-            <div class="image-card">
-                <h3>🔵 Model Popularity Bubble Chart</h3>
-                <img src="bubble_chart_2026-01-31.png" alt="气泡图" class="zoomable" data-title="Model Popularity Bubble Chart - 2026-01-31" onerror="this.parentElement.style.display='none'">
-                <p class="click-hint">👆 点击图片可放大查看</p>
-            </div>
-            <div class="image-card">
-                <h3>🏢 Active Organizations Ranking</h3>
-                <img src="org_ranking_2026-01-31.png" alt="组织排行" class="zoomable" data-title="Active Organizations Ranking - 2026-01-31" onerror="this.parentElement.style.display='none'">
-                <p class="click-hint">👆 点击图片可放大查看</p>
-            </div>
-        </div>
-        
-        <div class="trends">
-            <h2>📝 技术趋势观察</h2>
-            <ul>
-                <li>🚀 <strong>语言模型 (LLM)</strong>仍是最热门的技术方向，但多模态模型增长迅速</li>
-                <li>🎙️ <strong>语音技术</strong>(TTS/ASR) 近期热度上升，多个新模型上榜</li>
-                <li>🎨 <strong>图像生成</strong>领域持续活跃，Diffusion 模型占据主导地位</li>
-                <li>📄 <strong>OCR/文档理解</strong>成为新的增长点，DeepSeek-OCR 等模型表现亮眼</li>
-            </ul>
-        </div>
-        
-        <div class="footer">
-            <p>本报告由 Hugging Face 热门技术分析系统自动生成</p>
-            <p>每日早上 9:00 自动更新</p>
-        </div>
-    </div>
+    </body>
+    </html>
     
-    <!-- 图片放大模态框 -->
-    <div id="imageModal" class="modal" onclick="closeModal()">
-        <span class="modal-close" onclick="closeModal()">&times;</span>
-        <img class="modal-content" id="modalImage">
-        <div class="modal-title" id="modalTitle"></div>
-    </div>
-    
-    <script>
-        // 图片放大功能
-        document.querySelectorAll('.zoomable').forEach(function(img) {
-            img.addEventListener('click', function() {
-                var modal = document.getElementById('imageModal');
-                var modalImg = document.getElementById('modalImage');
-                var modalTitle = document.getElementById('modalTitle');
-                modal.style.display = 'block';
-                modalImg.src = this.src;
-                modalTitle.textContent = this.getAttribute('data-title') || this.alt;
-            });
-        });
-        
-        function closeModal() {
-            document.getElementById('imageModal').style.display = 'none';
-        }
-        
-        // ESC 键关闭模态框
-        document.addEventListener('keydown', function(e) {
-            if (e.key === 'Escape') {
-                closeModal();
-            }
-        });
-    </script>
-</body>
-</html>
