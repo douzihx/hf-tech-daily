@@ -43,16 +43,6 @@ def generate_html(data):
     tech_count = len(tech_dist)
     llm_ratio = tech_dist.get("语言模型", 0) / sum(tech_dist.values()) * 100 if tech_dist and sum(tech_dist.values()) > 0 else 0
     
-    # 收集最近 7 天的报告
-    archive_links = ""
-    files = sorted([f for f in os.listdir(ROOT_DIR) if f.startswith("hf_data_") and f.endswith(".json")])
-    for filename in files[-7:]:
-        date_str = filename.replace("hf_data_", "").replace(".json", "")
-        archive_links += f'<li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="?date={date_str}" style="color: #667eea; text-decoration: none;">{date_str}</a></li>\n'
-    
-    if not archive_links:
-        archive_links = '<li style="padding: 8px 0; color: #999;">暂无历史数据</li>' 
-    
     # 生成表格行
     table_rows = ""
     for i, model in enumerate(trending, 1):
@@ -368,16 +358,10 @@ def generate_html(data):
                 <p class="click-hint">👆 点击图片可放大查看</p>
             </div>
             <div class="image-card">
-                <h3>🏙 Active Organizations Ranking</h3>
+                <h3>🏢 Active Organizations Ranking</h3>
                 <img src="org_ranking_{date}.png" alt="组织排行" class="zoomable" data-title="Active Organizations Ranking - {date}" onerror="this.parentElement.style.display='none'">
                 <p class="click-hint">👆 点击图片可放大查看</p>
             </div>
-        </div>
-        
-        <div class="card">
-            <h2>📈 技术领域趋势分析</h2>
-            <img src="trend_chart_{date}.png" alt="技术趋势" class="zoomable" data-title="Tech Trends - {date}" style="width: 100%; border-radius: 8px; cursor: pointer;" onerror="this.parentElement.style.display='none'">
-            <p class="click-hint">👆 点击图片可放大查看</p>
         </div>
         
         <div class="trends">
@@ -385,19 +369,9 @@ def generate_html(data):
             <ul>
                 <li>🚀 <strong>语言模型 (LLM)</strong>仍是最热门的技术方向，但多模态模型增长迅速</li>
                 <li>🎙️ <strong>语音技术</strong>(TTS/ASR) 近期热度上升，多个新模型上榜</li>
-                <li>🎈 <strong>图像生成</strong>领域持续活跃，Diffusion 模型占据主导地位</li>
+                <li>🎨 <strong>图像生成</strong>领域持续活跃，Diffusion 模型占据主导地位</li>
                 <li>📄 <strong>OCR/文档理解</strong>成为新的增长点，DeepSeek-OCR 等模型表现亮眼</li>
             </ul>
-        </div>
-        
-        <div class="card">
-            <h2>📂 历史数据归档</h2>
-            <p>本系统每日自动生成报告并保存数据。下方是最近 7 天的报告归档。</p>
-            <div style="margin-top: 15px;">
-                <ul style="list-style: none; padding: 0;">
-                    {archive_links}
-                </ul>
-            </div>
         </div>
         
         <div class="footer">
