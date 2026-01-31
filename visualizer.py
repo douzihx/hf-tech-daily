@@ -7,7 +7,7 @@ from datetime import datetime
 
 def generate_charts(data_file):
     with open(data_file, 'r') as f:
-        data = json.json.load(f)
+        data = json.load(f)
     
     date_str = data['date']
     stats = data['statistics']
