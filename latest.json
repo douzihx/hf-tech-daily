@@ -1,13 +1,13 @@
 {
   "date": "2026-01-31",
-  "timestamp": "2026-01-31T03:18:32.895674",
+  "timestamp": "2026-01-31T04:20:51.935813",
   "trending_models": [
     {
       "id": "moonshotai/Kimi-K2.5",
       "author": "moonshotai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 25438,
-      "likes": 1202,
+      "likes": 1204,
       "num_parameters": null,
       "last_modified": "2026-01-31T00:52:48.000Z",
       "source": "trending",
@@ -19,7 +19,7 @@
       "author": "nvidia",
       "pipeline_tag": "audio-to-audio",
       "downloads": 54463,
-      "likes": 1512,
+      "likes": 1514,
       "num_parameters": null,
       "last_modified": "2026-01-28T23:12:52.000Z",
       "source": "trending",
@@ -31,7 +31,7 @@
       "author": "Tongyi-MAI",
       "pipeline_tag": "text-to-image",
       "downloads": 1918,
-      "likes": 708,
+      "likes": 710,
       "num_parameters": null,
       "last_modified": "2026-01-28T14:26:13.000Z",
       "source": "trending",
@@ -39,23 +39,11 @@
       "size_category": "未知"
     },
     {
-      "id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
-      "author": "Qwen",
-      "pipeline_tag": "text-to-speech",
-      "downloads": 180679,
-      "likes": 803,
-      "num_parameters": 1916676352,
-      "last_modified": "2026-01-29T08:00:54.000Z",
-      "source": "trending",
-      "tech_category": "语音合成",
-      "size_category": "小型 (1B-7B)"
-    },
-    {
       "id": "deepseek-ai/DeepSeek-OCR-2",
       "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 45346,
-      "likes": 566,
+      "likes": 569,
       "num_parameters": 3389119360,
       "last_modified": "2026-01-30T00:17:54.000Z",
       "source": "trending",
@@ -63,11 +51,23 @@
       "size_category": "小型 (1B-7B)"
     },
     {
+      "id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
+      "author": "Qwen",
+      "pipeline_tag": "text-to-speech",
+      "downloads": 180679,
+      "likes": 805,
+      "num_parameters": 1916676352,
+      "last_modified": "2026-01-29T08:00:54.000Z",
+      "source": "trending",
+      "tech_category": "语音合成",
+      "size_category": "小型 (1B-7B)"
+    },
+    {
       "id": "microsoft/VibeVoice-ASR",
       "author": "microsoft",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 111610,
-      "likes": 745,
+      "likes": 748,
       "num_parameters": 8674021857,
       "last_modified": "2026-01-27T13:12:22.000Z",
       "source": "trending",
@@ -79,7 +79,7 @@
       "author": "tencent",
       "pipeline_tag": "image-to-image",
       "downloads": 37,
-      "likes": 396,
+      "likes": 397,
       "num_parameters": 83009199459,
       "last_modified": "2026-01-28T08:15:07.000Z",
       "source": "trending",
@@ -91,7 +91,7 @@
       "author": "zai-org",
       "pipeline_tag": "text-generation",
       "downloads": 645542,
-      "likes": 1340,
+      "likes": 1341,
       "num_parameters": 31221488576,
       "last_modified": "2026-01-29T08:06:19.000Z",
       "source": "trending",
@@ -103,7 +103,7 @@
       "author": "lightonai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 27393,
-      "likes": 444,
+      "likes": 446,
       "num_parameters": 1005647872,
       "last_modified": "2026-01-30T12:27:56.000Z",
       "source": "trending",
@@ -129,7 +129,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 143000804,
-      "likes": 4399,
+      "likes": 4400,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -349,7 +349,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 21709737,
-      "likes": 1232,
+      "likes": 1233,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -763,7 +763,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 10152306,
-      "likes": 2696,
+      "likes": 2698,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1005,7 +1005,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 8418889,
-      "likes": 1041,
+      "likes": 1042,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1063,7 +1063,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 8308986,
-      "likes": 1023,
+      "likes": 1024,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1342,7 +1342,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 6281510,
-      "likes": 4271,
+      "likes": 4272,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -2548,7 +2548,7 @@
       "author": null,
       "pipeline_tag": "translation",
       "downloads": 3357505,
-      "likes": 523,
+      "likes": 524,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -2887,7 +2887,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 3066292,
-      "likes": 683,
+      "likes": 684,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3164,7 +3164,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 2822132,
-      "likes": 4409,
+      "likes": 4410,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3948,7 +3948,7 @@
       "author": null,
       "pipeline_tag": "image-to-video",
       "downloads": 2470421,
-      "likes": 1383,
+      "likes": 1384,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4580,7 +4580,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 2822132,
-      "likes": 4409,
+      "likes": 4410,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4607,7 +4607,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 143000804,
-      "likes": 4399,
+      "likes": 4400,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4693,7 +4693,7 @@
       "author": null,
       "pipeline_tag": "text-generation",
       "downloads": 6281510,
-      "likes": 4271,
+      "likes": 4272,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5403,7 +5403,7 @@
       "author": null,
       "pipeline_tag": "sentence-similarity",
       "downloads": 10152306,
-      "likes": 2696,
+      "likes": 2698,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -7212,7 +7212,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 8418889,
-        "likes": 1041,
+        "likes": 1042,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -7242,7 +7242,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 8308986,
-        "likes": 1023,
+        "likes": 1024,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -7330,7 +7330,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 6281510,
-        "likes": 4271,
+        "likes": 4272,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -7530,7 +7530,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 3066292,
-        "likes": 683,
+        "likes": 684,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -7586,7 +7586,7 @@
         "author": null,
         "pipeline_tag": "text-generation",
         "downloads": 2822132,
-        "likes": 4409,
+        "likes": 4410,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8071,7 +8071,7 @@
         "author": null,
         "pipeline_tag": "image-text-to-text",
         "downloads": 1429160,
-        "likes": 1259,
+        "likes": 1260,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -9633,7 +9633,7 @@
         "author": null,
         "pipeline_tag": "text-to-speech",
         "downloads": 180679,
-        "likes": 803,
+        "likes": 805,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -9872,7 +9872,7 @@
         "author": null,
         "pipeline_tag": "text-to-speech",
         "downloads": 76204,
-        "likes": 209,
+        "likes": 211,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -11049,7 +11049,7 @@
         "author": null,
         "pipeline_tag": "image-to-text",
         "downloads": 1074937,
-        "likes": 403,
+        "likes": 404,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -13045,8 +13045,8 @@
       "moonshotai": 1,
       "nvidia": 1,
       "Tongyi-MAI": 1,
-      "Qwen": 1,
       "deepseek-ai": 1,
+      "Qwen": 1,
       "microsoft": 1,
       "tencent": 1,
       "zai-org": 1,
