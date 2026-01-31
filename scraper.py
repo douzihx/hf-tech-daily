@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Hugging Face 热门 AI 技术爬取脚本 (GitHub Actions 优化版)
+Hugging Face 热门 AI 技术爬取脚本 (GitHub Actions 版本)
 """
 
 import json
@@ -12,7 +12,7 @@ from typing import Dict, List, Optional
 
 # 配置 - 使用当前工作目录
 ROOT_DIR = os.getcwd()
-DATA_DIR = ROOT_DIR
+DATA_DIR = ROOT_DIR  # 直接保存到根目录
 
 # 技术领域分类映射
 TECH_CATEGORIES = {
@@ -29,26 +29,35 @@ TECH_CATEGORIES = {
 }
 
 def get_size_category(num_params: Optional[int]) -> str:
-    if num_params is None: return "未知"
-    if num_params < 1e9: return "微型 (<1B)"
-    elif num_params < 7e9: return "小型 (1B-7B)"
-    elif num_params < 32e9: return "中型 (7B-32B)"
-    elif num_params < 128e9: return "大型 (32B-128B)"
-    else: return "超大型 (>128B)"
+    if num_params is None:
+        return "未知"
+    if num_params < 1e9:
+        return "微型 (<1B)"
+    elif num_params < 7e9:
+        return "小型 (1B-7B)"
+    elif num_params < 32e9:
+        return "中型 (7B-32B)"
+    elif num_params < 128e9:
+        return "大型 (32B-128B)"
+    else:
+        return "超大型 (>128B)"
 
 def get_tech_category(pipeline_tag: Optional[str]) -> str:
-    if pipeline_tag is None: return "其他"
+    if pipeline_tag is None:
+        return "其他"
     for category, tags in TECH_CATEGORIES.items():
-        if pipeline_tag in tags: return category
+        if pipeline_tag in tags:
+            return category
     return "其他"
 
-def fetch_trending_models(limit: int = 500) -> List[Dict]:
+def fetch_trending_models(limit: int = 100) -> List[Dict]:
     print(f"正在获取热门模型 (Top {limit})...")
     url = "https://huggingface.co/api/trending"
     try:
-        response = requests.get(url, timeout=30 )
+        response = requests.get(url, timeout=30)
         response.raise_for_status()
         data = response.json()
+        
         models = []
         for item in data.get("recentlyTrending", [])[:limit]:
             repo_data = item.get("repoData", {})
@@ -63,16 +72,18 @@ def fetch_trending_models(limit: int = 500) -> List[Dict]:
                     "last_modified": repo_data.get("lastModified"),
                     "source": "trending"
                 })
+        print(f"  获取到 {len(models)} 个热门模型")
         return models
     except Exception as e:
-        print(f"获取热门模型失败: {e}")
+        print(f"  获取热门模型失败: {e}")
         return []
 
-def fetch_models_by_sort(sort: str, limit: int = 500) -> List[Dict]:
+def fetch_models_by_sort(sort: str, limit: int = 100, pipeline_tag: Optional[str] = None) -> List[Dict]:
     print(f"正在获取模型 (sort={sort}, limit={limit})...")
     api = HfApi()
     try:
-        models_iter = api.list_models(sort=sort, limit=limit)
+        models_iter = api.list_models(sort=sort, limit=limit, pipeline_tag=pipeline_tag)
+        
         models = []
         for model in models_iter:
             models.append({
@@ -83,54 +94,115 @@ def fetch_models_by_sort(sort: str, limit: int = 500) -> List[Dict]:
                 "likes": getattr(model, 'likes', 0),
                 "num_parameters": getattr(model, 'safetensors', {}).get('total') if hasattr(model, 'safetensors') and model.safetensors else None,
                 "last_modified": model.last_modified.isoformat() if model.last_modified else None,
-                "source": sort
+                "tags": list(model.tags) if model.tags else [],
+                "source": f"{sort}"
             })
+        print(f"  获取到 {len(models)} 个模型")
         return models
     except Exception as e:
-        print(f"获取模型失败: {e}")
+        print(f"  获取模型失败: {e}")
         return []
+
+def fetch_models_by_category(limit_per_category: int = 20) -> Dict[str, List[Dict]]:
+    print("正在按技术领域获取模型...")
+    category_models = {}
+    
+    for category, tags in TECH_CATEGORIES.items():
+        if not tags:
+            continue
+        category_models[category] = []
+        for tag in tags[:2]:
+            models = fetch_models_by_sort("downloads", limit=limit_per_category, pipeline_tag=tag)
+            category_models[category].extend(models)
+        seen_ids = set()
+        unique_models = []
+        for m in category_models[category]:
+            if m["id"] not in seen_ids:
+                seen_ids.add(m["id"])
+                unique_models.append(m)
+        category_models[category] = unique_models[:limit_per_category]
+    
+    return category_models
+
+def enrich_model_data(models: List[Dict]) -> List[Dict]:
+    for model in models:
+        model["tech_category"] = get_tech_category(model.get("pipeline_tag"))
+        model["size_category"] = get_size_category(model.get("num_parameters"))
+    return models
 
 def collect_all_data() -> Dict:
     today = datetime.now().strftime("%Y-%m-%d")
-    data = {"date": today, "timestamp": datetime.now().isoformat(), "statistics": {}}
+    print(f"\n{'='*60}")
+    print(f"开始数据采集 - {today}")
+    print(f"{'='*60}\n")
     
-    # 扩大采样量到 500
-    trending = fetch_trending_models(500)
-    downloaded = fetch_models_by_sort("downloads", 500)
-    liked = fetch_models_by_sort("likes", 500)
+    data = {
+        "date": today,
+        "timestamp": datetime.now().isoformat(),
+        "trending_models": [],
+        "most_downloaded": [],
+        "most_liked": [],
+        "by_category": {},
+        "statistics": {}
+    }
     
-    # 去重并整合
-    all_models_dict = {m["id"]: m for m in (trending + downloaded + liked)}
-    all_models = list(all_models_dict.values())
+    data["trending_models"] = enrich_model_data(fetch_trending_models(100))
+    data["most_downloaded"] = enrich_model_data(fetch_models_by_sort("downloads", 100))
+    data["most_liked"] = enrich_model_data(fetch_models_by_sort("likes", 100))
     
-    for m in all_models:
-        m["tech_category"] = get_tech_category(m.get("pipeline_tag"))
-        m["size_category"] = get_size_category(m.get("num_parameters"))
-
-    # 统计组织活跃度 (修复逻辑)
+    category_models = fetch_models_by_category(20)
+    for category, models in category_models.items():
+        data["by_category"][category] = enrich_model_data(models)
+    
+    all_models = data["trending_models"] + data["most_downloaded"] + data["most_liked"]
+    
+    tech_dist = {}
+    for model in all_models:
+        cat = model.get("tech_category", "其他")
+        tech_dist[cat] = tech_dist.get(cat, 0) + 1
+    data["statistics"]["tech_distribution"] = tech_dist
+    
     org_dist = {}
-    for m in all_models:
-        author = m.get("author")
-        if not author and m.get("id") and "/" in m["id"]:
-            author = m["id"].split("/")[0]
+    for model in all_models:
+        author = model.get("author")
         if author:
             org_dist[author] = org_dist.get(author, 0) + 1
+    data["statistics"]["top_organizations"] = dict(
+        sorted(org_dist.items(), key=lambda x: x[1], reverse=True)[:20]
+    )
     
-    data["statistics"]["top_organizations"] = dict(sorted(org_dist.items(), key=lambda x: x[1], reverse=True)[:20])
-    data["statistics"]["tech_distribution"] = {}
-    for m in all_models:
-        cat = m["tech_category"]
-        data["statistics"]["tech_distribution"][cat] = data["statistics"]["tech_distribution"].get(cat, 0) + 1
-        
-    data["trending_models"] = trending[:20]
+    size_dist = {}
+    for model in all_models:
+        size = model.get("size_category", "未知")
+        size_dist[size] = size_dist.get(size, 0) + 1
+    data["statistics"]["size_distribution"] = size_dist
+    
+    print(f"\n数据采集完成!")
     return data
 
-def save_data(data: Dict):
-    filepath = os.path.join(ROOT_DIR, f"hf_data_{data['date']}.json")
+def save_data(data: Dict) -> str:
+    # 保存到根目录
+    filename = f"hf_data_{data['date']}.json"
+    filepath = os.path.join(ROOT_DIR, filename)
+    
     with open(filepath, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
-    with open(os.path.join(ROOT_DIR, "latest.json"), 'w', encoding='utf-8') as f:
+    
+    # 同时保存为 latest.json
+    latest_path = os.path.join(ROOT_DIR, "latest.json")
+    with open(latest_path, 'w', encoding='utf-8') as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
+    
+    print(f"数据已保存到: {filepath}")
+    print(f"latest.json 已保存到: {latest_path}")
+    return filepath
+
+def main():
+    print(f"当前工作目录: {ROOT_DIR}")
+    print(f"目录内容: {os.listdir(ROOT_DIR)}")
+    data = collect_all_data()
+    save_data(data)
+    return data
 
 if __name__ == "__main__":
-    save_data(collect_all_data())
+    main()
