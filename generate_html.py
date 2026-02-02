@@ -535,8 +535,8 @@ def generate_html(data):
             </div>
         </div>
         
-        <!-- 原有词云图片 (保留兼容) -->
-        <div class="card" style="display:none;">
+        <!-- 原有词云图片 -->
+        <div class="card">
             <h2>🎨 技术词云 (图片版)</h2>
             <img src="wordcloud_{date}.png" alt="技术词云" class="zoomable" data-title="Hugging Face 技术词云 - {date}" style="width: 100%; border-radius: 8px; cursor: pointer;" onerror="this.parentElement.style.display='none'">
             <div class="tag-cloud">
