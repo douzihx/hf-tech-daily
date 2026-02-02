@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
 生成 HTML 报告页面 (100% 样式保留版)
+更新: 增加精美交互式技术关键字词云，支持点击跳转到 Hugging Face 搜索
 修复：1) 植入超链接 2) 植入交互式标签云 3) 保持原始精美样式与所有图表
 """
 
@@ -36,10 +37,45 @@ def load_data():
             return json.load(f)
     return None
 
+# ========== 新增: 生成精美交互式词云 HTML ==========
+def generate_keyword_cloud_html(tech_keywords: dict) -> str:
+    """根据技术关键字热度生成精美交互式词云 HTML"""
+    if not tech_keywords:
+        return '<p style="color:#999; text-align:center;">暂无技术关键字数据</p>'
+    
+    # 按热度排序
+    sorted_keywords = sorted(tech_keywords.items(), key=lambda x: x[1], reverse=True)
+    max_count = max(tech_keywords.values()) if tech_keywords else 1
+    
+    # 分级阈值
+    hot_threshold = max_count * 0.7      # 超热门
+    warm_threshold = max_count * 0.4     # 热门
+    medium_threshold = max_count * 0.2   # 上升中
+    
+    cloud_items = []
+    for keyword, count in sorted_keywords[:30]:  # 最多显示30个
+        # 生成搜索链接
+        url = f"https://huggingface.co/models?search={keyword}"
+        
+        # 根据热度分配样式类
+        if count >= hot_threshold:
+            css_class = "kw-hot"
+        elif count >= warm_threshold:
+            css_class = "kw-warm"
+        elif count >= medium_threshold:
+            css_class = "kw-medium"
+        else:
+            css_class = "kw-normal"
+        
+        cloud_items.append(f'<a href="{url}" target="_blank" class="{css_class}">{keyword}</a>')
+    
+    return '\n'.join(cloud_items)
+
 def generate_html(data):
     date = data.get("date", datetime.now().strftime("%Y-%m-%d"))
     trending = data.get("trending_models", [])[:10]
     tech_dist = data.get("statistics", {}).get("tech_distribution", {})
+    tech_keywords = data.get("statistics", {}).get("tech_keywords", {})  # 新增
     
     total_models = len(data.get("trending_models", [])) + len(data.get("most_downloaded", [])) + len(data.get("most_liked", []))
     tech_count = len(tech_dist)
@@ -54,7 +90,7 @@ def generate_html(data):
     if not archive_links:
         archive_links = '<li style="padding: 8px 0; color: #999;">暂无历史数据</li>' 
     
-    # 生成交互式标签云 (解决词云不可点击的问题)
+    # 生成交互式标签云 (技术领域分类)
     tag_cloud_html = ""
     if tech_dist:
         max_count = max(tech_dist.values())
@@ -63,6 +99,9 @@ def generate_html(data):
             url = f"https://huggingface.co/models?pipeline_tag={tag}" if tag else "#"
             font_size = 0.8 + (count / max_count) * 1.0
             tag_cloud_html += f'<a href="{url}" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:{font_size:.2f}rem; color:#6366f1; font-weight:bold;">{tech}</a> '
+
+    # ========== 新增: 生成精美技术关键字词云 ==========
+    keyword_cloud_html = generate_keyword_cloud_html(tech_keywords)
 
     table_rows = ""
     for i, model in enumerate(trending, 1):
@@ -303,10 +342,129 @@ def generate_html(data):
             border-radius: 15px;
             margin-top: 15px;
         }}
+        
+        /* ========== 新增: 精美技术关键字词云样式 ========== */
+        .keyword-cloud-container {{
+            position: relative;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.06) 0%, transparent 60%),
+                linear-gradient(180deg, #fafbff 0%, #fff 100%);
+            border-radius: 20px;
+            padding: 35px 25px;
+            min-height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px 12px;
+            border: 1px solid rgba(102, 126, 234, 0.15);
+            box-shadow: inset 0 2px 15px rgba(102, 126, 234, 0.05);
+        }}
+        .keyword-cloud-container a {{
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 6px 14px;
+            border-radius: 10px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }}
+        .keyword-cloud-container a:hover {{
+            transform: scale(1.12) translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }}
+        /* 超热门 */
+        .kw-hot {{
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            font-size: 1.6rem;
+            padding: 10px 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }}
+        .kw-hot:hover {{
+            box-shadow: 0 10px 35px rgba(102, 126, 234, 0.5) !important;
+        }}
+        /* 热门 */
+        .kw-warm {{
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white !important;
+            font-size: 1.35rem;
+            padding: 8px 15px;
+            box-shadow: 0 3px 12px rgba(245, 87, 108, 0.3);
+        }}
+        /* 上升中 */
+        .kw-medium {{
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white !important;
+            font-size: 1.15rem;
+            box-shadow: 0 3px 10px rgba(79, 172, 254, 0.3);
+        }}
+        /* 一般 */
+        .kw-normal {{
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea !important;
+            font-size: 1rem;
+        }}
+        .kw-normal:hover {{
+            background: rgba(102, 126, 234, 0.2);
+        }}
+        
+        .keyword-legend {{
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }}
+        .keyword-legend-item {{
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #666;
+        }}
+        .keyword-legend-dot {{
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+        }}
+        .keyword-legend-dot.hot {{ background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }}
+        .keyword-legend-dot.warm {{ background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }}
+        .keyword-legend-dot.medium {{ background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }}
+        .keyword-legend-dot.normal {{ background: rgba(102, 126, 234, 0.3); }}
+        
+        .keyword-hint {{
+            text-align: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(102, 126, 234, 0.2);
+        }}
+        .keyword-hint .badge {{
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }}
+        .keyword-hint .text {{
+            color: #888;
+            font-size: 0.85rem;
+        }}
+        
         @media (max-width: 768px) {{
             .header h1 {{ font-size: 1.8rem; }}
             .image-grid {{ grid-template-columns: 1fr; }}
             th, td {{ padding: 10px 5px; font-size: 0.9rem; }}
+            .kw-hot {{ font-size: 1.3rem; padding: 8px 14px; }}
+            .kw-warm {{ font-size: 1.15rem; }}
+            .kw-medium {{ font-size: 1rem; }}
+            .kw-normal {{ font-size: 0.9rem; }}
         }}
     </style>
 </head>
@@ -358,8 +516,28 @@ def generate_html(data):
             </table>
         </div>
         
+        <!-- ========== 新增: 精美技术关键字词云 ========== -->
         <div class="card">
-            <h2>🎨 技术词云</h2>
+            <h2>🎨 技术热点词云</h2>
+            <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">基于热门模型标签实时提取的技术关键字，字体越大表示热度越高</p>
+            <div class="keyword-cloud-container">
+                {keyword_cloud_html}
+            </div>
+            <div class="keyword-legend">
+                <div class="keyword-legend-item"><span class="keyword-legend-dot hot"></span> 超热门</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot warm"></span> 热门</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot medium"></span> 上升中</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot normal"></span> 稳定</div>
+            </div>
+            <div class="keyword-hint">
+                <span class="badge">✨ 可点击</span>
+                <span class="text">点击任意标签，即可跳转至 Hugging Face 查看相关模型</span>
+            </div>
+        </div>
+        
+        <!-- 原有词云图片 (保留兼容) -->
+        <div class="card" style="display:none;">
+            <h2>🎨 技术词云 (图片版)</h2>
             <img src="wordcloud_{date}.png" alt="技术词云" class="zoomable" data-title="Hugging Face 技术词云 - {date}" style="width: 100%; border-radius: 8px; cursor: pointer;" onerror="this.parentElement.style.display='none'">
             <div class="tag-cloud">
                 <p style="color:#666; font-size:0.9rem; margin-bottom:10px;">👇 点击下方标签可直接跳转至 HF 对应领域</p>
