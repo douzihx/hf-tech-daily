@@ -202,10 +202,129 @@
             border-radius: 15px;
             margin-top: 15px;
         }
+        
+        /* ========== 新增: 精美技术关键字词云样式 ========== */
+        .keyword-cloud-container {
+            position: relative;
+            background: 
+                radial-gradient(ellipse at 20% 30%, rgba(99, 102, 241, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 80% 70%, rgba(236, 72, 153, 0.08) 0%, transparent 50%),
+                radial-gradient(ellipse at 50% 50%, rgba(20, 184, 166, 0.06) 0%, transparent 60%),
+                linear-gradient(180deg, #fafbff 0%, #fff 100%);
+            border-radius: 20px;
+            padding: 35px 25px;
+            min-height: 200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 8px 12px;
+            border: 1px solid rgba(102, 126, 234, 0.15);
+            box-shadow: inset 0 2px 15px rgba(102, 126, 234, 0.05);
+        }
+        .keyword-cloud-container a {
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            padding: 6px 14px;
+            border-radius: 10px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+        .keyword-cloud-container a:hover {
+            transform: scale(1.12) translateY(-3px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        /* 超热门 */
+        .kw-hot {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            font-size: 1.6rem;
+            padding: 10px 18px;
+            border-radius: 14px;
+            box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        }
+        .kw-hot:hover {
+            box-shadow: 0 10px 35px rgba(102, 126, 234, 0.5) !important;
+        }
+        /* 热门 */
+        .kw-warm {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white !important;
+            font-size: 1.35rem;
+            padding: 8px 15px;
+            box-shadow: 0 3px 12px rgba(245, 87, 108, 0.3);
+        }
+        /* 上升中 */
+        .kw-medium {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white !important;
+            font-size: 1.15rem;
+            box-shadow: 0 3px 10px rgba(79, 172, 254, 0.3);
+        }
+        /* 一般 */
+        .kw-normal {
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea !important;
+            font-size: 1rem;
+        }
+        .kw-normal:hover {
+            background: rgba(102, 126, 234, 0.2);
+        }
+        
+        .keyword-legend {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 15px;
+            flex-wrap: wrap;
+        }
+        .keyword-legend-item {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.8rem;
+            color: #666;
+        }
+        .keyword-legend-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 4px;
+        }
+        .keyword-legend-dot.hot { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .keyword-legend-dot.warm { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .keyword-legend-dot.medium { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .keyword-legend-dot.normal { background: rgba(102, 126, 234, 0.3); }
+        
+        .keyword-hint {
+            text-align: center;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px dashed rgba(102, 126, 234, 0.2);
+        }
+        .keyword-hint .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+        .keyword-hint .text {
+            color: #888;
+            font-size: 0.85rem;
+        }
+        
         @media (max-width: 768px) {
             .header h1 { font-size: 1.8rem; }
             .image-grid { grid-template-columns: 1fr; }
             th, td { padding: 10px 5px; font-size: 0.9rem; }
+            .kw-hot { font-size: 1.3rem; padding: 8px 14px; }
+            .kw-warm { font-size: 1.15rem; }
+            .kw-medium { font-size: 1rem; }
+            .kw-normal { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -225,15 +344,15 @@
                 <div class="label">热门模型</div>
             </div>
             <div class="stat-card">
-                <div class="number">10</div>
+                <div class="number">9</div>
                 <div class="label">技术领域</div>
             </div>
             <div class="stat-card">
-                <div class="number">1010+</div>
+                <div class="number">210+</div>
                 <div class="label">分析模型数</div>
             </div>
             <div class="stat-card">
-                <div class="number">26%</div>
+                <div class="number">28%</div>
                 <div class="label">语言模型占比</div>
             </div>
         </div>
@@ -258,7 +377,7 @@
                 <td class="model-name"><a href="https://huggingface.co/moonshotai/Kimi-K2.5" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">Kimi-K2.5</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></a></td>
                 <td class="downloads">53.5K</td>
-                <td class="likes">1385</td>
+                <td class="likes">1404</td>
                 <td class="author"><a href="https://huggingface.co/moonshotai" target="_blank" style="text-decoration:none; color:#888;">moonshotai</a></td>
             </tr>
         
@@ -267,7 +386,7 @@
                 <td class="model-name"><a href="https://huggingface.co/Tongyi-MAI/Z-Image" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">Z-Image</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=text-to-image" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #3b82f6">图像生成</span></a></td>
                 <td class="downloads">4.8K</td>
-                <td class="likes">771</td>
+                <td class="likes">775</td>
                 <td class="author"><a href="https://huggingface.co/Tongyi-MAI" target="_blank" style="text-decoration:none; color:#888;">Tongyi-MAI</a></td>
             </tr>
         
@@ -276,7 +395,7 @@
                 <td class="model-name"><a href="https://huggingface.co/tencent/HunyuanImage-3.0-Instruct" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">HunyuanImage-3.0-Instruct</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=text-to-image" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #3b82f6">图像生成</span></a></td>
                 <td class="downloads">0.1K</td>
-                <td class="likes">759</td>
+                <td class="likes">764</td>
                 <td class="author"><a href="https://huggingface.co/tencent" target="_blank" style="text-decoration:none; color:#888;">tencent</a></td>
             </tr>
         
@@ -285,7 +404,7 @@
                 <td class="model-name"><a href="https://huggingface.co/deepseek-ai/DeepSeek-OCR-2" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">DeepSeek-OCR-2</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></a></td>
                 <td class="downloads">102.9K</td>
-                <td class="likes">609</td>
+                <td class="likes">616</td>
                 <td class="author"><a href="https://huggingface.co/deepseek-ai" target="_blank" style="text-decoration:none; color:#888;">deepseek-ai</a></td>
             </tr>
         
@@ -294,7 +413,7 @@
                 <td class="model-name"><a href="https://huggingface.co/nvidia/personaplex-7b-v1" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">personaplex-7b-v1</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=automatic-speech-recognition" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #a855f7">语音识别</span></a></td>
                 <td class="downloads">83.8K</td>
-                <td class="likes">1574</td>
+                <td class="likes">1575</td>
                 <td class="author"><a href="https://huggingface.co/nvidia" target="_blank" style="text-decoration:none; color:#888;">nvidia</a></td>
             </tr>
         
@@ -303,7 +422,7 @@
                 <td class="model-name"><a href="https://huggingface.co/Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">Qwen3-TTS-12Hz-1.7B-CustomVoice</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=text-to-speech" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #f59e0b">语音合成</span></a></td>
                 <td class="downloads">227.8K</td>
-                <td class="likes">837</td>
+                <td class="likes">838</td>
                 <td class="author"><a href="https://huggingface.co/Qwen" target="_blank" style="text-decoration:none; color:#888;">Qwen</a></td>
             </tr>
         
@@ -312,7 +431,7 @@
                 <td class="model-name"><a href="https://huggingface.co/Qwen/Qwen3-ASR-1.7B" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">Qwen3-ASR-1.7B</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=automatic-speech-recognition" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #a855f7">语音识别</span></a></td>
                 <td class="downloads">25.7K</td>
-                <td class="likes">317</td>
+                <td class="likes">323</td>
                 <td class="author"><a href="https://huggingface.co/Qwen" target="_blank" style="text-decoration:none; color:#888;">Qwen</a></td>
             </tr>
         
@@ -321,7 +440,7 @@
                 <td class="model-name"><a href="https://huggingface.co/PaddlePaddle/PaddleOCR-VL-1.5" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">PaddleOCR-VL-1.5</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #14b8a6">多模态模型</span></a></td>
                 <td class="downloads">2.0K</td>
-                <td class="likes">291</td>
+                <td class="likes">295</td>
                 <td class="author"><a href="https://huggingface.co/PaddlePaddle" target="_blank" style="text-decoration:none; color:#888;">PaddlePaddle</a></td>
             </tr>
         
@@ -330,7 +449,7 @@
                 <td class="model-name"><a href="https://huggingface.co/microsoft/VibeVoice-ASR" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">VibeVoice-ASR</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=automatic-speech-recognition" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #a855f7">语音识别</span></a></td>
                 <td class="downloads">146.2K</td>
-                <td class="likes">766</td>
+                <td class="likes">768</td>
                 <td class="author"><a href="https://huggingface.co/microsoft" target="_blank" style="text-decoration:none; color:#888;">microsoft</a></td>
             </tr>
         
@@ -339,7 +458,7 @@
                 <td class="model-name"><a href="https://huggingface.co/zai-org/GLM-4.7-Flash" target="_blank" style="text-decoration:none; color:#333; font-weight:600;">GLM-4.7-Flash</a></td>
                 <td><a href="https://huggingface.co/models?pipeline_tag=text-generation" target="_blank" style="text-decoration:none;"><span class="category-tag" style="background-color: #6366f1">语言模型</span></a></td>
                 <td class="downloads">826.8K</td>
-                <td class="likes">1398</td>
+                <td class="likes">1400</td>
                 <td class="author"><a href="https://huggingface.co/zai-org" target="_blank" style="text-decoration:none; color:#888;">zai-org</a></td>
             </tr>
         
@@ -347,12 +466,61 @@
             </table>
         </div>
         
+        <!-- ========== 新增: 精美技术关键字词云 ========== -->
         <div class="card">
-            <h2>🎨 技术词云</h2>
+            <h2>🎨 技术热点词云</h2>
+            <p style="color:#666; font-size:0.9rem; margin-bottom:15px;">基于热门模型标签实时提取的技术关键字，字体越大表示热度越高</p>
+            <div class="keyword-cloud-container">
+                <a href="https://huggingface.co/models?search=Transformer" target="_blank" class="kw-hot">Transformer</a>
+<a href="https://huggingface.co/models?search=BERT" target="_blank" class="kw-medium">BERT</a>
+<a href="https://huggingface.co/models?search=Diffusion" target="_blank" class="kw-normal">Diffusion</a>
+<a href="https://huggingface.co/models?search=Qwen" target="_blank" class="kw-normal">Qwen</a>
+<a href="https://huggingface.co/models?search=Embedding" target="_blank" class="kw-normal">Embedding</a>
+<a href="https://huggingface.co/models?search=Sentence" target="_blank" class="kw-normal">Sentence</a>
+<a href="https://huggingface.co/models?search=Llama" target="_blank" class="kw-normal">Llama</a>
+<a href="https://huggingface.co/models?search=LLaMA" target="_blank" class="kw-normal">LLaMA</a>
+<a href="https://huggingface.co/models?search=Meta" target="_blank" class="kw-normal">Meta</a>
+<a href="https://huggingface.co/models?search=Stable" target="_blank" class="kw-normal">Stable</a>
+<a href="https://huggingface.co/models?search=ViT" target="_blank" class="kw-normal">ViT</a>
+<a href="https://huggingface.co/models?search=RoBERTa" target="_blank" class="kw-normal">RoBERTa</a>
+<a href="https://huggingface.co/models?search=Yi" target="_blank" class="kw-normal">Yi</a>
+<a href="https://huggingface.co/models?search=DeepSeek" target="_blank" class="kw-normal">DeepSeek</a>
+<a href="https://huggingface.co/models?search=Mistral" target="_blank" class="kw-normal">Mistral</a>
+<a href="https://huggingface.co/models?search=GPT" target="_blank" class="kw-normal">GPT</a>
+<a href="https://huggingface.co/models?search=TTS" target="_blank" class="kw-normal">TTS</a>
+<a href="https://huggingface.co/models?search=T5" target="_blank" class="kw-normal">T5</a>
+<a href="https://huggingface.co/models?search=BGE" target="_blank" class="kw-normal">BGE</a>
+<a href="https://huggingface.co/models?search=CLIP" target="_blank" class="kw-normal">CLIP</a>
+<a href="https://huggingface.co/models?search=Whisper" target="_blank" class="kw-normal">Whisper</a>
+<a href="https://huggingface.co/models?search=Wav2Vec" target="_blank" class="kw-normal">Wav2Vec</a>
+<a href="https://huggingface.co/models?search=Phi" target="_blank" class="kw-normal">Phi</a>
+<a href="https://huggingface.co/models?search=FLUX" target="_blank" class="kw-normal">FLUX</a>
+<a href="https://huggingface.co/models?search=ControlNet" target="_blank" class="kw-normal">ControlNet</a>
+<a href="https://huggingface.co/models?search=SDXL" target="_blank" class="kw-normal">SDXL</a>
+<a href="https://huggingface.co/models?search=Google" target="_blank" class="kw-normal">Google</a>
+<a href="https://huggingface.co/models?search=MobileNet" target="_blank" class="kw-normal">MobileNet</a>
+<a href="https://huggingface.co/models?search=ResNet" target="_blank" class="kw-normal">ResNet</a>
+<a href="https://huggingface.co/models?search=DistilBERT" target="_blank" class="kw-normal">DistilBERT</a>
+            </div>
+            <div class="keyword-legend">
+                <div class="keyword-legend-item"><span class="keyword-legend-dot hot"></span> 超热门</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot warm"></span> 热门</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot medium"></span> 上升中</div>
+                <div class="keyword-legend-item"><span class="keyword-legend-dot normal"></span> 稳定</div>
+            </div>
+            <div class="keyword-hint">
+                <span class="badge">✨ 可点击</span>
+                <span class="text">点击任意标签，即可跳转至 Hugging Face 查看相关模型</span>
+            </div>
+        </div>
+        
+        <!-- 原有词云图片 (保留兼容) -->
+        <div class="card" style="display:none;">
+            <h2>🎨 技术词云 (图片版)</h2>
             <img src="wordcloud_2026-02-02.png" alt="技术词云" class="zoomable" data-title="Hugging Face 技术词云 - 2026-02-02" style="width: 100%; border-radius: 8px; cursor: pointer;" onerror="this.parentElement.style.display='none'">
             <div class="tag-cloud">
                 <p style="color:#666; font-size:0.9rem; margin-bottom:10px;">👇 点击下方标签可直接跳转至 HF 对应领域</p>
-                <a href="#" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.80rem; color:#6366f1; font-weight:bold;">其他</a> <a href="https://huggingface.co/models?pipeline_tag=text-generation" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.66rem; color:#6366f1; font-weight:bold;">语言模型</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-image" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.14rem; color:#6366f1; font-weight:bold;">图像生成</a> <a href="https://huggingface.co/models?pipeline_tag=feature-extraction" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.08rem; color:#6366f1; font-weight:bold;">嵌入模型</a> <a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.05rem; color:#6366f1; font-weight:bold;">多模态模型</a> <a href="https://huggingface.co/models?pipeline_tag=automatic-speech-recognition" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.94rem; color:#6366f1; font-weight:bold;">语音识别</a> <a href="https://huggingface.co/models?pipeline_tag=image-classification" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.94rem; color:#6366f1; font-weight:bold;">图像理解</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-speech" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.91rem; color:#6366f1; font-weight:bold;">语音合成</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-video" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.89rem; color:#6366f1; font-weight:bold;">视频生成</a> <a href="https://huggingface.co/models?pipeline_tag=document-question-answering" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.85rem; color:#6366f1; font-weight:bold;">文档理解</a> 
+                <a href="https://huggingface.co/models?pipeline_tag=text-generation" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.80rem; color:#6366f1; font-weight:bold;">语言模型</a> <a href="#" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.80rem; color:#6366f1; font-weight:bold;">其他</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-image" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.20rem; color:#6366f1; font-weight:bold;">图像生成</a> <a href="https://huggingface.co/models?pipeline_tag=multimodal" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.09rem; color:#6366f1; font-weight:bold;">多模态模型</a> <a href="https://huggingface.co/models?pipeline_tag=automatic-speech-recognition" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.08rem; color:#6366f1; font-weight:bold;">语音识别</a> <a href="https://huggingface.co/models?pipeline_tag=feature-extraction" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:1.08rem; color:#6366f1; font-weight:bold;">嵌入模型</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-speech" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.96rem; color:#6366f1; font-weight:bold;">语音合成</a> <a href="https://huggingface.co/models?pipeline_tag=image-classification" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.96rem; color:#6366f1; font-weight:bold;">图像理解</a> <a href="https://huggingface.co/models?pipeline_tag=text-to-video" target="_blank" style="text-decoration:none; display:inline-block; margin:5px 10px; font-size:0.87rem; color:#6366f1; font-weight:bold;">视频生成</a> 
             </div>
             <p class="click-hint">👆 点击图片可放大查看</p>
         </div>
