@@ -174,9 +174,11 @@ def fetch_models_by_sort(sort: str, limit: int = 100, pipeline_tag: Optional[str
         for model in models_iter:
             model_id = model.id
             tags = list(model.tags) if model.tags else []
+            # 從模型ID提取作者（格式: author/model_name）
+            author = model.author if model.author else (model_id.split("/")[0] if "/" in model_id else None)
             models.append({
                 "id": model_id,
-                "author": model.author,
+                "author": author,
                 "pipeline_tag": model.pipeline_tag,
                 "downloads": getattr(model, 'downloads', 0),
                 "likes": getattr(model, 'likes', 0),
