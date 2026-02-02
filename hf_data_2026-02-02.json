@@ -1,13 +1,13 @@
 {
   "date": "2026-02-02",
-  "timestamp": "2026-02-02T09:17:20.105948",
+  "timestamp": "2026-02-02T10:46:09.076261",
   "trending_models": [
     {
       "id": "moonshotai/Kimi-K2.5",
       "author": "moonshotai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 96162,
-      "likes": 1426,
+      "likes": 1430,
       "num_parameters": null,
       "last_modified": "2026-01-31T00:52:48.000Z",
       "tags": [],
@@ -49,7 +49,7 @@
       "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 143676,
-      "likes": 621,
+      "likes": 624,
       "num_parameters": 3389119360,
       "last_modified": "2026-01-30T00:17:54.000Z",
       "tags": [],
@@ -79,13 +79,13 @@
       "author": "Qwen",
       "pipeline_tag": "text-to-speech",
       "downloads": 265335,
-      "likes": 841,
+      "likes": 842,
       "num_parameters": 1916676352,
       "last_modified": "2026-01-29T08:00:54.000Z",
       "tags": [],
       "tech_keywords": [
-        "TTS",
-        "Qwen"
+        "Qwen",
+        "TTS"
       ],
       "source": "trending",
       "tech_category": "语音合成",
@@ -96,7 +96,7 @@
       "author": "Qwen",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 44958,
-      "likes": 330,
+      "likes": 333,
       "num_parameters": 2349217408,
       "last_modified": "2026-01-30T03:00:12.000Z",
       "tags": [],
@@ -112,7 +112,7 @@
       "author": "PaddlePaddle",
       "pipeline_tag": "image-text-to-text",
       "downloads": 3295,
-      "likes": 304,
+      "likes": 307,
       "num_parameters": 958588736,
       "last_modified": "2026-01-30T05:29:50.000Z",
       "tags": [],
@@ -122,25 +122,11 @@
       "size_category": "微型 (<1B)"
     },
     {
-      "id": "microsoft/VibeVoice-ASR",
-      "author": "microsoft",
-      "pipeline_tag": "automatic-speech-recognition",
-      "downloads": 175432,
-      "likes": 776,
-      "num_parameters": 8674021857,
-      "last_modified": "2026-01-27T13:12:22.000Z",
-      "tags": [],
-      "tech_keywords": [],
-      "source": "trending",
-      "tech_category": "语音识别",
-      "size_category": "中型 (7B-32B)"
-    },
-    {
       "id": "circlestone-labs/Anima",
       "author": "circlestone-labs",
       "pipeline_tag": null,
       "downloads": 16906,
-      "likes": 239,
+      "likes": 248,
       "num_parameters": null,
       "last_modified": "2026-02-01T00:46:15.000Z",
       "tags": [],
@@ -148,12 +134,26 @@
       "source": "trending",
       "tech_category": "其他",
       "size_category": "未知"
+    },
+    {
+      "id": "microsoft/VibeVoice-ASR",
+      "author": "microsoft",
+      "pipeline_tag": "automatic-speech-recognition",
+      "downloads": 175432,
+      "likes": 777,
+      "num_parameters": 8674021857,
+      "last_modified": "2026-01-27T13:12:22.000Z",
+      "tags": [],
+      "tech_keywords": [],
+      "source": "trending",
+      "tech_category": "语音识别",
+      "size_category": "中型 (7B-32B)"
     }
   ],
   "most_downloaded": [
     {
       "id": "sentence-transformers/all-MiniLM-L6-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 142416386,
       "likes": 4410,
@@ -206,9 +206,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -216,7 +216,7 @@
     },
     {
       "id": "Falconsai/nsfw_image_detection",
-      "author": null,
+      "author": "Falconsai",
       "pipeline_tag": "image-classification",
       "downloads": 66786298,
       "likes": 973,
@@ -235,8 +235,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ViT"
+        "ViT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -244,7 +244,7 @@
     },
     {
       "id": "google/electra-base-discriminator",
-      "author": null,
+      "author": "google",
       "pipeline_tag": null,
       "downloads": 48403132,
       "likes": 79,
@@ -265,8 +265,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ELECTRA"
+        "ELECTRA",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -274,7 +274,7 @@
     },
     {
       "id": "dima806/fairface_age_image_detection",
-      "author": null,
+      "author": "dima806",
       "pipeline_tag": "image-classification",
       "downloads": 43488200,
       "likes": 59,
@@ -293,9 +293,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "ViT",
         "Google",
-        "Transformer",
-        "ViT"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -303,7 +303,7 @@
     },
     {
       "id": "google-bert/bert-base-uncased",
-      "author": null,
+      "author": "google-bert",
       "pipeline_tag": "fill-mask",
       "downloads": 40050492,
       "likes": 2557,
@@ -340,7 +340,7 @@
     },
     {
       "id": "timm/mobilenetv3_small_100.lamb_in1k",
-      "author": null,
+      "author": "timm",
       "pipeline_tag": "image-classification",
       "downloads": 22621324,
       "likes": 49,
@@ -359,8 +359,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "MobileNet"
+        "MobileNet",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -368,7 +368,7 @@
     },
     {
       "id": "sentence-transformers/all-mpnet-base-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 21768706,
       "likes": 1235,
@@ -419,9 +419,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -429,7 +429,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-VL-3B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "image-text-to-text",
       "downloads": 21645366,
       "likes": 597,
@@ -453,8 +453,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "多模态模型",
@@ -462,7 +462,7 @@
     },
     {
       "id": "FacebookAI/roberta-large",
-      "author": null,
+      "author": "FacebookAI",
       "pipeline_tag": "fill-mask",
       "downloads": 21122127,
       "likes": 264,
@@ -490,8 +490,8 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "RoBERTa",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -499,7 +499,7 @@
     },
     {
       "id": "sentence-transformers/paraphrase-multilingual-MiniLM-L12-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 17362456,
       "likes": 1116,
@@ -575,9 +575,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -585,7 +585,7 @@
     },
     {
       "id": "laion/clap-htsat-fused",
-      "author": null,
+      "author": "laion",
       "pipeline_tag": "audio-classification",
       "downloads": 15949639,
       "likes": 51,
@@ -615,7 +615,7 @@
     },
     {
       "id": "colbert-ir/colbertv2.0",
-      "author": null,
+      "author": "colbert-ir",
       "pipeline_tag": null,
       "downloads": 15557095,
       "likes": 310,
@@ -648,7 +648,7 @@
     },
     {
       "id": "openai/clip-vit-base-patch32",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "zero-shot-image-classification",
       "downloads": 14752612,
       "likes": 850,
@@ -668,9 +668,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "CLIP",
         "ViT",
-        "CLIP"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -678,7 +678,7 @@
     },
     {
       "id": "pyannote/wespeaker-voxceleb-resnet34-LM",
-      "author": null,
+      "author": "pyannote",
       "pipeline_tag": null,
       "downloads": 14677611,
       "likes": 99,
@@ -703,8 +703,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ResNet",
-        "Embedding"
+        "Embedding",
+        "ResNet"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -712,7 +712,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-3B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 14594899,
       "likes": 395,
@@ -736,8 +736,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -745,7 +745,7 @@
     },
     {
       "id": "pyannote/segmentation-3.0",
-      "author": null,
+      "author": "pyannote",
       "pipeline_tag": "voice-activity-detection",
       "downloads": 13154726,
       "likes": 771,
@@ -778,7 +778,7 @@
     },
     {
       "id": "pyannote/speaker-diarization-3.1",
-      "author": null,
+      "author": "pyannote",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 12445312,
       "likes": 1491,
@@ -812,7 +812,7 @@
     },
     {
       "id": "autogluon/chronos-bolt-small",
-      "author": null,
+      "author": "autogluon",
       "pipeline_tag": "time-series-forecasting",
       "downloads": 11893422,
       "likes": 24,
@@ -842,7 +842,7 @@
     },
     {
       "id": "Bingsu/adetailer",
-      "author": null,
+      "author": "Bingsu",
       "pipeline_tag": null,
       "downloads": 11777048,
       "likes": 655,
@@ -864,7 +864,7 @@
     },
     {
       "id": "BAAI/bge-m3",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "sentence-similarity",
       "downloads": 10681067,
       "likes": 2702,
@@ -889,12 +889,12 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
-        "Sentence",
         "RoBERTa",
+        "Sentence",
+        "Transformer",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -902,7 +902,7 @@
     },
     {
       "id": "meta-llama/Llama-3.1-8B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 9752415,
       "likes": 5363,
@@ -936,10 +936,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -947,7 +947,7 @@
     },
     {
       "id": "FacebookAI/xlm-roberta-base",
-      "author": null,
+      "author": "FacebookAI",
       "pipeline_tag": "fill-mask",
       "downloads": 9388922,
       "likes": 783,
@@ -1065,9 +1065,9 @@
       ],
       "tech_keywords": [
         "BERT",
+        "RoBERTa",
         "Transformer",
-        "Yi",
-        "RoBERTa"
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1075,7 +1075,7 @@
     },
     {
       "id": "omni-research/Tarsier2-Recap-7b",
-      "author": null,
+      "author": "omni-research",
       "pipeline_tag": null,
       "downloads": 9183266,
       "likes": 22,
@@ -1095,7 +1095,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-7B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 9135077,
       "likes": 1047,
@@ -1120,8 +1120,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -1129,7 +1129,7 @@
     },
     {
       "id": "amazon/chronos-2",
-      "author": null,
+      "author": "amazon",
       "pipeline_tag": "time-series-forecasting",
       "downloads": 8944071,
       "likes": 169,
@@ -1160,7 +1160,7 @@
     },
     {
       "id": "Qwen/Qwen3-0.6B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 8786772,
       "likes": 1032,
@@ -1182,8 +1182,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -1191,7 +1191,7 @@
     },
     {
       "id": "FacebookAI/roberta-base",
-      "author": null,
+      "author": "FacebookAI",
       "pipeline_tag": "fill-mask",
       "downloads": 8369893,
       "likes": 561,
@@ -1219,8 +1219,8 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "RoBERTa",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1228,7 +1228,7 @@
     },
     {
       "id": "openai/clip-vit-large-patch14",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "zero-shot-image-classification",
       "downloads": 7913134,
       "likes": 1957,
@@ -1249,9 +1249,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "CLIP",
         "ViT",
-        "CLIP"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1259,7 +1259,7 @@
     },
     {
       "id": "Kijai/WanVideo_comfy",
-      "author": null,
+      "author": "Kijai",
       "pipeline_tag": null,
       "downloads": 6862401,
       "likes": 2064,
@@ -1281,7 +1281,7 @@
     },
     {
       "id": "openai-community/gpt2",
-      "author": null,
+      "author": "openai-community",
       "pipeline_tag": "text-generation",
       "downloads": 6807918,
       "likes": 3104,
@@ -1308,8 +1308,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "GPT",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -1318,7 +1318,7 @@
     },
     {
       "id": "facebook/contriever",
-      "author": null,
+      "author": "facebook",
       "pipeline_tag": null,
       "downloads": 6658415,
       "likes": 72,
@@ -1342,10 +1342,10 @@
     },
     {
       "id": "openai/whisper-large-v3",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 6300411,
-      "likes": 5357,
+      "likes": 5358,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1473,10 +1473,10 @@
     },
     {
       "id": "openai/gpt-oss-20b",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 6084388,
-      "likes": 4281,
+      "likes": 4282,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1504,10 +1504,10 @@
     },
     {
       "id": "Qwen/Qwen2.5-1.5B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 5866332,
-      "likes": 602,
+      "likes": 603,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -1528,8 +1528,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -1537,7 +1537,7 @@
     },
     {
       "id": "sentence-transformers/paraphrase-multilingual-mpnet-base-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 5699940,
       "likes": 444,
@@ -1611,8 +1611,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
         "RoBERTa",
+        "Sentence",
         "BERT",
         "Embedding",
         "Transformer"
@@ -1623,7 +1623,7 @@
     },
     {
       "id": "cross-encoder/ms-marco-MiniLM-L6-v2",
-      "author": null,
+      "author": "cross-encoder",
       "pipeline_tag": "text-ranking",
       "downloads": 5672971,
       "likes": 186,
@@ -1651,9 +1651,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1661,7 +1661,7 @@
     },
     {
       "id": "coqui/XTTS-v2",
-      "author": null,
+      "author": "coqui",
       "pipeline_tag": "text-to-speech",
       "downloads": 5670142,
       "likes": 3373,
@@ -1684,7 +1684,7 @@
     },
     {
       "id": "distilbert/distilbert-base-uncased",
-      "author": null,
+      "author": "distilbert",
       "pipeline_tag": "fill-mask",
       "downloads": 5643679,
       "likes": 830,
@@ -1720,7 +1720,7 @@
     },
     {
       "id": "Comfy-Org/Wan_2.2_ComfyUI_Repackaged",
-      "author": null,
+      "author": "Comfy-Org",
       "pipeline_tag": null,
       "downloads": 5599799,
       "likes": 570,
@@ -1740,7 +1740,7 @@
     },
     {
       "id": "jinaai/jina-embeddings-v3",
-      "author": null,
+      "author": "jinaai",
       "pipeline_tag": "feature-extraction",
       "downloads": 5020789,
       "likes": 1127,
@@ -1858,9 +1858,9 @@
       "tech_keywords": [
         "Jina",
         "Sentence",
-        "Yi",
         "Embedding",
-        "Transformer"
+        "Transformer",
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -1868,7 +1868,7 @@
     },
     {
       "id": "Qwen/Qwen3-4B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 4829869,
       "likes": 542,
@@ -1890,8 +1890,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -1899,7 +1899,7 @@
     },
     {
       "id": "jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
-      "author": null,
+      "author": "jonatasgrosman",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 4810245,
       "likes": 124,
@@ -1933,7 +1933,7 @@
     },
     {
       "id": "iitolstykh/mivolo_v2",
-      "author": null,
+      "author": "iitolstykh",
       "pipeline_tag": "image-classification",
       "downloads": 4746226,
       "likes": 21,
@@ -1958,7 +1958,7 @@
     },
     {
       "id": "google-bert/bert-base-multilingual-uncased",
-      "author": null,
+      "author": "google-bert",
       "pipeline_tag": "fill-mask",
       "downloads": 4562616,
       "likes": 152,
@@ -2090,7 +2090,7 @@
     },
     {
       "id": "emilyalsentzer/Bio_ClinicalBERT",
-      "author": null,
+      "author": "emilyalsentzer",
       "pipeline_tag": "fill-mask",
       "downloads": 4250070,
       "likes": 410,
@@ -2113,8 +2113,8 @@
       ],
       "tech_keywords": [
         "BERT",
-        "ALBERT",
-        "Transformer"
+        "Transformer",
+        "ALBERT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2122,7 +2122,7 @@
     },
     {
       "id": "Qwen/Qwen3-8B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 4235450,
       "likes": 891,
@@ -2145,8 +2145,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2154,7 +2154,7 @@
     },
     {
       "id": "timm/resnet50.a1_in1k",
-      "author": null,
+      "author": "timm",
       "pipeline_tag": "image-classification",
       "downloads": 4167178,
       "likes": 39,
@@ -2182,7 +2182,7 @@
     },
     {
       "id": "BAAI/bge-large-en-v1.5",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "feature-extraction",
       "downloads": 4164529,
       "likes": 623,
@@ -2212,11 +2212,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
         "Sentence",
+        "Transformer",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2224,7 +2224,7 @@
     },
     {
       "id": "jonatasgrosman/wav2vec2-large-xlsr-53-russian",
-      "author": null,
+      "author": "jonatasgrosman",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 4137926,
       "likes": 64,
@@ -2262,7 +2262,7 @@
     },
     {
       "id": "sentence-transformers/multi-qa-mpnet-base-dot-v1",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 4137741,
       "likes": 189,
@@ -2298,9 +2298,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2308,7 +2308,7 @@
     },
     {
       "id": "cardiffnlp/twitter-roberta-base-sentiment-latest",
-      "author": null,
+      "author": "cardiffnlp",
       "pipeline_tag": "text-classification",
       "downloads": 4082592,
       "likes": 762,
@@ -2330,8 +2330,8 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "RoBERTa",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2339,7 +2339,7 @@
     },
     {
       "id": "distilbert/distilbert-base-uncased-finetuned-sst-2-english",
-      "author": null,
+      "author": "distilbert",
       "pipeline_tag": "text-classification",
       "downloads": 4059849,
       "likes": 871,
@@ -2376,7 +2376,7 @@
     },
     {
       "id": "Comfy-Org/Wan_2.1_ComfyUI_repackaged",
-      "author": null,
+      "author": "Comfy-Org",
       "pipeline_tag": null,
       "downloads": 4012047,
       "likes": 836,
@@ -2396,7 +2396,7 @@
     },
     {
       "id": "google/vit-base-patch16-224",
-      "author": null,
+      "author": "google",
       "pipeline_tag": "image-classification",
       "downloads": 3985024,
       "likes": 931,
@@ -2421,8 +2421,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ViT"
+        "ViT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -2430,7 +2430,7 @@
     },
     {
       "id": "dphn/dolphin-2.9.1-yi-1.5-34b",
-      "author": null,
+      "author": "dphn",
       "pipeline_tag": "text-generation",
       "downloads": 3938924,
       "likes": 54,
@@ -2461,15 +2461,15 @@
       ],
       "tech_keywords": [
         "Orca",
-        "InternLM",
-        "Phi",
         "Microsoft",
-        "SAM",
-        "Yi",
+        "InternLM",
         "LLaMA",
+        "Llama",
+        "Phi",
         "01-ai",
+        "SAM",
         "Transformer",
-        "Llama"
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2477,7 +2477,7 @@
     },
     {
       "id": "timm/mobilenetv3_large_100.ra_in1k",
-      "author": null,
+      "author": "timm",
       "pipeline_tag": "image-classification",
       "downloads": 3903516,
       "likes": 36,
@@ -2496,8 +2496,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "MobileNet"
+        "MobileNet",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -2505,7 +2505,7 @@
     },
     {
       "id": "FacebookAI/xlm-roberta-large",
-      "author": null,
+      "author": "FacebookAI",
       "pipeline_tag": "fill-mask",
       "downloads": 3869979,
       "likes": 491,
@@ -2623,9 +2623,9 @@
       ],
       "tech_keywords": [
         "BERT",
+        "RoBERTa",
         "Transformer",
-        "Yi",
-        "RoBERTa"
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2633,7 +2633,7 @@
     },
     {
       "id": "BAAI/bge-small-en-v1.5",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "feature-extraction",
       "downloads": 3851585,
       "likes": 406,
@@ -2663,11 +2663,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
         "Sentence",
+        "Transformer",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2675,7 +2675,7 @@
     },
     {
       "id": "facebook/opt-125m",
-      "author": null,
+      "author": "facebook",
       "pipeline_tag": "text-generation",
       "downloads": 3724022,
       "likes": 232,
@@ -2697,8 +2697,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "OPT",
-        "Transformer"
+        "Transformer",
+        "OPT"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2706,7 +2706,7 @@
     },
     {
       "id": "nomic-ai/nomic-embed-text-v1.5",
-      "author": null,
+      "author": "nomic-ai",
       "pipeline_tag": "sentence-similarity",
       "downloads": 3665934,
       "likes": 766,
@@ -2734,9 +2734,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2744,7 +2744,7 @@
     },
     {
       "id": "prajjwal1/bert-tiny",
-      "author": null,
+      "author": "prajjwal1",
       "pipeline_tag": null,
       "downloads": 3535055,
       "likes": 136,
@@ -2775,7 +2775,7 @@
     },
     {
       "id": "Qwen/Qwen3-1.7B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 3528651,
       "likes": 410,
@@ -2796,8 +2796,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2805,7 +2805,7 @@
     },
     {
       "id": "vikhyatk/moondream2",
-      "author": null,
+      "author": "vikhyatk",
       "pipeline_tag": "image-text-to-text",
       "downloads": 3513318,
       "likes": 1367,
@@ -2832,7 +2832,7 @@
     },
     {
       "id": "BAAI/bge-reranker-v2-m3",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "text-classification",
       "downloads": 3478408,
       "likes": 873,
@@ -2854,13 +2854,13 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
-        "Sentence",
-        "Reranker",
         "RoBERTa",
+        "Sentence",
+        "Transformer",
+        "Reranker",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2868,7 +2868,7 @@
     },
     {
       "id": "facebook/bart-large-mnli",
-      "author": null,
+      "author": "facebook",
       "pipeline_tag": "zero-shot-classification",
       "downloads": 3439021,
       "likes": 1525,
@@ -2900,7 +2900,7 @@
     },
     {
       "id": "google-t5/t5-small",
-      "author": null,
+      "author": "google-t5",
       "pipeline_tag": "translation",
       "downloads": 3316367,
       "likes": 524,
@@ -2948,7 +2948,7 @@
     },
     {
       "id": "openai/clip-vit-large-patch14-336",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "zero-shot-image-classification",
       "downloads": 3302278,
       "likes": 286,
@@ -2965,9 +2965,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "CLIP",
         "ViT",
-        "CLIP"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2975,7 +2975,7 @@
     },
     {
       "id": "intfloat/multilingual-e5-large",
-      "author": null,
+      "author": "intfloat",
       "pipeline_tag": "feature-extraction",
       "downloads": 3280336,
       "likes": 1133,
@@ -3098,13 +3098,13 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "Yi",
         "RoBERTa",
-        "BERT",
+        "Sentence",
         "E5",
+        "BERT",
         "Embedding",
-        "Transformer"
+        "Transformer",
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3112,7 +3112,7 @@
     },
     {
       "id": "BAAI/bge-base-en-v1.5",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "feature-extraction",
       "downloads": 3236838,
       "likes": 399,
@@ -3142,11 +3142,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
         "Sentence",
+        "Transformer",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3154,7 +3154,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-32B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 3226325,
       "likes": 323,
@@ -3179,8 +3179,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -3188,7 +3188,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-VL-7B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "image-text-to-text",
       "downloads": 3223120,
       "likes": 1441,
@@ -3213,8 +3213,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "多模态模型",
@@ -3222,7 +3222,7 @@
     },
     {
       "id": "autogluon/chronos-bolt-base",
-      "author": null,
+      "author": "autogluon",
       "pipeline_tag": "time-series-forecasting",
       "downloads": 3144520,
       "likes": 35,
@@ -3252,7 +3252,7 @@
     },
     {
       "id": "Qwen/Qwen3-4B-Instruct-2507",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 3090364,
       "likes": 689,
@@ -3273,8 +3273,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -3282,7 +3282,7 @@
     },
     {
       "id": "hustvl/vitmatte-small-composition-1k",
-      "author": null,
+      "author": "hustvl",
       "pipeline_tag": null,
       "downloads": 2990776,
       "likes": 52,
@@ -3300,8 +3300,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ViT"
+        "ViT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -3309,7 +3309,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-OCR",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 2960353,
       "likes": 3123,
@@ -3331,8 +3331,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "多模态模型",
@@ -3340,7 +3340,7 @@
     },
     {
       "id": "hexgrad/Kokoro-82M",
-      "author": null,
+      "author": "hexgrad",
       "pipeline_tag": "text-to-speech",
       "downloads": 2951737,
       "likes": 5647,
@@ -3366,7 +3366,7 @@
     },
     {
       "id": "usyd-community/vitpose-plus-base",
-      "author": null,
+      "author": "usyd-community",
       "pipeline_tag": "keypoint-detection",
       "downloads": 2950480,
       "likes": 28,
@@ -3384,8 +3384,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ViT"
+        "ViT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -3393,10 +3393,10 @@
     },
     {
       "id": "openai/gpt-oss-120b",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 2881514,
-      "likes": 4426,
+      "likes": 4427,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3424,7 +3424,7 @@
     },
     {
       "id": "facebook/bart-large-cnn",
-      "author": null,
+      "author": "facebook",
       "pipeline_tag": "summarization",
       "downloads": 2855013,
       "likes": 1531,
@@ -3458,7 +3458,7 @@
     },
     {
       "id": "sentence-transformers/all-MiniLM-L12-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 2829350,
       "likes": 291,
@@ -3509,9 +3509,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3519,7 +3519,7 @@
     },
     {
       "id": "sentence-transformers/paraphrase-MiniLM-L6-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 2828610,
       "likes": 145,
@@ -3544,9 +3544,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3554,7 +3554,7 @@
     },
     {
       "id": "OpenGVLab/InternVL3-78B",
-      "author": null,
+      "author": "OpenGVLab",
       "pipeline_tag": "image-text-to-text",
       "downloads": 2799665,
       "likes": 231,
@@ -3592,7 +3592,7 @@
     },
     {
       "id": "openai/whisper-large-v3-turbo",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 2788792,
       "likes": 2797,
@@ -3712,9 +3712,9 @@
       ],
       "tech_keywords": [
         "Whisper",
+        "OpenAI",
         "Transformer",
-        "Yi",
-        "OpenAI"
+        "Yi"
       ],
       "source": "downloads",
       "tech_category": "语音识别",
@@ -3722,7 +3722,7 @@
     },
     {
       "id": "dslim/bert-base-NER",
-      "author": null,
+      "author": "dslim",
       "pipeline_tag": "token-classification",
       "downloads": 2762470,
       "likes": 692,
@@ -3756,7 +3756,7 @@
     },
     {
       "id": "MahmoudAshraf/mms-300m-1130-forced-aligner",
-      "author": null,
+      "author": "MahmoudAshraf",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 2761818,
       "likes": 70,
@@ -3908,9 +3908,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Wav2Vec",
         "MMS",
-        "Transformer",
-        "Wav2Vec"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语音识别",
@@ -3918,10 +3918,10 @@
     },
     {
       "id": "meta-llama/Llama-3.2-1B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 2755857,
-      "likes": 1277,
+      "likes": 1278,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3950,10 +3950,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -3961,7 +3961,7 @@
     },
     {
       "id": "Lightricks/LTX-2",
-      "author": null,
+      "author": "Lightricks",
       "pipeline_tag": "image-to-video",
       "downloads": 2719615,
       "likes": 1406,
@@ -4006,7 +4006,7 @@
     },
     {
       "id": "openai/clip-vit-base-patch16",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "zero-shot-image-classification",
       "downloads": 2691991,
       "likes": 148,
@@ -4025,9 +4025,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "CLIP",
         "ViT",
-        "CLIP"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -4035,7 +4035,7 @@
     },
     {
       "id": "openvla/openvla-7b",
-      "author": null,
+      "author": "openvla",
       "pipeline_tag": "image-text-to-text",
       "downloads": 2572076,
       "likes": 173,
@@ -4066,7 +4066,7 @@
     },
     {
       "id": "autogluon/chronos-2",
-      "author": null,
+      "author": "autogluon",
       "pipeline_tag": "time-series-forecasting",
       "downloads": 2548537,
       "likes": 3,
@@ -4097,7 +4097,7 @@
     },
     {
       "id": "w11wo/indonesian-roberta-base-posp-tagger",
-      "author": null,
+      "author": "w11wo",
       "pipeline_tag": "token-classification",
       "downloads": 2518557,
       "likes": 10,
@@ -4123,8 +4123,8 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "RoBERTa",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -4132,7 +4132,7 @@
     },
     {
       "id": "google-bert/bert-base-multilingual-cased",
-      "author": null,
+      "author": "google-bert",
       "pipeline_tag": "fill-mask",
       "downloads": 2509775,
       "likes": 569,
@@ -4266,7 +4266,7 @@
     },
     {
       "id": "google-t5/t5-base",
-      "author": null,
+      "author": "google-t5",
       "pipeline_tag": "translation",
       "downloads": 2499173,
       "likes": 762,
@@ -4312,7 +4312,7 @@
     },
     {
       "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
-      "author": null,
+      "author": "jonatasgrosman",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 2493892,
       "likes": 52,
@@ -4346,7 +4346,7 @@
     },
     {
       "id": "Comfy-Org/z_image_turbo",
-      "author": null,
+      "author": "Comfy-Org",
       "pipeline_tag": null,
       "downloads": 2472696,
       "likes": 575,
@@ -4366,7 +4366,7 @@
     },
     {
       "id": "ProsusAI/finbert",
-      "author": null,
+      "author": "ProsusAI",
       "pipeline_tag": "text-classification",
       "downloads": 2453383,
       "likes": 1075,
@@ -4397,7 +4397,7 @@
     },
     {
       "id": "facebook/dinov2-small",
-      "author": null,
+      "author": "facebook",
       "pipeline_tag": "image-feature-extraction",
       "downloads": 2446820,
       "likes": 55,
@@ -4426,7 +4426,7 @@
     },
     {
       "id": "Babelscape/rebel-large",
-      "author": null,
+      "author": "Babelscape",
       "pipeline_tag": null,
       "downloads": 2437206,
       "likes": 232,
@@ -4457,7 +4457,7 @@
     },
     {
       "id": "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese",
-      "author": null,
+      "author": "jonatasgrosman",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 2436415,
       "likes": 37,
@@ -4495,7 +4495,7 @@
     },
     {
       "id": "meta-llama/Llama-3.2-1B",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 2431107,
       "likes": 2277,
@@ -4526,10 +4526,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -4539,7 +4539,7 @@
   "most_liked": [
     {
       "id": "deepseek-ai/DeepSeek-R1",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "text-generation",
       "downloads": 418140,
       "likes": 12985,
@@ -4561,8 +4561,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4570,7 +4570,7 @@
     },
     {
       "id": "black-forest-labs/FLUX.1-dev",
-      "author": null,
+      "author": "black-forest-labs",
       "pipeline_tag": "text-to-image",
       "downloads": 779589,
       "likes": 12248,
@@ -4597,10 +4597,10 @@
     },
     {
       "id": "stabilityai/stable-diffusion-xl-base-1.0",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "text-to-image",
       "downloads": 1941754,
-      "likes": 7387,
+      "likes": 7388,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4620,8 +4620,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -4629,7 +4629,7 @@
     },
     {
       "id": "CompVis/stable-diffusion-v1-4",
-      "author": null,
+      "author": "CompVis",
       "pipeline_tag": "text-to-image",
       "downloads": 733704,
       "likes": 6972,
@@ -4652,8 +4652,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -4661,7 +4661,7 @@
     },
     {
       "id": "meta-llama/Meta-Llama-3-8B",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 1727382,
       "likes": 6441,
@@ -4683,10 +4683,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4694,7 +4694,7 @@
     },
     {
       "id": "hexgrad/Kokoro-82M",
-      "author": null,
+      "author": "hexgrad",
       "pipeline_tag": "text-to-speech",
       "downloads": 2951737,
       "likes": 5647,
@@ -4720,7 +4720,7 @@
     },
     {
       "id": "meta-llama/Llama-3.1-8B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 9752415,
       "likes": 5363,
@@ -4754,10 +4754,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4765,10 +4765,10 @@
     },
     {
       "id": "openai/whisper-large-v3",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 6300411,
-      "likes": 5357,
+      "likes": 5358,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4896,7 +4896,7 @@
     },
     {
       "id": "bigscience/bloom",
-      "author": null,
+      "author": "bigscience",
       "pipeline_tag": "text-generation",
       "downloads": 3451,
       "likes": 4978,
@@ -4969,8 +4969,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "BLOOM"
+        "BLOOM",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4978,7 +4978,7 @@
     },
     {
       "id": "stabilityai/stable-diffusion-3-medium",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "text-to-image",
       "downloads": 6583,
       "likes": 4905,
@@ -4994,8 +4994,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -5003,7 +5003,7 @@
     },
     {
       "id": "meta-llama/Llama-2-7b-chat-hf",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 422796,
       "likes": 4696,
@@ -5027,10 +5027,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5038,7 +5038,7 @@
     },
     {
       "id": "mistralai/Mixtral-8x7B-Instruct-v0.1",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": null,
       "downloads": 464111,
       "likes": 4633,
@@ -5067,7 +5067,7 @@
     },
     {
       "id": "black-forest-labs/FLUX.1-schnell",
-      "author": null,
+      "author": "black-forest-labs",
       "pipeline_tag": "text-to-image",
       "downloads": 602625,
       "likes": 4583,
@@ -5095,7 +5095,7 @@
     },
     {
       "id": "meta-llama/Llama-2-7b",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 322,
       "likes": 4448,
@@ -5114,8 +5114,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
         "Llama",
+        "Meta",
         "LLaMA"
       ],
       "source": "likes",
@@ -5124,10 +5124,10 @@
     },
     {
       "id": "openai/gpt-oss-120b",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 2881514,
-      "likes": 4426,
+      "likes": 4427,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5155,7 +5155,7 @@
     },
     {
       "id": "sentence-transformers/all-MiniLM-L6-v2",
-      "author": null,
+      "author": "sentence-transformers",
       "pipeline_tag": "sentence-similarity",
       "downloads": 142416386,
       "likes": 4410,
@@ -5208,9 +5208,9 @@
       ],
       "tech_keywords": [
         "BERT",
-        "Transformer",
+        "Embedding",
         "Sentence",
-        "Embedding"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "嵌入模型",
@@ -5218,10 +5218,10 @@
     },
     {
       "id": "meta-llama/Meta-Llama-3-8B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 1496257,
-      "likes": 4371,
+      "likes": 4372,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5242,10 +5242,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5253,10 +5253,10 @@
     },
     {
       "id": "openai/gpt-oss-20b",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 6084388,
-      "likes": 4281,
+      "likes": 4282,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5284,10 +5284,10 @@
     },
     {
       "id": "mistralai/Mistral-7B-v0.1",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": "text-generation",
       "downloads": 265688,
-      "likes": 4037,
+      "likes": 4036,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5314,10 +5314,10 @@
     },
     {
       "id": "Tongyi-MAI/Z-Image-Turbo",
-      "author": null,
+      "author": "Tongyi-MAI",
       "pipeline_tag": "text-to-image",
       "downloads": 558121,
-      "likes": 4021,
+      "likes": 4023,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5340,7 +5340,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V3",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "text-generation",
       "downloads": 911728,
       "likes": 4018,
@@ -5361,8 +5361,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5370,7 +5370,7 @@
     },
     {
       "id": "lllyasviel/ControlNet-v1-1",
-      "author": null,
+      "author": "lllyasviel",
       "pipeline_tag": null,
       "downloads": 0,
       "likes": 3995,
@@ -5389,7 +5389,7 @@
     },
     {
       "id": "WarriorMama777/OrangeMixs",
-      "author": null,
+      "author": "WarriorMama777",
       "pipeline_tag": "text-to-image",
       "downloads": 703,
       "likes": 3893,
@@ -5406,9 +5406,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
+        "MPT",
         "Diffusion",
-        "MPT"
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -5416,7 +5416,7 @@
     },
     {
       "id": "lllyasviel/ControlNet",
-      "author": null,
+      "author": "lllyasviel",
       "pipeline_tag": null,
       "downloads": 1,
       "likes": 3788,
@@ -5435,7 +5435,7 @@
     },
     {
       "id": "deepseek-ai/Janus-Pro-7B",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "any-to-any",
       "downloads": 21907,
       "likes": 3557,
@@ -5463,10 +5463,10 @@
     },
     {
       "id": "microsoft/phi-2",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "text-generation",
       "downloads": 1281146,
-      "likes": 3423,
+      "likes": 3422,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5484,8 +5484,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Phi"
+        "Phi",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5493,7 +5493,7 @@
     },
     {
       "id": "coqui/XTTS-v2",
-      "author": null,
+      "author": "coqui",
       "pipeline_tag": "text-to-speech",
       "downloads": 5670142,
       "likes": 3373,
@@ -5516,7 +5516,7 @@
     },
     {
       "id": "stabilityai/stable-diffusion-3.5-large",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "text-to-image",
       "downloads": 51002,
       "likes": 3341,
@@ -5534,8 +5534,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -5543,7 +5543,7 @@
     },
     {
       "id": "google/gemma-7b",
-      "author": null,
+      "author": "google",
       "pipeline_tag": "text-generation",
       "downloads": 33709,
       "likes": 3265,
@@ -5594,7 +5594,7 @@
     },
     {
       "id": "stabilityai/stable-video-diffusion-img2vid-xt",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "image-to-video",
       "downloads": 118710,
       "likes": 3227,
@@ -5609,8 +5609,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "视频生成",
@@ -5618,7 +5618,7 @@
     },
     {
       "id": "prompthero/openjourney",
-      "author": null,
+      "author": "prompthero",
       "pipeline_tag": "text-to-image",
       "downloads": 6973,
       "likes": 3181,
@@ -5637,8 +5637,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -5646,7 +5646,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-OCR",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 2960353,
       "likes": 3123,
@@ -5668,8 +5668,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -5677,7 +5677,7 @@
     },
     {
       "id": "openai-community/gpt2",
-      "author": null,
+      "author": "openai-community",
       "pipeline_tag": "text-generation",
       "downloads": 6807918,
       "likes": 3104,
@@ -5704,8 +5704,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "GPT",
+        "BERT",
         "Transformer"
       ],
       "source": "likes",
@@ -5714,7 +5714,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V3-0324",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "text-generation",
       "downloads": 267655,
       "likes": 3086,
@@ -5736,8 +5736,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5745,7 +5745,7 @@
     },
     {
       "id": "mistralai/Mistral-7B-Instruct-v0.2",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": "text-generation",
       "downloads": 2115392,
       "likes": 3064,
@@ -5776,7 +5776,7 @@
     },
     {
       "id": "bigcode/starcoder",
-      "author": null,
+      "author": "bigcode",
       "pipeline_tag": "text-generation",
       "downloads": 7071,
       "likes": 2918,
@@ -5801,8 +5801,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "GPT"
+        "GPT",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5810,7 +5810,7 @@
     },
     {
       "id": "Qwen/QwQ-32B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 44717,
       "likes": 2885,
@@ -5835,8 +5835,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5844,7 +5844,7 @@
     },
     {
       "id": "zai-org/chatglm-6b",
-      "author": null,
+      "author": "zai-org",
       "pipeline_tag": null,
       "downloads": 3521,
       "likes": 2875,
@@ -5875,7 +5875,7 @@
     },
     {
       "id": "CompVis/stable-diffusion-v-1-4-original",
-      "author": null,
+      "author": "CompVis",
       "pipeline_tag": "text-to-image",
       "downloads": 0,
       "likes": 2835,
@@ -5893,8 +5893,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -5902,7 +5902,7 @@
     },
     {
       "id": "nari-labs/Dia-1.6B",
-      "author": null,
+      "author": "nari-labs",
       "pipeline_tag": "text-to-speech",
       "downloads": 69211,
       "likes": 2828,
@@ -5925,7 +5925,7 @@
     },
     {
       "id": "openai/whisper-large-v3-turbo",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 2788792,
       "likes": 2797,
@@ -6045,9 +6045,9 @@
       ],
       "tech_keywords": [
         "Whisper",
+        "OpenAI",
         "Transformer",
-        "Yi",
-        "OpenAI"
+        "Yi"
       ],
       "source": "likes",
       "tech_category": "语音识别",
@@ -6055,7 +6055,7 @@
     },
     {
       "id": "BAAI/bge-m3",
-      "author": null,
+      "author": "BAAI",
       "pipeline_tag": "sentence-similarity",
       "downloads": 10681067,
       "likes": 2702,
@@ -6080,12 +6080,12 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BGE",
-        "Sentence",
         "RoBERTa",
+        "Sentence",
+        "Transformer",
         "BERT",
         "Embedding",
-        "Transformer"
+        "BGE"
       ],
       "source": "likes",
       "tech_category": "嵌入模型",
@@ -6093,7 +6093,7 @@
     },
     {
       "id": "meta-llama/Llama-3.3-70B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 838263,
       "likes": 2638,
@@ -6126,10 +6126,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6137,7 +6137,7 @@
     },
     {
       "id": "google-bert/bert-base-uncased",
-      "author": null,
+      "author": "google-bert",
       "pipeline_tag": "fill-mask",
       "downloads": 40050492,
       "likes": 2557,
@@ -6174,7 +6174,7 @@
     },
     {
       "id": "black-forest-labs/FLUX.1-Kontext-dev",
-      "author": null,
+      "author": "black-forest-labs",
       "pipeline_tag": "image-to-image",
       "downloads": 180828,
       "likes": 2532,
@@ -6203,7 +6203,7 @@
     },
     {
       "id": "stabilityai/sdxl-turbo",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "text-to-image",
       "downloads": 371313,
       "likes": 2521,
@@ -6219,9 +6219,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Diffusion",
         "SDXL",
-        "Stable",
-        "Diffusion"
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -6229,7 +6229,7 @@
     },
     {
       "id": "hakurei/waifu-diffusion",
-      "author": null,
+      "author": "hakurei",
       "pipeline_tag": "text-to-image",
       "downloads": 2278,
       "likes": 2473,
@@ -6247,8 +6247,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -6256,7 +6256,7 @@
     },
     {
       "id": "tiiuae/falcon-40b",
-      "author": null,
+      "author": "tiiuae",
       "pipeline_tag": "text-generation",
       "downloads": 14387,
       "likes": 2433,
@@ -6295,7 +6295,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-R1-0528",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": "text-generation",
       "downloads": 446817,
       "likes": 2395,
@@ -6317,8 +6317,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6326,10 +6326,10 @@
     },
     {
       "id": "xai-org/grok-1",
-      "author": null,
+      "author": "xai-org",
       "pipeline_tag": "text-generation",
       "downloads": 262,
-      "likes": 2384,
+      "likes": 2383,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -6346,7 +6346,7 @@
     },
     {
       "id": "mistralai/Mistral-7B-Instruct-v0.3",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": null,
       "downloads": 881825,
       "likes": 2380,
@@ -6371,7 +6371,7 @@
     },
     {
       "id": "Qwen/Qwen-Image",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-to-image",
       "downloads": 182558,
       "likes": 2366,
@@ -6398,7 +6398,7 @@
     },
     {
       "id": "perplexity-ai/r1-1776",
-      "author": null,
+      "author": "perplexity-ai",
       "pipeline_tag": "text-generation",
       "downloads": 590,
       "likes": 2332,
@@ -6419,8 +6419,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "DeepSeek"
+        "DeepSeek",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6428,7 +6428,7 @@
     },
     {
       "id": "sesame/csm-1b",
-      "author": null,
+      "author": "sesame",
       "pipeline_tag": "text-to-speech",
       "downloads": 59565,
       "likes": 2327,
@@ -6454,7 +6454,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2-Instruct",
-      "author": null,
+      "author": "moonshotai",
       "pipeline_tag": "text-generation",
       "downloads": 203020,
       "likes": 2311,
@@ -6482,7 +6482,7 @@
     },
     {
       "id": "Qwen/Qwen-Image-Edit",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "image-to-image",
       "downloads": 40214,
       "likes": 2293,
@@ -6508,7 +6508,7 @@
     },
     {
       "id": "meta-llama/Llama-3.2-1B",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 2431107,
       "likes": 2277,
@@ -6539,10 +6539,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6550,7 +6550,7 @@
     },
     {
       "id": "meta-llama/Llama-2-7b-hf",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 435108,
       "likes": 2259,
@@ -6573,10 +6573,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6584,7 +6584,7 @@
     },
     {
       "id": "microsoft/phi-4",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "text-generation",
       "downloads": 591592,
       "likes": 2214,
@@ -6609,8 +6609,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Phi"
+        "Phi",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6618,7 +6618,7 @@
     },
     {
       "id": "meta-llama/Llama-2-70b-chat-hf",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 17524,
       "likes": 2203,
@@ -6642,10 +6642,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6653,7 +6653,7 @@
     },
     {
       "id": "microsoft/VibeVoice-1.5B",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "text-to-speech",
       "downloads": 327942,
       "likes": 2202,
@@ -6683,7 +6683,7 @@
     },
     {
       "id": "ByteDance/SDXL-Lightning",
-      "author": null,
+      "author": "ByteDance",
       "pipeline_tag": "text-to-image",
       "downloads": 38958,
       "likes": 2124,
@@ -6698,9 +6698,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Diffusion",
         "SDXL",
-        "Stable",
-        "Diffusion"
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -6708,7 +6708,7 @@
     },
     {
       "id": "tencent/HunyuanVideo",
-      "author": null,
+      "author": "tencent",
       "pipeline_tag": "text-to-video",
       "downloads": 1316,
       "likes": 2109,
@@ -6728,7 +6728,7 @@
     },
     {
       "id": "Lightricks/LTX-Video",
-      "author": null,
+      "author": "Lightricks",
       "pipeline_tag": "image-to-video",
       "downloads": 171062,
       "likes": 2102,
@@ -6751,7 +6751,7 @@
     },
     {
       "id": "lllyasviel/sd_control_collection",
-      "author": null,
+      "author": "lllyasviel",
       "pipeline_tag": null,
       "downloads": 0,
       "likes": 2098,
@@ -6767,7 +6767,7 @@
     },
     {
       "id": "Kijai/WanVideo_comfy",
-      "author": null,
+      "author": "Kijai",
       "pipeline_tag": null,
       "downloads": 6862401,
       "likes": 2064,
@@ -6789,7 +6789,7 @@
     },
     {
       "id": "nvidia/Llama-3.1-Nemotron-70B-Instruct-HF",
-      "author": null,
+      "author": "nvidia",
       "pipeline_tag": "text-generation",
       "downloads": 4302,
       "likes": 2062,
@@ -6815,11 +6815,11 @@
         "region:us"
       ],
       "tech_keywords": [
+        "LLaMA",
+        "Llama",
         "NVIDIA",
         "Meta",
-        "LLaMA",
-        "Transformer",
-        "Llama"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6827,7 +6827,7 @@
     },
     {
       "id": "zai-org/chatglm2-6b",
-      "author": null,
+      "author": "zai-org",
       "pipeline_tag": null,
       "downloads": 510143,
       "likes": 2056,
@@ -6859,7 +6859,7 @@
     },
     {
       "id": "meta-llama/Llama-3.1-8B",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 2048864,
       "likes": 2042,
@@ -6889,10 +6889,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6900,10 +6900,10 @@
     },
     {
       "id": "stabilityai/stable-diffusion-xl-refiner-1.0",
-      "author": null,
+      "author": "stabilityai",
       "pipeline_tag": "image-to-image",
       "downloads": 325274,
-      "likes": 2020,
+      "likes": 2021,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -6920,8 +6920,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -6929,7 +6929,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-Coder-32B-Instruct",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 496728,
       "likes": 1986,
@@ -6959,8 +6959,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6968,7 +6968,7 @@
     },
     {
       "id": "meta-llama/Llama-3.2-3B-Instruct",
-      "author": null,
+      "author": "meta-llama",
       "pipeline_tag": "text-generation",
       "downloads": 1544445,
       "likes": 1959,
@@ -7000,10 +7000,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7011,7 +7011,7 @@
     },
     {
       "id": "openai/clip-vit-large-patch14",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "zero-shot-image-classification",
       "downloads": 7913134,
       "likes": 1957,
@@ -7032,9 +7032,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "CLIP",
         "ViT",
-        "CLIP"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "其他",
@@ -7042,7 +7042,7 @@
     },
     {
       "id": "briaai/RMBG-1.4",
-      "author": null,
+      "author": "briaai",
       "pipeline_tag": "image-segmentation",
       "downloads": 948089,
       "likes": 1936,
@@ -7076,7 +7076,7 @@
     },
     {
       "id": "zai-org/GLM-4.7",
-      "author": null,
+      "author": "zai-org",
       "pipeline_tag": "text-generation",
       "downloads": 74829,
       "likes": 1902,
@@ -7105,7 +7105,7 @@
     },
     {
       "id": "Qwen/Qwen2.5-Omni-7B",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "any-to-any",
       "downloads": 173912,
       "likes": 1850,
@@ -7124,8 +7124,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -7133,7 +7133,7 @@
     },
     {
       "id": "google/gemma-3-27b-it",
-      "author": null,
+      "author": "google",
       "pipeline_tag": "image-text-to-text",
       "downloads": 1569049,
       "likes": 1844,
@@ -7182,9 +7182,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Google",
         "Gemma",
-        "Transformer",
-        "Google"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -7192,7 +7192,7 @@
     },
     {
       "id": "HuggingFaceH4/zephyr-7b-beta",
-      "author": null,
+      "author": "HuggingFaceH4",
       "pipeline_tag": "text-generation",
       "downloads": 64042,
       "likes": 1832,
@@ -7224,8 +7224,8 @@
       ],
       "tech_keywords": [
         "Mistral",
-        "Transformer",
-        "Zephyr"
+        "Zephyr",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7233,7 +7233,7 @@
     },
     {
       "id": "mistralai/Mistral-7B-Instruct-v0.1",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": "text-generation",
       "downloads": 360596,
       "likes": 1826,
@@ -7265,7 +7265,7 @@
     },
     {
       "id": "h94/IP-Adapter-FaceID",
-      "author": null,
+      "author": "h94",
       "pipeline_tag": "text-to-image",
       "downloads": 233572,
       "likes": 1818,
@@ -7280,9 +7280,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Diffusion",
         "IP-Adapter",
-        "Stable",
-        "Diffusion"
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -7290,7 +7290,7 @@
     },
     {
       "id": "mistralai/Mixtral-8x7B-v0.1",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": null,
       "downloads": 53806,
       "likes": 1788,
@@ -7319,7 +7319,7 @@
     },
     {
       "id": "openai/whisper-large-v2",
-      "author": null,
+      "author": "openai",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 73782,
       "likes": 1778,
@@ -7451,7 +7451,7 @@
     },
     {
       "id": "CohereLabs/c4ai-command-r-plus",
-      "author": null,
+      "author": "CohereLabs",
       "pipeline_tag": "text-generation",
       "downloads": 2273,
       "likes": 1766,
@@ -7479,8 +7479,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Cohere"
+        "Cohere",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7488,7 +7488,7 @@
     },
     {
       "id": "microsoft/Florence-2-large",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "image-text-to-text",
       "downloads": 712401,
       "likes": 1749,
@@ -7518,7 +7518,7 @@
     },
     {
       "id": "Qwen/QwQ-32B-Preview",
-      "author": null,
+      "author": "Qwen",
       "pipeline_tag": "text-generation",
       "downloads": 6977,
       "likes": 1741,
@@ -7542,8 +7542,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7551,7 +7551,7 @@
     },
     {
       "id": "dreamlike-art/dreamlike-photoreal-2.0",
-      "author": null,
+      "author": "dreamlike-art",
       "pipeline_tag": "text-to-image",
       "downloads": 8938,
       "likes": 1721,
@@ -7571,8 +7571,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -7580,7 +7580,7 @@
     },
     {
       "id": "mattshumer/Reflection-Llama-3.1-70B",
-      "author": null,
+      "author": "mattshumer",
       "pipeline_tag": "text-generation",
       "downloads": 133,
       "likes": 1711,
@@ -7601,10 +7601,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Meta",
-        "Transformer",
         "Llama",
-        "LLaMA"
+        "Meta",
+        "LLaMA",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7612,7 +7612,7 @@
     },
     {
       "id": "microsoft/OmniParser",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "image-text-to-text",
       "downloads": 375,
       "likes": 1705,
@@ -7630,8 +7630,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "BLIP"
+        "BLIP",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -7639,7 +7639,7 @@
     },
     {
       "id": "tencent/Hunyuan3D-2",
-      "author": null,
+      "author": "tencent",
       "pipeline_tag": "image-to-3d",
       "downloads": 66900,
       "likes": 1700,
@@ -7665,7 +7665,7 @@
     },
     {
       "id": "microsoft/Phi-3-mini-128k-instruct",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "text-generation",
       "downloads": 49413,
       "likes": 1691,
@@ -7687,8 +7687,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Phi"
+        "Phi",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7696,7 +7696,7 @@
     },
     {
       "id": "deepseek-ai/DeepSeek-V3-Base",
-      "author": null,
+      "author": "deepseek-ai",
       "pipeline_tag": null,
       "downloads": 8114,
       "likes": 1684,
@@ -7719,7 +7719,7 @@
     },
     {
       "id": "xinsir/controlnet-union-sdxl-1.0",
-      "author": null,
+      "author": "xinsir",
       "pipeline_tag": "text-to-image",
       "downloads": 107438,
       "likes": 1668,
@@ -7737,10 +7737,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "SDXL",
-        "ControlNet",
+        "Diffusion",
         "Stable",
-        "Diffusion"
+        "SDXL",
+        "ControlNet"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -7748,7 +7748,7 @@
     },
     {
       "id": "moonshotai/Kimi-K2-Thinking",
-      "author": null,
+      "author": "moonshotai",
       "pipeline_tag": "text-generation",
       "downloads": 355846,
       "likes": 1647,
@@ -7776,7 +7776,7 @@
     },
     {
       "id": "mistralai/Mistral-Nemo-Instruct-2407",
-      "author": null,
+      "author": "mistralai",
       "pipeline_tag": null,
       "downloads": 88643,
       "likes": 1646,
@@ -7810,7 +7810,7 @@
     },
     {
       "id": "2Noise/ChatTTS",
-      "author": null,
+      "author": "2Noise",
       "pipeline_tag": "text-to-audio",
       "downloads": 1085,
       "likes": 1634,
@@ -7832,7 +7832,7 @@
     },
     {
       "id": "docling-project/SmolDocling-256M-preview",
-      "author": null,
+      "author": "docling-project",
       "pipeline_tag": "image-text-to-text",
       "downloads": 26718,
       "likes": 1608,
@@ -7869,7 +7869,7 @@
     },
     {
       "id": "nanonets/Nanonets-OCR-s",
-      "author": null,
+      "author": "nanonets",
       "pipeline_tag": "image-text-to-text",
       "downloads": 27302,
       "likes": 1582,
@@ -7892,8 +7892,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Qwen"
+        "Qwen",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -7901,7 +7901,7 @@
     },
     {
       "id": "nvidia/personaplex-7b-v1",
-      "author": null,
+      "author": "nvidia",
       "pipeline_tag": "audio-to-audio",
       "downloads": 101038,
       "likes": 1580,
@@ -7929,7 +7929,7 @@
     },
     {
       "id": "gsdf/Counterfeit-V2.5",
-      "author": null,
+      "author": "gsdf",
       "pipeline_tag": "text-to-image",
       "downloads": 3763,
       "likes": 1578,
@@ -7947,8 +7947,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
-        "Diffusion"
+        "Diffusion",
+        "Stable"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -7956,7 +7956,7 @@
     },
     {
       "id": "microsoft/Phi-4-multimodal-instruct",
-      "author": null,
+      "author": "microsoft",
       "pipeline_tag": "automatic-speech-recognition",
       "downloads": 234208,
       "likes": 1565,
@@ -8008,8 +8008,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "Phi"
+        "Phi",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语音识别",
@@ -8020,7 +8020,7 @@
     "语言模型": [
       {
         "id": "Qwen/Qwen2.5-3B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 14594899,
         "likes": 395,
@@ -8044,8 +8044,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8053,7 +8053,7 @@
       },
       {
         "id": "meta-llama/Llama-3.1-8B-Instruct",
-        "author": null,
+        "author": "meta-llama",
         "pipeline_tag": "text-generation",
         "downloads": 9752415,
         "likes": 5363,
@@ -8087,10 +8087,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Meta",
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "Meta",
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8098,7 +8098,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-7B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 9135077,
         "likes": 1047,
@@ -8123,8 +8123,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8132,7 +8132,7 @@
       },
       {
         "id": "Qwen/Qwen3-0.6B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 8786772,
         "likes": 1032,
@@ -8154,8 +8154,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8163,7 +8163,7 @@
       },
       {
         "id": "openai-community/gpt2",
-        "author": null,
+        "author": "openai-community",
         "pipeline_tag": "text-generation",
         "downloads": 6807918,
         "likes": 3104,
@@ -8190,8 +8190,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "GPT",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -8200,10 +8200,10 @@
       },
       {
         "id": "openai/gpt-oss-20b",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "text-generation",
         "downloads": 6084388,
-        "likes": 4281,
+        "likes": 4282,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8231,10 +8231,10 @@
       },
       {
         "id": "Qwen/Qwen2.5-1.5B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 5866332,
-        "likes": 602,
+        "likes": 603,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8255,8 +8255,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8264,7 +8264,7 @@
       },
       {
         "id": "Qwen/Qwen3-4B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 4829869,
         "likes": 542,
@@ -8286,8 +8286,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8295,7 +8295,7 @@
       },
       {
         "id": "Qwen/Qwen3-8B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 4235450,
         "likes": 891,
@@ -8318,8 +8318,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8327,7 +8327,7 @@
       },
       {
         "id": "dphn/dolphin-2.9.1-yi-1.5-34b",
-        "author": null,
+        "author": "dphn",
         "pipeline_tag": "text-generation",
         "downloads": 3938924,
         "likes": 54,
@@ -8358,15 +8358,15 @@
         ],
         "tech_keywords": [
           "Orca",
-          "InternLM",
-          "Phi",
           "Microsoft",
-          "SAM",
-          "Yi",
+          "InternLM",
           "LLaMA",
+          "Llama",
+          "Phi",
           "01-ai",
+          "SAM",
           "Transformer",
-          "Llama"
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8374,7 +8374,7 @@
       },
       {
         "id": "facebook/opt-125m",
-        "author": null,
+        "author": "facebook",
         "pipeline_tag": "text-generation",
         "downloads": 3724022,
         "likes": 232,
@@ -8396,8 +8396,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "OPT",
-          "Transformer"
+          "Transformer",
+          "OPT"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8405,7 +8405,7 @@
       },
       {
         "id": "Qwen/Qwen3-1.7B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 3528651,
         "likes": 410,
@@ -8426,8 +8426,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8435,7 +8435,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-32B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 3226325,
         "likes": 323,
@@ -8460,8 +8460,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8469,7 +8469,7 @@
       },
       {
         "id": "Qwen/Qwen3-4B-Instruct-2507",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 3090364,
         "likes": 689,
@@ -8490,8 +8490,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8499,10 +8499,10 @@
       },
       {
         "id": "openai/gpt-oss-120b",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "text-generation",
         "downloads": 2881514,
-        "likes": 4426,
+        "likes": 4427,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8530,10 +8530,10 @@
       },
       {
         "id": "meta-llama/Llama-3.2-1B-Instruct",
-        "author": null,
+        "author": "meta-llama",
         "pipeline_tag": "text-generation",
         "downloads": 2755857,
-        "likes": 1277,
+        "likes": 1278,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8562,10 +8562,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Meta",
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "Meta",
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8573,7 +8573,7 @@
       },
       {
         "id": "meta-llama/Llama-3.2-1B",
-        "author": null,
+        "author": "meta-llama",
         "pipeline_tag": "text-generation",
         "downloads": 2431107,
         "likes": 2277,
@@ -8604,10 +8604,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Meta",
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "Meta",
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8615,7 +8615,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-Coder-0.5B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 2372423,
         "likes": 64,
@@ -8644,8 +8644,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8653,7 +8653,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-14B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-generation",
         "downloads": 2331833,
         "likes": 306,
@@ -8678,8 +8678,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8687,7 +8687,7 @@
       },
       {
         "id": "distilbert/distilgpt2",
-        "author": null,
+        "author": "distilbert",
         "pipeline_tag": "text-generation",
         "downloads": 2286399,
         "likes": 607,
@@ -8721,8 +8721,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "GPT",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -8733,7 +8733,7 @@
     "多模态模型": [
       {
         "id": "Qwen/Qwen2.5-VL-3B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 21645366,
         "likes": 597,
@@ -8757,8 +8757,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -8766,7 +8766,7 @@
       },
       {
         "id": "vikhyatk/moondream2",
-        "author": null,
+        "author": "vikhyatk",
         "pipeline_tag": "image-text-to-text",
         "downloads": 3513318,
         "likes": 1367,
@@ -8793,7 +8793,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-VL-7B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 3223120,
         "likes": 1441,
@@ -8818,8 +8818,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -8827,7 +8827,7 @@
       },
       {
         "id": "deepseek-ai/DeepSeek-OCR",
-        "author": null,
+        "author": "deepseek-ai",
         "pipeline_tag": "image-text-to-text",
         "downloads": 2960353,
         "likes": 3123,
@@ -8849,8 +8849,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "DeepSeek"
+          "DeepSeek",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -8858,7 +8858,7 @@
       },
       {
         "id": "OpenGVLab/InternVL3-78B",
-        "author": null,
+        "author": "OpenGVLab",
         "pipeline_tag": "image-text-to-text",
         "downloads": 2799665,
         "likes": 231,
@@ -8896,7 +8896,7 @@
       },
       {
         "id": "openvla/openvla-7b",
-        "author": null,
+        "author": "openvla",
         "pipeline_tag": "image-text-to-text",
         "downloads": 2572076,
         "likes": 173,
@@ -8927,7 +8927,7 @@
       },
       {
         "id": "Qwen/Qwen2.5-VL-32B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 2254361,
         "likes": 474,
@@ -8951,8 +8951,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -8960,10 +8960,10 @@
       },
       {
         "id": "Qwen/Qwen3-VL-8B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 2237714,
-        "likes": 709,
+        "likes": 710,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8983,8 +8983,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -8992,7 +8992,7 @@
       },
       {
         "id": "Qwen/Qwen2-VL-2B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1655888,
         "likes": 484,
@@ -9018,8 +9018,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9027,7 +9027,7 @@
       },
       {
         "id": "google/gemma-3-27b-it",
-        "author": null,
+        "author": "google",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1569049,
         "likes": 1844,
@@ -9076,9 +9076,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Google",
           "Gemma",
-          "Transformer",
-          "Google"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9086,7 +9086,7 @@
       },
       {
         "id": "Qwen/Qwen2-VL-7B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1482614,
         "likes": 1260,
@@ -9112,8 +9112,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9121,7 +9121,7 @@
       },
       {
         "id": "google/gemma-3-12b-it",
-        "author": null,
+        "author": "google",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1360347,
         "likes": 644,
@@ -9170,9 +9170,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Google",
           "Gemma",
-          "Transformer",
-          "Google"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9180,7 +9180,7 @@
       },
       {
         "id": "tencent/HunyuanOCR",
-        "author": null,
+        "author": "tencent",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1351179,
         "likes": 686,
@@ -9217,7 +9217,7 @@
       },
       {
         "id": "llava-hf/llava-1.5-7b-hf",
-        "author": null,
+        "author": "llava-hf",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1150933,
         "likes": 337,
@@ -9238,10 +9238,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "LLaVA",
           "Llama",
-          "Transformer",
-          "LLaMA"
+          "LLaMA",
+          "LLaVA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9249,7 +9249,7 @@
       },
       {
         "id": "OpenGVLab/InternVL3_5-GPT-OSS-20B-A4B-Preview-HF",
-        "author": null,
+        "author": "OpenGVLab",
         "pipeline_tag": "image-text-to-text",
         "downloads": 1091144,
         "likes": 8,
@@ -9282,9 +9282,9 @@
         ],
         "tech_keywords": [
           "OpenAI",
+          "ViT",
           "InternVL",
           "GPT",
-          "ViT",
           "Transformer"
         ],
         "source": "downloads",
@@ -9293,7 +9293,7 @@
       },
       {
         "id": "OpenGVLab/InternVL2-2B",
-        "author": null,
+        "author": "OpenGVLab",
         "pipeline_tag": "image-text-to-text",
         "downloads": 923051,
         "likes": 78,
@@ -9321,9 +9321,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "ViT",
           "InternLM",
           "Transformer",
-          "ViT",
           "InternVL"
         ],
         "source": "downloads",
@@ -9332,7 +9332,7 @@
       },
       {
         "id": "nvidia/Llama-3.1-Nemotron-Nano-VL-8B-V1",
-        "author": null,
+        "author": "nvidia",
         "pipeline_tag": "image-text-to-text",
         "downloads": 918482,
         "likes": 174,
@@ -9350,10 +9350,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "NVIDIA",
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "NVIDIA",
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9361,7 +9361,7 @@
       },
       {
         "id": "google/gemma-3-4b-it",
-        "author": null,
+        "author": "google",
         "pipeline_tag": "image-text-to-text",
         "downloads": 914774,
         "likes": 1144,
@@ -9410,9 +9410,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Google",
           "Gemma",
-          "Transformer",
-          "Google"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9420,7 +9420,7 @@
       },
       {
         "id": "OpenGVLab/InternVL2-1B",
-        "author": null,
+        "author": "OpenGVLab",
         "pipeline_tag": "image-text-to-text",
         "downloads": 902281,
         "likes": 78,
@@ -9448,9 +9448,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT",
           "Qwen",
+          "ViT",
+          "Transformer",
           "InternVL"
         ],
         "source": "downloads",
@@ -9459,7 +9459,7 @@
       },
       {
         "id": "Qwen/Qwen3-VL-30B-A3B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-text-to-text",
         "downloads": 862952,
         "likes": 523,
@@ -9482,8 +9482,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9493,10 +9493,10 @@
     "图像生成": [
       {
         "id": "stabilityai/stable-diffusion-xl-base-1.0",
-        "author": null,
+        "author": "stabilityai",
         "pipeline_tag": "text-to-image",
         "downloads": 1941754,
-        "likes": 7387,
+        "likes": 7388,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -9516,8 +9516,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9525,7 +9525,7 @@
       },
       {
         "id": "stable-diffusion-v1-5/stable-diffusion-v1-5",
-        "author": null,
+        "author": "stable-diffusion-v1-5",
         "pipeline_tag": "text-to-image",
         "downloads": 1454071,
         "likes": 999,
@@ -9548,8 +9548,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9557,7 +9557,7 @@
       },
       {
         "id": "black-forest-labs/FLUX.1-dev",
-        "author": null,
+        "author": "black-forest-labs",
         "pipeline_tag": "text-to-image",
         "downloads": 779589,
         "likes": 12248,
@@ -9584,7 +9584,7 @@
       },
       {
         "id": "CompVis/stable-diffusion-v1-4",
-        "author": null,
+        "author": "CompVis",
         "pipeline_tag": "text-to-image",
         "downloads": 733704,
         "likes": 6972,
@@ -9607,8 +9607,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9616,7 +9616,7 @@
       },
       {
         "id": "crynux-network/sdxl-turbo",
-        "author": null,
+        "author": "crynux-network",
         "pipeline_tag": "text-to-image",
         "downloads": 693298,
         "likes": 2,
@@ -9630,9 +9630,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "SDXL",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9640,7 +9640,7 @@
       },
       {
         "id": "lightx2v/Qwen-Image-Lightning",
-        "author": null,
+        "author": "lightx2v",
         "pipeline_tag": "text-to-image",
         "downloads": 632690,
         "likes": 763,
@@ -9661,8 +9661,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "LoRA",
-          "Qwen"
+          "Qwen",
+          "LoRA"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9670,7 +9670,7 @@
       },
       {
         "id": "stabilityai/sd-turbo",
-        "author": null,
+        "author": "stabilityai",
         "pipeline_tag": "text-to-image",
         "downloads": 618989,
         "likes": 437,
@@ -9684,8 +9684,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9693,7 +9693,7 @@
       },
       {
         "id": "black-forest-labs/FLUX.1-schnell",
-        "author": null,
+        "author": "black-forest-labs",
         "pipeline_tag": "text-to-image",
         "downloads": 602625,
         "likes": 4583,
@@ -9721,7 +9721,7 @@
       },
       {
         "id": "crynux-network/stable-diffusion-v1-5",
-        "author": null,
+        "author": "crynux-network",
         "pipeline_tag": "text-to-image",
         "downloads": 580039,
         "likes": 1,
@@ -9736,8 +9736,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9745,10 +9745,10 @@
       },
       {
         "id": "Tongyi-MAI/Z-Image-Turbo",
-        "author": null,
+        "author": "Tongyi-MAI",
         "pipeline_tag": "text-to-image",
         "downloads": 558121,
-        "likes": 4021,
+        "likes": 4023,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -9771,7 +9771,7 @@
       },
       {
         "id": "playgroundai/playground-v2.5-1024px-aesthetic",
-        "author": null,
+        "author": "playgroundai",
         "pipeline_tag": "text-to-image",
         "downloads": 454106,
         "likes": 756,
@@ -9790,9 +9790,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "Playground",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9800,7 +9800,7 @@
       },
       {
         "id": "stabilityai/sdxl-turbo",
-        "author": null,
+        "author": "stabilityai",
         "pipeline_tag": "text-to-image",
         "downloads": 371313,
         "likes": 2521,
@@ -9816,9 +9816,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "SDXL",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9826,7 +9826,7 @@
       },
       {
         "id": "John6666/one-obsession-17-red-sdxl",
-        "author": null,
+        "author": "John6666",
         "pipeline_tag": "text-to-image",
         "downloads": 316252,
         "likes": 0,
@@ -9871,9 +9871,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "SDXL",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9881,7 +9881,7 @@
       },
       {
         "id": "SG161222/Realistic_Vision_V5.1_noVAE",
-        "author": null,
+        "author": "SG161222",
         "pipeline_tag": "text-to-image",
         "downloads": 301022,
         "likes": 233,
@@ -9896,8 +9896,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9905,7 +9905,7 @@
       },
       {
         "id": "John6666/diving-illustrious-real-asian-v50-sdxl",
-        "author": null,
+        "author": "John6666",
         "pipeline_tag": "text-to-image",
         "downloads": 276492,
         "likes": 0,
@@ -9931,9 +9931,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "SDXL",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9941,7 +9941,7 @@
       },
       {
         "id": "tarn59/pixel_art_style_lora_z_image_turbo",
-        "author": null,
+        "author": "tarn59",
         "pipeline_tag": "text-to-image",
         "downloads": 253190,
         "likes": 21,
@@ -9958,9 +9958,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Yi",
           "LoRA",
-          "Diffusion"
+          "Diffusion",
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9968,7 +9968,7 @@
       },
       {
         "id": "cagliostrolab/animagine-xl-4.0",
-        "author": null,
+        "author": "cagliostrolab",
         "pipeline_tag": "text-to-image",
         "downloads": 245721,
         "likes": 382,
@@ -9989,8 +9989,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9998,7 +9998,7 @@
       },
       {
         "id": "John6666/wai-nsfw-illustrious-v80-sdxl",
-        "author": null,
+        "author": "John6666",
         "pipeline_tag": "text-to-image",
         "downloads": 238539,
         "likes": 4,
@@ -10024,9 +10024,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "SDXL",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -10034,7 +10034,7 @@
       },
       {
         "id": "h94/IP-Adapter-FaceID",
-        "author": null,
+        "author": "h94",
         "pipeline_tag": "text-to-image",
         "downloads": 233572,
         "likes": 1818,
@@ -10049,9 +10049,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Diffusion",
           "IP-Adapter",
-          "Stable",
-          "Diffusion"
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -10059,7 +10059,7 @@
       },
       {
         "id": "SG161222/RealVisXL_V4.0",
-        "author": null,
+        "author": "SG161222",
         "pipeline_tag": "text-to-image",
         "downloads": 229252,
         "likes": 283,
@@ -10075,8 +10075,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Stable",
-          "Diffusion"
+          "Diffusion",
+          "Stable"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -10086,7 +10086,7 @@
     "视频生成": [
       {
         "id": "tencent/HunyuanVideo-1.5",
-        "author": null,
+        "author": "tencent",
         "pipeline_tag": "text-to-video",
         "downloads": 259172,
         "likes": 708,
@@ -10111,7 +10111,7 @@
       },
       {
         "id": "Wan-AI/Wan2.2-T2V-A14B-Diffusers",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 158831,
         "likes": 107,
@@ -10134,7 +10134,7 @@
       },
       {
         "id": "QuantStack/Wan2.2-T2V-A14B-GGUF",
-        "author": null,
+        "author": "QuantStack",
         "pipeline_tag": "text-to-video",
         "downloads": 152091,
         "likes": 218,
@@ -10156,7 +10156,7 @@
       },
       {
         "id": "Wan-AI/Wan2.1-T2V-1.3B-Diffusers",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 91252,
         "likes": 102,
@@ -10181,7 +10181,7 @@
       },
       {
         "id": "Wan-AI/Wan2.1-T2V-14B",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 49683,
         "likes": 1460,
@@ -10205,7 +10205,7 @@
       },
       {
         "id": "zai-org/CogVideoX-5b",
-        "author": null,
+        "author": "zai-org",
         "pipeline_tag": "text-to-video",
         "downloads": 39150,
         "likes": 661,
@@ -10231,7 +10231,7 @@
       },
       {
         "id": "Wan-AI/Wan2.2-TI2V-5B-Diffusers",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 34863,
         "likes": 105,
@@ -10255,7 +10255,7 @@
       },
       {
         "id": "magespace/Wan2.2-I2V-A14B-Lightning-Diffusers",
-        "author": null,
+        "author": "magespace",
         "pipeline_tag": "text-to-video",
         "downloads": 29025,
         "likes": 0,
@@ -10278,7 +10278,7 @@
       },
       {
         "id": "alibaba-pai/Wan2.1-Fun-14B-Control",
-        "author": null,
+        "author": "alibaba-pai",
         "pipeline_tag": "text-to-video",
         "downloads": 26911,
         "likes": 55,
@@ -10304,7 +10304,7 @@
       },
       {
         "id": "bullerwins/Wan2.2-T2V-A14B-GGUF",
-        "author": null,
+        "author": "bullerwins",
         "pipeline_tag": "text-to-video",
         "downloads": 26259,
         "likes": 66,
@@ -10327,7 +10327,7 @@
       },
       {
         "id": "alibaba-pai/Wan2.2-Fun-Reward-LoRAs",
-        "author": null,
+        "author": "alibaba-pai",
         "pipeline_tag": "text-to-video",
         "downloads": 22738,
         "likes": 63,
@@ -10351,7 +10351,7 @@
       },
       {
         "id": "city96/Wan2.1-T2V-14B-gguf",
-        "author": null,
+        "author": "city96",
         "pipeline_tag": "text-to-video",
         "downloads": 22318,
         "likes": 183,
@@ -10372,7 +10372,7 @@
       },
       {
         "id": "Wan-AI/Wan2.1-T2V-14B-Diffusers",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 21321,
         "likes": 48,
@@ -10396,7 +10396,7 @@
       },
       {
         "id": "FastVideo/FastWan2.1-T2V-1.3B-Diffusers",
-        "author": null,
+        "author": "FastVideo",
         "pipeline_tag": "text-to-video",
         "downloads": 19567,
         "likes": 20,
@@ -10422,7 +10422,7 @@
       },
       {
         "id": "zai-org/CogVideoX-2b",
-        "author": null,
+        "author": "zai-org",
         "pipeline_tag": "text-to-video",
         "downloads": 17621,
         "likes": 351,
@@ -10448,7 +10448,7 @@
       },
       {
         "id": "QuantStack/Wan2.2-TI2V-5B-GGUF",
-        "author": null,
+        "author": "QuantStack",
         "pipeline_tag": "text-to-video",
         "downloads": 12057,
         "likes": 134,
@@ -10472,7 +10472,7 @@
       },
       {
         "id": "Wan-AI/Wan2.1-T2V-1.3B",
-        "author": null,
+        "author": "Wan-AI",
         "pipeline_tag": "text-to-video",
         "downloads": 11428,
         "likes": 429,
@@ -10497,7 +10497,7 @@
       },
       {
         "id": "FastVideo/FastWan2.2-TI2V-5B-FullAttn-Diffusers",
-        "author": null,
+        "author": "FastVideo",
         "pipeline_tag": "text-to-video",
         "downloads": 10798,
         "likes": 59,
@@ -10520,7 +10520,7 @@
       },
       {
         "id": "wangfuyun/AnimateLCM",
-        "author": null,
+        "author": "wangfuyun",
         "pipeline_tag": "text-to-video",
         "downloads": 10338,
         "likes": 342,
@@ -10542,7 +10542,7 @@
       },
       {
         "id": "QuantStack/Wan2.1_14B_VACE-GGUF",
-        "author": null,
+        "author": "QuantStack",
         "pipeline_tag": "text-to-video",
         "downloads": 9863,
         "likes": 234,
@@ -10567,7 +10567,7 @@
     "语音合成": [
       {
         "id": "coqui/XTTS-v2",
-        "author": null,
+        "author": "coqui",
         "pipeline_tag": "text-to-speech",
         "downloads": 5670142,
         "likes": 3373,
@@ -10590,7 +10590,7 @@
       },
       {
         "id": "hexgrad/Kokoro-82M",
-        "author": null,
+        "author": "hexgrad",
         "pipeline_tag": "text-to-speech",
         "downloads": 2951737,
         "likes": 5647,
@@ -10616,7 +10616,7 @@
       },
       {
         "id": "myshell-ai/MeloTTS-English",
-        "author": null,
+        "author": "myshell-ai",
         "pipeline_tag": "text-to-speech",
         "downloads": 927810,
         "likes": 304,
@@ -10640,7 +10640,7 @@
       },
       {
         "id": "SWivid/F5-TTS",
-        "author": null,
+        "author": "SWivid",
         "pipeline_tag": "text-to-speech",
         "downloads": 719892,
         "likes": 1147,
@@ -10655,8 +10655,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "TTS",
-          "Phi"
+          "Phi",
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -10664,7 +10664,7 @@
       },
       {
         "id": "ResembleAI/chatterbox",
-        "author": null,
+        "author": "ResembleAI",
         "pipeline_tag": "text-to-speech",
         "downloads": 568918,
         "likes": 1454,
@@ -10712,7 +10712,7 @@
       },
       {
         "id": "microsoft/VibeVoice-1.5B",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "text-to-speech",
         "downloads": 327942,
         "likes": 2202,
@@ -10742,7 +10742,7 @@
       },
       {
         "id": "microsoft/VibeVoice-Realtime-0.5B",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "text-to-speech",
         "downloads": 323381,
         "likes": 1094,
@@ -10766,9 +10766,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Qwen",
           "Transformer",
-          "TTS",
-          "Qwen"
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -10776,7 +10776,7 @@
       },
       {
         "id": "parler-tts/parler-tts-mini-multilingual-v1.1",
-        "author": null,
+        "author": "parler-tts",
         "pipeline_tag": "text-to-speech",
         "downloads": 306998,
         "likes": 54,
@@ -10819,7 +10819,7 @@
       },
       {
         "id": "myshell-ai/MeloTTS-Spanish",
-        "author": null,
+        "author": "myshell-ai",
         "pipeline_tag": "text-to-speech",
         "downloads": 293027,
         "likes": 26,
@@ -10843,10 +10843,10 @@
       },
       {
         "id": "Qwen/Qwen3-TTS-12Hz-1.7B-CustomVoice",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-to-speech",
         "downloads": 265335,
-        "likes": 841,
+        "likes": 842,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -10858,8 +10858,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "TTS",
-          "Qwen"
+          "Qwen",
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -10867,7 +10867,7 @@
       },
       {
         "id": "bosonai/higgs-audio-v2-generation-3B-base",
-        "author": null,
+        "author": "bosonai",
         "pipeline_tag": "text-to-speech",
         "downloads": 134330,
         "likes": 657,
@@ -10892,7 +10892,7 @@
       },
       {
         "id": "kyutai/tts-0.75b-en-public",
-        "author": null,
+        "author": "kyutai",
         "pipeline_tag": "text-to-speech",
         "downloads": 131707,
         "likes": 13,
@@ -10919,7 +10919,7 @@
       },
       {
         "id": "Qwen/Qwen3-TTS-12Hz-1.7B-VoiceDesign",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-to-speech",
         "downloads": 129910,
         "likes": 220,
@@ -10939,8 +10939,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "TTS",
-          "Qwen"
+          "Qwen",
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -10948,7 +10948,7 @@
       },
       {
         "id": "Qwen/Qwen3-TTS-12Hz-0.6B-Base",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "text-to-speech",
         "downloads": 126993,
         "likes": 157,
@@ -10976,8 +10976,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "TTS",
-          "Qwen"
+          "Qwen",
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -10985,7 +10985,7 @@
       },
       {
         "id": "myshell-ai/MeloTTS-Chinese",
-        "author": null,
+        "author": "myshell-ai",
         "pipeline_tag": "text-to-speech",
         "downloads": 118928,
         "likes": 96,
@@ -11009,7 +11009,7 @@
       },
       {
         "id": "isaiahbjork/orpheus-3b-0.1-ft-Q4_K_M-GGUF",
-        "author": null,
+        "author": "isaiahbjork",
         "pipeline_tag": "text-to-speech",
         "downloads": 108695,
         "likes": 66,
@@ -11030,9 +11030,9 @@
           "conversational"
         ],
         "tech_keywords": [
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -11040,7 +11040,7 @@
       },
       {
         "id": "SWivid/E2-TTS",
-        "author": null,
+        "author": "SWivid",
         "pipeline_tag": "text-to-speech",
         "downloads": 94712,
         "likes": 57,
@@ -11055,8 +11055,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "TTS",
-          "Phi"
+          "Phi",
+          "TTS"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -11064,7 +11064,7 @@
       },
       {
         "id": "kyutai/pocket-tts-without-voice-cloning",
-        "author": null,
+        "author": "kyutai",
         "pipeline_tag": "text-to-speech",
         "downloads": 83503,
         "likes": 13,
@@ -11087,7 +11087,7 @@
       },
       {
         "id": "microsoft/speecht5_tts",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "text-to-speech",
         "downloads": 81655,
         "likes": 824,
@@ -11108,8 +11108,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "SpeechT5",
           "T5",
+          "SpeechT5",
           "Transformer",
           "TTS"
         ],
@@ -11119,7 +11119,7 @@
       },
       {
         "id": "canopylabs/3b-de-ft-research_release",
-        "author": null,
+        "author": "canopylabs",
         "pipeline_tag": "text-to-speech",
         "downloads": 71861,
         "likes": 15,
@@ -11140,9 +11140,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音合成",
@@ -11152,7 +11152,7 @@
     "语音识别": [
       {
         "id": "pyannote/speaker-diarization-3.1",
-        "author": null,
+        "author": "pyannote",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 12445312,
         "likes": 1491,
@@ -11186,10 +11186,10 @@
       },
       {
         "id": "openai/whisper-large-v3",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 6300411,
-        "likes": 5357,
+        "likes": 5358,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -11317,7 +11317,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-chinese-zh-cn",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 4810245,
         "likes": 124,
@@ -11351,7 +11351,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-russian",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 4137926,
         "likes": 64,
@@ -11389,7 +11389,7 @@
       },
       {
         "id": "openai/whisper-large-v3-turbo",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 2788792,
         "likes": 2797,
@@ -11509,9 +11509,9 @@
         ],
         "tech_keywords": [
           "Whisper",
+          "OpenAI",
           "Transformer",
-          "Yi",
-          "OpenAI"
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -11519,7 +11519,7 @@
       },
       {
         "id": "MahmoudAshraf/mms-300m-1130-forced-aligner",
-        "author": null,
+        "author": "MahmoudAshraf",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 2761818,
         "likes": 70,
@@ -11671,9 +11671,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Wav2Vec",
           "MMS",
-          "Transformer",
-          "Wav2Vec"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -11681,7 +11681,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-japanese",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 2493892,
         "likes": 52,
@@ -11715,7 +11715,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-portuguese",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 2436415,
         "likes": 37,
@@ -11753,7 +11753,7 @@
       },
       {
         "id": "argmaxinc/whisperkit-coreml",
-        "author": null,
+        "author": "argmaxinc",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 2079564,
         "likes": 158,
@@ -11777,7 +11777,7 @@
       },
       {
         "id": "kresnik/wav2vec2-large-xlsr-korean",
-        "author": null,
+        "author": "kresnik",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 1726439,
         "likes": 55,
@@ -11808,7 +11808,7 @@
       },
       {
         "id": "pyannote/speaker-diarization-community-1",
-        "author": null,
+        "author": "pyannote",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 1508793,
         "likes": 163,
@@ -11843,7 +11843,7 @@
       },
       {
         "id": "openai/whisper-small",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 1479275,
         "likes": 513,
@@ -11976,7 +11976,7 @@
       },
       {
         "id": "openai/whisper-base",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 1242184,
         "likes": 251,
@@ -12108,7 +12108,7 @@
       },
       {
         "id": "facebook/wav2vec2-base-960h",
-        "author": null,
+        "author": "facebook",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 1058813,
         "likes": 387,
@@ -12142,7 +12142,7 @@
       },
       {
         "id": "distil-whisper/distil-large-v3",
-        "author": null,
+        "author": "distil-whisper",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 855259,
         "likes": 364,
@@ -12175,7 +12175,7 @@
       },
       {
         "id": "pyannote/overlapped-speech-detection",
-        "author": null,
+        "author": "pyannote",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 718520,
         "likes": 49,
@@ -12204,7 +12204,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-arabic",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 711714,
         "likes": 46,
@@ -12239,7 +12239,7 @@
       },
       {
         "id": "jonatasgrosman/wav2vec2-large-xlsr-53-dutch",
-        "author": null,
+        "author": "jonatasgrosman",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 611824,
         "likes": 13,
@@ -12277,7 +12277,7 @@
       },
       {
         "id": "Systran/faster-whisper-large-v3",
-        "author": null,
+        "author": "Systran",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 545920,
         "likes": 508,
@@ -12400,7 +12400,7 @@
       },
       {
         "id": "openai/whisper-medium",
-        "author": null,
+        "author": "openai",
         "pipeline_tag": "automatic-speech-recognition",
         "downloads": 525353,
         "likes": 275,
@@ -12535,7 +12535,7 @@
     "文档理解": [
       {
         "id": "Salesforce/blip-image-captioning-base",
-        "author": null,
+        "author": "Salesforce",
         "pipeline_tag": "image-to-text",
         "downloads": 1956889,
         "likes": 841,
@@ -12554,8 +12554,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "BLIP"
+          "BLIP",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12563,7 +12563,7 @@
       },
       {
         "id": "numind/NuMarkdown-8B-Thinking",
-        "author": null,
+        "author": "numind",
         "pipeline_tag": "image-to-text",
         "downloads": 1160187,
         "likes": 416,
@@ -12589,8 +12589,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12598,7 +12598,7 @@
       },
       {
         "id": "Salesforce/blip-image-captioning-large",
-        "author": null,
+        "author": "Salesforce",
         "pipeline_tag": "image-to-text",
         "downloads": 827539,
         "likes": 1447,
@@ -12618,8 +12618,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "BLIP"
+          "BLIP",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12627,7 +12627,7 @@
       },
       {
         "id": "nlpconnect/vit-gpt2-image-captioning",
-        "author": null,
+        "author": "nlpconnect",
         "pipeline_tag": "image-to-text",
         "downloads": 701701,
         "likes": 924,
@@ -12655,7 +12655,7 @@
       },
       {
         "id": "Qwen/Qwen3-VL-235B-A22B-Thinking",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-to-text",
         "downloads": 687404,
         "likes": 367,
@@ -12676,8 +12676,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12685,7 +12685,7 @@
       },
       {
         "id": "PaddlePaddle/UVDoc",
-        "author": null,
+        "author": "PaddlePaddle",
         "pipeline_tag": "image-to-text",
         "downloads": 551290,
         "likes": 8,
@@ -12709,7 +12709,7 @@
       },
       {
         "id": "datalab-to/chandra",
-        "author": null,
+        "author": "datalab-to",
         "pipeline_tag": "image-to-text",
         "downloads": 499237,
         "likes": 468,
@@ -12727,8 +12727,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12736,7 +12736,7 @@
       },
       {
         "id": "microsoft/trocr-large-printed",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "image-to-text",
         "downloads": 466125,
         "likes": 179,
@@ -12762,7 +12762,7 @@
       },
       {
         "id": "PaddlePaddle/PP-LCNet_x1_0_doc_ori",
-        "author": null,
+        "author": "PaddlePaddle",
         "pipeline_tag": "image-to-text",
         "downloads": 409981,
         "likes": 4,
@@ -12786,7 +12786,7 @@
       },
       {
         "id": "Salesforce/blip2-opt-2.7b-coco",
-        "author": null,
+        "author": "Salesforce",
         "pipeline_tag": "image-to-text",
         "downloads": 341658,
         "likes": 11,
@@ -12807,9 +12807,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "OPT",
           "BLIP",
-          "Transformer"
+          "Transformer",
+          "OPT"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12817,7 +12817,7 @@
       },
       {
         "id": "PaddlePaddle/PP-OCRv5_server_det",
-        "author": null,
+        "author": "PaddlePaddle",
         "pipeline_tag": "image-to-text",
         "downloads": 330605,
         "likes": 55,
@@ -12842,7 +12842,7 @@
       },
       {
         "id": "Qwen/Qwen3-VL-235B-A22B-Instruct",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "image-to-text",
         "downloads": 255960,
         "likes": 361,
@@ -12863,8 +12863,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12872,7 +12872,7 @@
       },
       {
         "id": "ChatDOC/OCRFlux-3B",
-        "author": null,
+        "author": "ChatDOC",
         "pipeline_tag": "image-to-text",
         "downloads": 230622,
         "likes": 364,
@@ -12891,9 +12891,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "Qwen",
-          "FLUX"
+          "FLUX",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12901,7 +12901,7 @@
       },
       {
         "id": "kha-white/manga-ocr-base",
-        "author": null,
+        "author": "kha-white",
         "pipeline_tag": "image-to-text",
         "downloads": 220591,
         "likes": 164,
@@ -12927,7 +12927,7 @@
       },
       {
         "id": "PaddlePaddle/en_PP-OCRv5_mobile_rec",
-        "author": null,
+        "author": "PaddlePaddle",
         "pipeline_tag": "image-to-text",
         "downloads": 212585,
         "likes": 1,
@@ -12950,7 +12950,7 @@
       },
       {
         "id": "meta-llama/Llama-4-Scout-17B-16E-Instruct",
-        "author": null,
+        "author": "meta-llama",
         "pipeline_tag": "image-to-text",
         "downloads": 210650,
         "likes": 1211,
@@ -12986,10 +12986,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Meta",
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "Meta",
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12997,7 +12997,7 @@
       },
       {
         "id": "allenai/olmOCR-2-7B-1025-FP8",
-        "author": null,
+        "author": "allenai",
         "pipeline_tag": "image-to-text",
         "downloads": 202956,
         "likes": 193,
@@ -13019,8 +13019,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Qwen"
+          "Qwen",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -13028,7 +13028,7 @@
       },
       {
         "id": "unsloth/gemma-3-4b-it-GGUF",
-        "author": null,
+        "author": "unsloth",
         "pipeline_tag": "image-to-text",
         "downloads": 190209,
         "likes": 165,
@@ -13079,9 +13079,9 @@
           "conversational"
         ],
         "tech_keywords": [
+          "Google",
           "Gemma",
-          "Transformer",
-          "Google"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -13089,7 +13089,7 @@
       },
       {
         "id": "unsloth/gemma-3-27b-it-bnb-4bit",
-        "author": null,
+        "author": "unsloth",
         "pipeline_tag": "image-to-text",
         "downloads": 178806,
         "likes": 18,
@@ -13143,9 +13143,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Google",
           "Gemma",
-          "Transformer",
-          "Google"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -13153,7 +13153,7 @@
       },
       {
         "id": "breezedeus/pix2text-mfr",
-        "author": null,
+        "author": "breezedeus",
         "pipeline_tag": "image-to-text",
         "downloads": 172380,
         "likes": 52,
@@ -13186,7 +13186,7 @@
     "嵌入模型": [
       {
         "id": "jinaai/jina-embeddings-v3",
-        "author": null,
+        "author": "jinaai",
         "pipeline_tag": "feature-extraction",
         "downloads": 5020789,
         "likes": 1127,
@@ -13304,9 +13304,9 @@
         "tech_keywords": [
           "Jina",
           "Sentence",
-          "Yi",
           "Embedding",
-          "Transformer"
+          "Transformer",
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13314,7 +13314,7 @@
       },
       {
         "id": "BAAI/bge-large-en-v1.5",
-        "author": null,
+        "author": "BAAI",
         "pipeline_tag": "feature-extraction",
         "downloads": 4164529,
         "likes": 623,
@@ -13344,11 +13344,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BGE",
           "Sentence",
+          "Transformer",
           "BERT",
           "Embedding",
-          "Transformer"
+          "BGE"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13356,7 +13356,7 @@
       },
       {
         "id": "BAAI/bge-small-en-v1.5",
-        "author": null,
+        "author": "BAAI",
         "pipeline_tag": "feature-extraction",
         "downloads": 3851585,
         "likes": 406,
@@ -13386,11 +13386,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BGE",
           "Sentence",
+          "Transformer",
           "BERT",
           "Embedding",
-          "Transformer"
+          "BGE"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13398,7 +13398,7 @@
       },
       {
         "id": "intfloat/multilingual-e5-large",
-        "author": null,
+        "author": "intfloat",
         "pipeline_tag": "feature-extraction",
         "downloads": 3280336,
         "likes": 1133,
@@ -13521,13 +13521,13 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "Yi",
           "RoBERTa",
-          "BERT",
+          "Sentence",
           "E5",
+          "BERT",
           "Embedding",
-          "Transformer"
+          "Transformer",
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13535,7 +13535,7 @@
       },
       {
         "id": "BAAI/bge-base-en-v1.5",
-        "author": null,
+        "author": "BAAI",
         "pipeline_tag": "feature-extraction",
         "downloads": 3236838,
         "likes": 399,
@@ -13565,11 +13565,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BGE",
           "Sentence",
+          "Transformer",
           "BERT",
           "Embedding",
-          "Transformer"
+          "BGE"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13577,7 +13577,7 @@
       },
       {
         "id": "facebook/w2v-bert-2.0",
-        "author": null,
+        "author": "facebook",
         "pipeline_tag": "feature-extraction",
         "downloads": 2227619,
         "likes": 200,
@@ -13690,9 +13690,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Wav2Vec",
           "BERT",
-          "Transformer",
-          "Wav2Vec"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13700,7 +13700,7 @@
       },
       {
         "id": "Qwen/Qwen3-Embedding-0.6B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "feature-extraction",
         "downloads": 2168356,
         "likes": 859,
@@ -13724,10 +13724,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Sentence",
           "Qwen",
-          "Embedding"
+          "Embedding",
+          "Sentence",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13735,7 +13735,7 @@
       },
       {
         "id": "Qwen/Qwen3-Embedding-8B",
-        "author": null,
+        "author": "Qwen",
         "pipeline_tag": "feature-extraction",
         "downloads": 1731277,
         "likes": 555,
@@ -13759,10 +13759,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Sentence",
           "Qwen",
-          "Embedding"
+          "Embedding",
+          "Sentence",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13770,7 +13770,7 @@
       },
       {
         "id": "opensearch-project/opensearch-neural-sparse-encoding-doc-v2-distill",
-        "author": null,
+        "author": "opensearch-project",
         "pipeline_tag": "feature-extraction",
         "downloads": 1717921,
         "likes": 19,
@@ -13803,12 +13803,12 @@
           "region:us"
         ],
         "tech_keywords": [
+          "Neural",
+          "DistilBERT",
           "Sentence",
           "BERT",
-          "DistilBERT",
           "Embedding",
-          "Transformer",
-          "Neural"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13816,7 +13816,7 @@
       },
       {
         "id": "microsoft/wavlm-base-plus",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "feature-extraction",
         "downloads": 1638576,
         "likes": 34,
@@ -13845,7 +13845,7 @@
       },
       {
         "id": "unslothai/1",
-        "author": null,
+        "author": "unslothai",
         "pipeline_tag": "feature-extraction",
         "downloads": 1450321,
         "likes": 1,
@@ -13861,9 +13861,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13871,7 +13871,7 @@
       },
       {
         "id": "mixedbread-ai/mxbai-embed-large-v1",
-        "author": null,
+        "author": "mixedbread-ai",
         "pipeline_tag": "feature-extraction",
         "downloads": 1396178,
         "likes": 763,
@@ -13898,9 +13898,9 @@
         ],
         "tech_keywords": [
           "BERT",
-          "Transformer",
+          "Embedding",
           "Sentence",
-          "Embedding"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13908,7 +13908,7 @@
       },
       {
         "id": "WhereIsAI/UAE-Large-V1",
-        "author": null,
+        "author": "WhereIsAI",
         "pipeline_tag": "feature-extraction",
         "downloads": 1357703,
         "likes": 237,
@@ -13937,9 +13937,9 @@
         ],
         "tech_keywords": [
           "BERT",
-          "Transformer",
+          "Embedding",
           "Sentence",
-          "Embedding"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13947,7 +13947,7 @@
       },
       {
         "id": "Xenova/bge-base-en-v1.5",
-        "author": null,
+        "author": "Xenova",
         "pipeline_tag": "feature-extraction",
         "downloads": 1222638,
         "likes": 9,
@@ -13974,7 +13974,7 @@
       },
       {
         "id": "YituTech/conv-bert-base",
-        "author": null,
+        "author": "YituTech",
         "pipeline_tag": "feature-extraction",
         "downloads": 1143670,
         "likes": 10,
@@ -14000,7 +14000,7 @@
       },
       {
         "id": "ibm-granite/granite-embedding-small-english-r2",
-        "author": null,
+        "author": "ibm-granite",
         "pipeline_tag": "feature-extraction",
         "downloads": 1141115,
         "likes": 59,
@@ -14026,9 +14026,9 @@
         ],
         "tech_keywords": [
           "BERT",
-          "Transformer",
+          "Embedding",
           "Sentence",
-          "Embedding"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -14036,7 +14036,7 @@
       },
       {
         "id": "unslothai/repeat",
-        "author": null,
+        "author": "unslothai",
         "pipeline_tag": "feature-extraction",
         "downloads": 1108304,
         "likes": 0,
@@ -14051,9 +14051,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -14061,7 +14061,7 @@
       },
       {
         "id": "facebook/bart-base",
-        "author": null,
+        "author": "facebook",
         "pipeline_tag": "feature-extraction",
         "downloads": 1040027,
         "likes": 204,
@@ -14091,7 +14091,7 @@
       },
       {
         "id": "intfloat/multilingual-e5-large-instruct",
-        "author": null,
+        "author": "intfloat",
         "pipeline_tag": "feature-extraction",
         "downloads": 997577,
         "likes": 603,
@@ -14210,13 +14210,13 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "Yi",
           "RoBERTa",
-          "BERT",
+          "Sentence",
           "E5",
+          "BERT",
           "Embedding",
-          "Transformer"
+          "Transformer",
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -14224,7 +14224,7 @@
       },
       {
         "id": "unslothai/other",
-        "author": null,
+        "author": "unslothai",
         "pipeline_tag": "feature-extraction",
         "downloads": 926530,
         "likes": 0,
@@ -14239,9 +14239,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "Llama",
-          "LLaMA"
+          "LLaMA",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -14251,7 +14251,7 @@
     "图像理解": [
       {
         "id": "Falconsai/nsfw_image_detection",
-        "author": null,
+        "author": "Falconsai",
         "pipeline_tag": "image-classification",
         "downloads": 66786298,
         "likes": 973,
@@ -14270,8 +14270,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT"
+          "ViT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14279,7 +14279,7 @@
       },
       {
         "id": "dima806/fairface_age_image_detection",
-        "author": null,
+        "author": "dima806",
         "pipeline_tag": "image-classification",
         "downloads": 43488200,
         "likes": 59,
@@ -14298,9 +14298,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "ViT",
           "Google",
-          "Transformer",
-          "ViT"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14308,7 +14308,7 @@
       },
       {
         "id": "timm/mobilenetv3_small_100.lamb_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 22621324,
         "likes": 49,
@@ -14327,8 +14327,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "MobileNet"
+          "MobileNet",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14336,7 +14336,7 @@
       },
       {
         "id": "iitolstykh/mivolo_v2",
-        "author": null,
+        "author": "iitolstykh",
         "pipeline_tag": "image-classification",
         "downloads": 4746226,
         "likes": 21,
@@ -14361,7 +14361,7 @@
       },
       {
         "id": "timm/resnet50.a1_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 4167178,
         "likes": 39,
@@ -14389,7 +14389,7 @@
       },
       {
         "id": "google/vit-base-patch16-224",
-        "author": null,
+        "author": "google",
         "pipeline_tag": "image-classification",
         "downloads": 3985024,
         "likes": 931,
@@ -14414,8 +14414,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT"
+          "ViT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14423,7 +14423,7 @@
       },
       {
         "id": "timm/mobilenetv3_large_100.ra_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 3903516,
         "likes": 36,
@@ -14442,8 +14442,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "MobileNet"
+          "MobileNet",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14451,7 +14451,7 @@
       },
       {
         "id": "apple/mobilevit-small",
-        "author": null,
+        "author": "apple",
         "pipeline_tag": "image-classification",
         "downloads": 2307089,
         "likes": 83,
@@ -14472,8 +14472,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT"
+          "ViT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14481,7 +14481,7 @@
       },
       {
         "id": "timm/convnextv2_nano.fcmae_ft_in22k_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 2275290,
         "likes": 3,
@@ -14499,8 +14499,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ConvNeXt"
+          "ConvNeXt",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14508,7 +14508,7 @@
       },
       {
         "id": "timm/resnet18.a1_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 1486426,
         "likes": 13,
@@ -14535,7 +14535,7 @@
       },
       {
         "id": "timm/efficientnet_b2.ra_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 1099144,
         "likes": 0,
@@ -14563,7 +14563,7 @@
       },
       {
         "id": "timm/regnety_016.tv2_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 1005294,
         "likes": 0,
@@ -14588,7 +14588,7 @@
       },
       {
         "id": "rizvandwiki/gender-classification",
-        "author": null,
+        "author": "rizvandwiki",
         "pipeline_tag": "image-classification",
         "downloads": 885635,
         "likes": 57,
@@ -14607,8 +14607,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT"
+          "ViT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14616,7 +14616,7 @@
       },
       {
         "id": "nvidia/mit-b2",
-        "author": null,
+        "author": "nvidia",
         "pipeline_tag": "image-classification",
         "downloads": 756577,
         "likes": 5,
@@ -14646,7 +14646,7 @@
       },
       {
         "id": "microsoft/beit-base-patch16-224-pt22k-ft22k",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "image-classification",
         "downloads": 753689,
         "likes": 80,
@@ -14668,8 +14668,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "BEiT"
+          "BEiT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14677,7 +14677,7 @@
       },
       {
         "id": "timm/tf_mobilenetv3_large_minimal_100.in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 748827,
         "likes": 0,
@@ -14695,8 +14695,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "MobileNet"
+          "MobileNet",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14704,7 +14704,7 @@
       },
       {
         "id": "microsoft/swin-large-patch4-window7-224",
-        "author": null,
+        "author": "microsoft",
         "pipeline_tag": "image-classification",
         "downloads": 715596,
         "likes": 1,
@@ -14725,8 +14725,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "Swin"
+          "Swin",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14734,7 +14734,7 @@
       },
       {
         "id": "timm/convnext_small.in12k_ft_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 655376,
         "likes": 0,
@@ -14753,8 +14753,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ConvNeXt"
+          "ConvNeXt",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14762,7 +14762,7 @@
       },
       {
         "id": "timm/vit_small_patch16_224.augreg_in21k_ft_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 642974,
         "likes": 4,
@@ -14782,8 +14782,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "ViT"
+          "ViT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14791,7 +14791,7 @@
       },
       {
         "id": "timm/efficientnet_b0.ra_in1k",
-        "author": null,
+        "author": "timm",
         "pipeline_tag": "image-classification",
         "downloads": 571722,
         "likes": 4,
@@ -14832,15 +14832,26 @@
       "视频生成": 4
     },
     "top_organizations": {
-      "Qwen": 2,
-      "moonshotai": 1,
-      "Tongyi-MAI": 1,
-      "tencent": 1,
-      "deepseek-ai": 1,
-      "nvidia": 1,
-      "PaddlePaddle": 1,
-      "microsoft": 1,
-      "circlestone-labs": 1
+      "Qwen": 19,
+      "openai": 14,
+      "meta-llama": 14,
+      "deepseek-ai": 9,
+      "microsoft": 8,
+      "sentence-transformers": 8,
+      "mistralai": 7,
+      "BAAI": 6,
+      "stabilityai": 6,
+      "facebook": 5,
+      "google": 4,
+      "google-bert": 4,
+      "FacebookAI": 4,
+      "jonatasgrosman": 4,
+      "moonshotai": 3,
+      "tencent": 3,
+      "nvidia": 3,
+      "timm": 3,
+      "pyannote": 3,
+      "autogluon": 3
     },
     "size_distribution": {
       "未知": 204,
