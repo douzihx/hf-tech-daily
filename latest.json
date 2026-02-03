@@ -1,13 +1,13 @@
 {
   "date": "2026-02-03",
-  "timestamp": "2026-02-03T03:20:54.349871",
+  "timestamp": "2026-02-03T03:31:40.088551",
   "trending_models": [
     {
       "id": "moonshotai/Kimi-K2.5",
       "author": "moonshotai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 96162,
-      "likes": 1508,
+      "likes": 1512,
       "num_parameters": null,
       "last_modified": "2026-01-31T00:52:48.000Z",
       "tags": [],
@@ -21,7 +21,7 @@
       "author": "Tongyi-MAI",
       "pipeline_tag": "text-to-image",
       "downloads": 6347,
-      "likes": 809,
+      "likes": 810,
       "num_parameters": null,
       "last_modified": "2026-01-28T14:26:13.000Z",
       "tags": [],
@@ -35,7 +35,7 @@
       "author": "tencent",
       "pipeline_tag": "image-to-image",
       "downloads": 148,
-      "likes": 784,
+      "likes": 785,
       "num_parameters": 83009199459,
       "last_modified": "2026-01-28T08:15:07.000Z",
       "tags": [],
@@ -49,7 +49,7 @@
       "author": "deepseek-ai",
       "pipeline_tag": "image-text-to-text",
       "downloads": 143676,
-      "likes": 644,
+      "likes": 645,
       "num_parameters": 3389119360,
       "last_modified": "2026-02-03T00:33:19.000Z",
       "tags": [],
@@ -109,9 +109,9 @@
       "author": "stepfun-ai",
       "pipeline_tag": null,
       "downloads": 44,
-      "likes": 314,
+      "likes": 315,
       "num_parameters": 199384301376,
-      "last_modified": "2026-02-02T13:32:18.000Z",
+      "last_modified": "2026-02-03T03:24:27.000Z",
       "tags": [],
       "tech_keywords": [],
       "source": "trending",
@@ -205,9 +205,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -293,8 +293,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ViT",
         "Google",
+        "ViT",
         "Transformer"
       ],
       "source": "downloads",
@@ -489,9 +489,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "RoBERTa",
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -574,9 +574,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -668,9 +668,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Transformer",
         "CLIP",
-        "ViT",
-        "Transformer"
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -703,8 +703,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ResNet",
-        "Embedding"
+        "Embedding",
+        "ResNet"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -889,11 +889,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
-        "BERT",
         "Embedding",
+        "BGE",
+        "BERT",
+        "Sentence",
         "RoBERTa"
       ],
       "source": "downloads",
@@ -936,10 +936,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -1064,10 +1064,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
-        "Transformer",
+        "RoBERTa",
         "Yi",
-        "RoBERTa"
+        "BERT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1218,9 +1218,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "RoBERTa",
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1249,9 +1249,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Transformer",
         "CLIP",
-        "ViT",
-        "Transformer"
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -1308,8 +1308,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "GPT",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -1463,9 +1463,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "Whisper",
         "Yi",
-        "Whisper"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语音识别",
@@ -1611,10 +1611,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
         "Transformer",
-        "BERT",
         "Embedding",
+        "BERT",
+        "Sentence",
         "RoBERTa"
       ],
       "source": "downloads",
@@ -1650,9 +1650,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -1674,8 +1674,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "XTTS",
         "Coqui",
+        "XTTS",
         "TTS"
       ],
       "source": "downloads",
@@ -1710,8 +1710,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "DistilBERT",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -1856,11 +1856,11 @@
         "region:eu"
       ],
       "tech_keywords": [
-        "Sentence",
-        "Yi",
         "Transformer",
+        "Embedding",
+        "Yi",
         "Jina",
-        "Embedding"
+        "Sentence"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2112,9 +2112,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "ALBERT",
         "BERT",
-        "Transformer",
-        "ALBERT"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2172,8 +2172,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "T5",
         "ResNet",
+        "T5",
         "Transformer"
       ],
       "source": "downloads",
@@ -2212,11 +2212,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
+        "Embedding",
+        "BGE",
         "BERT",
-        "Embedding"
+        "Sentence"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2329,9 +2329,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "RoBERTa",
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2366,8 +2366,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "DistilBERT",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -2421,8 +2421,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ViT",
-        "Transformer"
+        "Transformer",
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "图像理解",
@@ -2460,16 +2460,16 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Orca",
-        "Microsoft",
-        "Phi",
-        "Yi",
-        "Transformer",
         "01-ai",
-        "Llama",
-        "SAM",
+        "LLaMA",
+        "Transformer",
+        "Phi",
+        "Microsoft",
+        "Yi",
         "InternLM",
-        "LLaMA"
+        "Llama",
+        "Orca",
+        "SAM"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2622,10 +2622,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
-        "Transformer",
+        "RoBERTa",
         "Yi",
-        "RoBERTa"
+        "BERT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -2663,11 +2663,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
+        "Embedding",
+        "BGE",
         "BERT",
-        "Embedding"
+        "Sentence"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -2697,8 +2697,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "OPT"
+        "OPT",
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -2733,9 +2733,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -2854,12 +2854,12 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
+        "Embedding",
+        "BGE",
         "BERT",
         "Reranker",
-        "Embedding",
+        "Sentence",
         "RoBERTa"
       ],
       "source": "downloads",
@@ -2965,9 +2965,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Transformer",
         "CLIP",
-        "ViT",
-        "Transformer"
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -3098,13 +3098,13 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "Yi",
         "Transformer",
-        "BERT",
-        "E5",
         "Embedding",
-        "RoBERTa"
+        "RoBERTa",
+        "BERT",
+        "Yi",
+        "Sentence",
+        "E5"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3142,11 +3142,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
+        "Embedding",
+        "BGE",
         "BERT",
-        "Embedding"
+        "Sentence"
       ],
       "source": "downloads",
       "tech_category": "嵌入模型",
@@ -3300,8 +3300,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ViT",
-        "Transformer"
+        "Transformer",
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -3331,8 +3331,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "downloads",
       "tech_category": "多模态模型",
@@ -3384,8 +3384,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "ViT",
-        "Transformer"
+        "Transformer",
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -3396,7 +3396,7 @@
       "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 2881514,
-      "likes": 4430,
+      "likes": 4431,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -3508,9 +3508,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -3543,9 +3543,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "downloads",
@@ -3711,10 +3711,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
         "OpenAI",
+        "Whisper",
         "Yi",
-        "Whisper"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "语音识别",
@@ -3950,10 +3950,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -3964,7 +3964,7 @@
       "author": "Lightricks",
       "pipeline_tag": "image-to-video",
       "downloads": 2719615,
-      "likes": 1412,
+      "likes": 1413,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -4025,9 +4025,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Transformer",
         "CLIP",
-        "ViT",
-        "Transformer"
+        "ViT"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -4122,9 +4122,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "RoBERTa",
         "BERT",
-        "Transformer",
-        "RoBERTa"
+        "Transformer"
       ],
       "source": "downloads",
       "tech_category": "其他",
@@ -4526,10 +4526,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "downloads",
       "tech_category": "语言模型",
@@ -4561,8 +4561,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4683,10 +4683,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
+        "Transformer",
         "Meta",
-        "Transformer"
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4754,10 +4754,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -4886,9 +4886,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "Whisper",
         "Yi",
-        "Whisper"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语音识别",
@@ -5027,10 +5027,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5114,9 +5114,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Meta",
         "Llama",
-        "LLaMA",
-        "Meta"
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5127,7 +5127,7 @@
       "author": "openai",
       "pipeline_tag": "text-generation",
       "downloads": 2881514,
-      "likes": 4430,
+      "likes": 4431,
       "num_parameters": null,
       "last_modified": null,
       "tags": [
@@ -5207,9 +5207,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "Sentence",
         "Embedding",
+        "BERT",
         "Transformer"
       ],
       "source": "likes",
@@ -5242,10 +5242,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
+        "Transformer",
         "Meta",
-        "Transformer"
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5361,8 +5361,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5406,8 +5406,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Stable",
         "MPT",
+        "Stable",
         "Diffusion"
       ],
       "source": "likes",
@@ -5506,8 +5506,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "XTTS",
         "Coqui",
+        "XTTS",
         "TTS"
       ],
       "source": "likes",
@@ -5668,8 +5668,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "likes",
       "tech_category": "多模态模型",
@@ -5704,8 +5704,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "BERT",
         "GPT",
+        "BERT",
         "Transformer"
       ],
       "source": "likes",
@@ -5736,8 +5736,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -5866,8 +5866,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ChatGLM"
+        "ChatGLM",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "其他",
@@ -6044,10 +6044,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
         "OpenAI",
+        "Whisper",
         "Yi",
-        "Whisper"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语音识别",
@@ -6080,11 +6080,11 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Sentence",
-        "BGE",
         "Transformer",
-        "BERT",
         "Embedding",
+        "BGE",
+        "BERT",
+        "Sentence",
         "RoBERTa"
       ],
       "source": "likes",
@@ -6126,10 +6126,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6317,8 +6317,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "DeepSeek",
-        "Transformer"
+        "Transformer",
+        "DeepSeek"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6539,10 +6539,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6573,10 +6573,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6642,10 +6642,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6816,10 +6816,10 @@
       ],
       "tech_keywords": [
         "Meta",
-        "NVIDIA",
         "Transformer",
-        "Llama",
-        "LLaMA"
+        "LLaMA",
+        "NVIDIA",
+        "Llama"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -6850,8 +6850,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
-        "ChatGLM"
+        "ChatGLM",
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "其他",
@@ -6889,10 +6889,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7000,10 +7000,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7032,9 +7032,9 @@
         "region:us"
       ],
       "tech_keywords": [
+        "Transformer",
         "CLIP",
-        "ViT",
-        "Transformer"
+        "ViT"
       ],
       "source": "likes",
       "tech_category": "其他",
@@ -7182,8 +7182,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Gemma",
         "Google",
+        "Gemma",
         "Transformer"
       ],
       "source": "likes",
@@ -7223,8 +7223,8 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Mistral",
         "Zephyr",
+        "Mistral",
         "Transformer"
       ],
       "source": "likes",
@@ -7441,9 +7441,9 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Transformer",
+        "Whisper",
         "Yi",
-        "Whisper"
+        "Transformer"
       ],
       "source": "likes",
       "tech_category": "语音识别",
@@ -7601,10 +7601,10 @@
         "region:us"
       ],
       "tech_keywords": [
-        "Llama",
-        "LLaMA",
         "Meta",
-        "Transformer"
+        "Transformer",
+        "Llama",
+        "LLaMA"
       ],
       "source": "likes",
       "tech_category": "语言模型",
@@ -7739,8 +7739,8 @@
       "tech_keywords": [
         "SDXL",
         "Stable",
-        "ControlNet",
-        "Diffusion"
+        "Diffusion",
+        "ControlNet"
       ],
       "source": "likes",
       "tech_category": "图像生成",
@@ -8053,10 +8053,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
-          "LLaMA",
           "Meta",
-          "Transformer"
+          "Transformer",
+          "Llama",
+          "LLaMA"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8156,8 +8156,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "GPT",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -8323,16 +8323,16 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Orca",
-          "Microsoft",
-          "Phi",
-          "Yi",
-          "Transformer",
           "01-ai",
-          "Llama",
-          "SAM",
+          "LLaMA",
+          "Transformer",
+          "Phi",
+          "Microsoft",
+          "Yi",
           "InternLM",
-          "LLaMA"
+          "Llama",
+          "Orca",
+          "SAM"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8362,8 +8362,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
-          "OPT"
+          "OPT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8468,7 +8468,7 @@
         "author": "openai",
         "pipeline_tag": "text-generation",
         "downloads": 2881514,
-        "likes": 4430,
+        "likes": 4431,
         "num_parameters": null,
         "last_modified": null,
         "tags": [
@@ -8528,10 +8528,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
-          "LLaMA",
           "Meta",
-          "Transformer"
+          "Transformer",
+          "Llama",
+          "LLaMA"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8570,10 +8570,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
-          "LLaMA",
           "Meta",
-          "Transformer"
+          "Transformer",
+          "Llama",
+          "LLaMA"
         ],
         "source": "downloads",
         "tech_category": "语言模型",
@@ -8687,8 +8687,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "GPT",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -8815,8 +8815,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "DeepSeek",
-          "Transformer"
+          "Transformer",
+          "DeepSeek"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9042,8 +9042,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Gemma",
           "Google",
+          "Gemma",
           "Transformer"
         ],
         "source": "downloads",
@@ -9136,8 +9136,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Gemma",
           "Google",
+          "Gemma",
           "Transformer"
         ],
         "source": "downloads",
@@ -9204,9 +9204,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
-          "LLaVA",
           "LLaMA",
+          "LLaVA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -9247,10 +9247,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
           "OpenAI",
-          "InternVL",
           "Transformer",
+          "InternVL",
+          "ViT",
           "GPT"
         ],
         "source": "downloads",
@@ -9287,9 +9287,9 @@
           "region:us"
         ],
         "tech_keywords": [
+          "ViT",
           "InternVL",
           "InternLM",
-          "ViT",
           "Transformer"
         ],
         "source": "downloads",
@@ -9317,9 +9317,9 @@
         ],
         "tech_keywords": [
           "NVIDIA",
+          "Transformer",
           "Llama",
-          "LLaMA",
-          "Transformer"
+          "LLaMA"
         ],
         "source": "downloads",
         "tech_category": "多模态模型",
@@ -9376,8 +9376,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Gemma",
           "Google",
+          "Gemma",
           "Transformer"
         ],
         "source": "downloads",
@@ -9414,9 +9414,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "InternVL",
-          "ViT",
           "Qwen",
+          "ViT",
+          "InternVL",
           "Transformer"
         ],
         "source": "downloads",
@@ -9627,8 +9627,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "LoRA",
-          "Qwen"
+          "Qwen",
+          "LoRA"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9756,9 +9756,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Playground",
+          "Stable",
           "Diffusion",
-          "Stable"
+          "Playground"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -9925,8 +9925,8 @@
         ],
         "tech_keywords": [
           "Yi",
-          "LoRA",
-          "Diffusion"
+          "Diffusion",
+          "LoRA"
         ],
         "source": "downloads",
         "tech_category": "图像生成",
@@ -10546,8 +10546,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "XTTS",
           "Coqui",
+          "XTTS",
           "TTS"
         ],
         "source": "downloads",
@@ -10996,8 +10996,8 @@
           "conversational"
         ],
         "tech_keywords": [
-          "Llama",
           "LLaMA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -11106,8 +11106,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
           "LLaMA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -11273,9 +11273,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
+          "Whisper",
           "Yi",
-          "Whisper"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -11474,10 +11474,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "OpenAI",
+          "Whisper",
           "Yi",
-          "Whisper"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -11932,9 +11932,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
+          "Whisper",
           "Yi",
-          "Whisper"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -12064,9 +12064,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
+          "Whisper",
           "Yi",
-          "Whisper"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -12357,8 +12357,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Yi",
-          "Whisper"
+          "Whisper",
+          "Yi"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -12489,9 +12489,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
+          "Whisper",
           "Yi",
-          "Whisper"
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "语音识别",
@@ -12611,9 +12611,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
+          "Transformer",
           "GPT",
-          "Transformer"
+          "ViT"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12773,9 +12773,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Transformer",
           "BLIP",
-          "OPT"
+          "OPT",
+          "Transformer"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -12857,8 +12857,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "FLUX",
           "Qwen",
+          "FLUX",
           "Transformer"
         ],
         "source": "downloads",
@@ -12952,10 +12952,10 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
-          "LLaMA",
           "Meta",
-          "Transformer"
+          "Transformer",
+          "Llama",
+          "LLaMA"
         ],
         "source": "downloads",
         "tech_category": "文档理解",
@@ -13045,8 +13045,8 @@
           "conversational"
         ],
         "tech_keywords": [
-          "Gemma",
           "Google",
+          "Gemma",
           "Transformer"
         ],
         "source": "downloads",
@@ -13109,8 +13109,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Gemma",
           "Google",
+          "Gemma",
           "Transformer"
         ],
         "source": "downloads",
@@ -13268,11 +13268,11 @@
           "region:eu"
         ],
         "tech_keywords": [
-          "Sentence",
-          "Yi",
           "Transformer",
+          "Embedding",
+          "Yi",
           "Jina",
-          "Embedding"
+          "Sentence"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13310,11 +13310,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "BGE",
           "Transformer",
+          "Embedding",
+          "BGE",
           "BERT",
-          "Embedding"
+          "Sentence"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13352,11 +13352,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "BGE",
           "Transformer",
+          "Embedding",
+          "BGE",
           "BERT",
-          "Embedding"
+          "Sentence"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13487,13 +13487,13 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "Yi",
           "Transformer",
-          "BERT",
-          "E5",
           "Embedding",
-          "RoBERTa"
+          "RoBERTa",
+          "BERT",
+          "Yi",
+          "Sentence",
+          "E5"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13531,11 +13531,11 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "BGE",
           "Transformer",
+          "Embedding",
+          "BGE",
           "BERT",
-          "Embedding"
+          "Sentence"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13690,9 +13690,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
           "Qwen",
           "Embedding",
+          "Sentence",
           "Transformer"
         ],
         "source": "downloads",
@@ -13725,9 +13725,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
           "Qwen",
           "Embedding",
+          "Sentence",
           "Transformer"
         ],
         "source": "downloads",
@@ -13771,10 +13771,10 @@
         "tech_keywords": [
           "DistilBERT",
           "Neural",
-          "Sentence",
           "Transformer",
+          "Embedding",
           "BERT",
-          "Embedding"
+          "Sentence"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -13827,8 +13827,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
           "LLaMA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -13863,9 +13863,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "Sentence",
           "Embedding",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -13902,9 +13902,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "Sentence",
           "Embedding",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -13930,8 +13930,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
           "BGE",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -13991,9 +13991,9 @@
           "region:us"
         ],
         "tech_keywords": [
-          "BERT",
-          "Sentence",
           "Embedding",
+          "Sentence",
+          "BERT",
           "Transformer"
         ],
         "source": "downloads",
@@ -14017,8 +14017,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
           "LLaMA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -14176,13 +14176,13 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Sentence",
-          "Yi",
           "Transformer",
-          "BERT",
-          "E5",
           "Embedding",
-          "RoBERTa"
+          "RoBERTa",
+          "BERT",
+          "Yi",
+          "Sentence",
+          "E5"
         ],
         "source": "downloads",
         "tech_category": "嵌入模型",
@@ -14205,8 +14205,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "Llama",
           "LLaMA",
+          "Llama",
           "Transformer"
         ],
         "source": "downloads",
@@ -14264,8 +14264,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
           "Google",
+          "ViT",
           "Transformer"
         ],
         "source": "downloads",
@@ -14345,8 +14345,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "T5",
           "ResNet",
+          "T5",
           "Transformer"
         ],
         "source": "downloads",
@@ -14380,8 +14380,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
-          "Transformer"
+          "Transformer",
+          "ViT"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14438,8 +14438,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
-          "Transformer"
+          "Transformer",
+          "ViT"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14748,8 +14748,8 @@
           "region:us"
         ],
         "tech_keywords": [
-          "ViT",
-          "Transformer"
+          "Transformer",
+          "ViT"
         ],
         "source": "downloads",
         "tech_category": "图像理解",
@@ -14833,8 +14833,8 @@
       "Qwen": 21,
       "Embedding": 19,
       "Sentence": 18,
-      "Llama": 17,
       "LLaMA": 17,
+      "Llama": 17,
       "Meta": 16,
       "Stable": 16,
       "ViT": 12,
@@ -14856,8 +14856,8 @@
       "Google": 2,
       "MobileNet": 2,
       "ResNet": 2,
-      "XTTS": 2,
       "Coqui": 2,
+      "XTTS": 2,
       "DistilBERT": 2,
       "OpenAI": 2,
       "Gemma": 2,
