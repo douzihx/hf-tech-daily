@@ -6,6 +6,7 @@ import glob
 from wordcloud import WordCloud
 from datetime import datetime
 
+
 # 僅用於趨勢圖顯示的映射，解決 GitHub Actions 環境下的中文亂碼問題
 DISPLAY_LABELS = {
     "语言模型": "Language Models",
@@ -19,6 +20,21 @@ DISPLAY_LABELS = {
     "图像理解": "Computer Vision",
     "其他": "Others"
 }
+
+# 技術類別顏色映射
+CATEGORY_COLORS = {
+    "Language Models": "#FF6B6B",
+    "Multimodal": "#4ECDC4",
+    "Image Generation": "#45B7D1",
+    "Video Generation": "#96CEB4",
+    "TTS": "#FFEAA7",
+    "ASR": "#DDA0DD",
+    "Document AI": "#98D8C8",
+    "Embedding": "#F7DC6F",
+    "Computer Vision": "#BB8FCE",
+    "Others": "#85C1E9"
+}
+
 
 def generate_charts(data_file):
     with open(data_file, 'r', encoding='utf-8') as f:
@@ -44,6 +60,7 @@ def generate_charts(data_file):
         plt.savefig(f'top_models_{date_str}.png')
         plt.close()
 
+
     # --- 2. 保留原始：Tech Distribution (Pie & Bar) ---
     dist = stats.get('tech_distribution', {})
     if dist:
@@ -57,19 +74,11 @@ def generate_charts(data_file):
         plt.savefig(f'tech_dist_{date_str}.png')
         plt.close()
 
-    # --- 3. 保留原始：Model Popularity Bubble Chart ---
+
+    # --- 3. 【修改】模型新鮮度 vs 熱度圖表 (替換原氣泡圖) ---
     if all_models:
-        df = pd.DataFrame(all_models)
-        plt.figure(figsize=(12, 8))
-        plt.scatter(df['downloads'], df['likes'], s=df['downloads']/1000, alpha=0.5, c=range(len(df)), cmap='viridis')
-        plt.xlabel('Downloads')
-        plt.ylabel('Likes')
-        plt.title('Model Popularity Bubble Chart')
-        plt.xscale('log')
-        plt.yscale('log')
-        plt.tight_layout()
-        plt.savefig(f'bubble_chart_{date_str}.png')
-        plt.close()
+        generate_freshness_chart(all_models, date_str)
+
 
     # --- 4. 保留原始：Active Organizations Ranking ---
     orgs = stats.get('top_organizations', {})
@@ -81,6 +90,7 @@ def generate_charts(data_file):
         plt.tight_layout()
         plt.savefig(f'org_ranking_{date_str}.png')
         plt.close()
+
 
     # --- 5. 新增：生成詞雲 (Word Cloud) ---
     text = " ".join([m.get('id', '').split('/')[-1] for m in all_models])
@@ -97,6 +107,134 @@ def generate_charts(data_file):
     
     # --- 6. 新增：趨勢分析圖 ---
     generate_trend_chart(date_str)
+
+
+def generate_freshness_chart(all_models, date_str):
+    """
+    生成「模型新鮮度 vs 熱度」圖表
+    X 軸：模型創建時間（天數，相對於今天）
+    Y 軸：Likes 數量（熱度）
+    氣泡大小：Downloads 數量
+    顏色：技術類別
+    """
+    from datetime import datetime, timezone
+    
+    today = datetime.now(timezone.utc)
+    
+    # 準備數據
+    chart_data = []
+    for m in all_models:
+        created_at = m.get('created_at') or m.get('lastModified')
+        if not created_at:
+            continue
+        
+        try:
+            # 解析創建時間
+            if isinstance(created_at, str):
+                created_date = datetime.fromisoformat(created_at.replace('Z', '+00:00'))
+            else:
+                continue
+            
+            # 計算天數差（新鮮度）
+            days_old = (today - created_date).days
+            if days_old < 0:
+                days_old = 0
+            
+            # 獲取技術類別
+            tech_cat = m.get('tech_category', '其他')
+            tech_cat_en = DISPLAY_LABELS.get(tech_cat, 'Others')
+            
+            chart_data.append({
+                'name': m['id'].split('/')[-1][:20],  # 截斷長名稱
+                'days_old': days_old,
+                'likes': m.get('likes', 0),
+                'downloads': m.get('downloads', 0),
+                'category': tech_cat_en,
+                'full_name': m['id']
+            })
+        except Exception as e:
+            continue
+    
+    if not chart_data:
+        return
+    
+    df = pd.DataFrame(chart_data)
+    
+    # 過濾掉異常數據
+    df = df[df['days_old'] <= 365]  # 只顯示一年內的模型
+    df = df[df['likes'] > 0]  # 只顯示有 likes 的模型
+    
+    if df.empty:
+        return
+    
+    # 創建圖表
+    fig, ax = plt.subplots(figsize=(14, 10))
+    
+    # 按類別繪製散點
+    categories = df['category'].unique()
+    for cat in categories:
+        cat_df = df[df['category'] == cat]
+        color = CATEGORY_COLORS.get(cat, '#85C1E9')
+        
+        # 氣泡大小基於 downloads，設置最小和最大值
+        sizes = cat_df['downloads'].apply(lambda x: max(50, min(x / 500, 2000)))
+        
+        ax.scatter(
+            cat_df['days_old'],
+            cat_df['likes'],
+            s=sizes,
+            c=color,
+            alpha=0.6,
+            label=cat,
+            edgecolors='white',
+            linewidth=0.5
+        )
+    
+    # 標註 Top 10 熱門模型名稱
+    top_10 = df.nlargest(10, 'likes')
+    for _, row in top_10.iterrows():
+        ax.annotate(
+            row['name'],
+            (row['days_old'], row['likes']),
+            xytext=(5, 5),
+            textcoords='offset points',
+            fontsize=8,
+            alpha=0.8,
+            fontweight='bold'
+        )
+    
+    # 設置軸標籤和標題
+    ax.set_xlabel('Model Age (Days Since Creation)', fontsize=12)
+    ax.set_ylabel('Likes (Popularity)', fontsize=12)
+    ax.set_title(f'Model Freshness vs Popularity - {date_str}\n(Bubble Size = Downloads)', fontsize=14, fontweight='bold')
+    
+    # 反轉 X 軸，讓新模型在左邊
+    ax.invert_xaxis()
+    
+    # 設置對數刻度（如果數據範圍大）
+    if df['likes'].max() > 1000:
+        ax.set_yscale('log')
+    
+    # 添加圖例
+    ax.legend(title='Tech Category', loc='upper right', fontsize=9)
+    
+    # 添加網格
+    ax.grid(True, linestyle='--', alpha=0.3)
+    
+    # 添加說明文字
+    ax.text(
+        0.02, 0.02,
+        'Left = Newer Models | Right = Older Models\nBubble Size = Download Count',
+        transform=ax.transAxes,
+        fontsize=9,
+        verticalalignment='bottom',
+        bbox=dict(boxstyle='round', facecolor='wheat', alpha=0.5)
+    )
+    
+    plt.tight_layout()
+    plt.savefig(f'freshness_chart_{date_str}.png', dpi=150)
+    plt.close()
+
 
 def generate_trend_chart(current_date):
     files = sorted(glob.glob("hf_data_*.json"))
@@ -129,6 +267,7 @@ def generate_trend_chart(current_date):
         plt.tight_layout()
         plt.savefig(f'trend_chart_{current_date}.png')
         plt.close()
+
 
 if __name__ == "__main__":
     latest_file = "latest.json"
