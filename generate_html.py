@@ -3,6 +3,7 @@
 生成 HTML 报告页面 (100% 样式保留版)
 更新: 增加精美交互式技术关键字词云，支持点击跳转到 Hugging Face 搜索
 修复：1) 植入超链接 2) 植入交互式标签云 3) 保持原始精美样式与所有图表
+修改：将气泡图替换为「模型新鲜度 vs 热度」图表
 """
 
 import json
@@ -549,21 +550,21 @@ def generate_html(data):
         <div class="image-grid">
             <div class="image-card">
                 <h3>📊 Top Models Leaderboard</h3>
-                <img src="leaderboard_{date}.png" alt="排行榜" class="zoomable" data-title="Top Models Leaderboard - {date}" onerror="this.parentElement.style.display='none'">
+                <img src="top_models_{date}.png" alt="排行榜" class="zoomable" data-title="Top Models Leaderboard - {date}" onerror="this.parentElement.style.display='none'">
                 <p class="click-hint">👆 点击图片可放大查看</p>
             </div>
             <div class="image-card">
                 <h3>📈 Tech Distribution</h3>
-                <img src="tech_distribution_{date}.png" alt="技术分布" class="zoomable" data-title="Tech Distribution - {date}" onerror="this.parentElement.style.display='none'">
+                <img src="tech_dist_{date}.png" alt="技术分布" class="zoomable" data-title="Tech Distribution - {date}" onerror="this.parentElement.style.display='none'">
                 <p class="click-hint">👆 点击图片可放大查看</p>
             </div>
         </div>
         
         <div class="image-grid">
             <div class="image-card">
-                <h3>🔵 Model Popularity Bubble Chart</h3>
-                <img src="bubble_chart_{date}.png" alt="气泡图" class="zoomable" data-title="Model Popularity Bubble Chart - {date}" onerror="this.parentElement.style.display='none'">
-                <p class="click-hint">👆 点击图片可放大查看</p>
+                <h3>🆕 Model Freshness vs Popularity</h3>
+                <img src="freshness_chart_{date}.png" alt="新鲜度热度图" class="zoomable" data-title="Model Freshness vs Popularity - {date}" onerror="this.parentElement.style.display='none'">
+                <p class="click-hint">👆 点击图片可放大查看 | 左侧=新模型 右侧=老模型 气泡大小=下载量</p>
             </div>
             <div class="image-card">
                 <h3>🏙 Active Organizations Ranking</h3>
