@@ -8,6 +8,8 @@
 
 import json
 import os
+import sys
+import argparse
 from datetime import datetime
 
 # 使用当前工作目录
@@ -25,7 +27,15 @@ HF_TAG_MAP = {
     "图像理解": "image-classification"
 }
 
-def load_data():
+def load_data(requested_date=None):
+    # 如果指定了日期，优先加载对应的数据文件
+    if requested_date:
+        date_file = f"hf_data_{requested_date}.json"
+        filepath = os.path.join(ROOT_DIR, date_file)
+        if os.path.exists(filepath):
+            with open(filepath, 'r', encoding='utf-8') as f:
+                return json.load(f)
+    
     latest_path = os.path.join(ROOT_DIR, "latest.json")
     if os.path.exists(latest_path):
         with open(latest_path, 'r', encoding='utf-8') as f:
@@ -72,7 +82,7 @@ def generate_keyword_cloud_html(tech_keywords: dict) -> str:
     
     return '\n'.join(cloud_items)
 
-def generate_html(data):
+def generate_html(data, output_name="index.html"):
     date = data.get("date", datetime.now().strftime("%Y-%m-%d"))
     trending = data.get("trending_models", [])[:10]
     tech_dist = data.get("statistics", {}).get("tech_distribution", {})
@@ -86,7 +96,8 @@ def generate_html(data):
     files = sorted([f for f in os.listdir(ROOT_DIR) if f.startswith("hf_data_") and f.endswith(".json")])
     for filename in files[-7:]:
         date_str = filename.replace("hf_data_", "").replace(".json", "")
-        archive_links += f'<li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="?date={date_str}" style="color: #667eea; text-decoration: none;">{date_str}</a></li>\n'
+        html_file = f"hf_data_{date_str}.html"
+        archive_links += f'<li style="padding: 8px 0; border-bottom: 1px solid #eee;"><a href="{html_file}" target="_blank" style="color: #667eea; text-decoration: none;">{date_str}</a></li>\n'
     
     if not archive_links:
         archive_links = '<li style="padding: 8px 0; color: #999;">暂无历史数据</li>' 
@@ -634,12 +645,22 @@ def generate_html(data):
 </body>
 </html>
 """
-    output_path = os.path.join(ROOT_DIR, "index.html")
+    output_path = os.path.join(ROOT_DIR, output_name)
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(html)
     return output_path
 
 if __name__ == "__main__":
-    data = load_data()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--date', help='日期格式: YYYY-MM-DD')
+    parser.add_argument('--output', help='输出文件名')
+    args = parser.parse_args()
+    
+    output_name = args.output if args.output else 'index.html'
+    data = load_data(args.date if args.date else None)
+    
     if data:
-        generate_html(data)
+        generate_html(data, output_name)
+        print(f"✅ HTML 报告已生成: {output_name}")
+    else:
+        print("❌ 错误: 无法加载数据文件")
